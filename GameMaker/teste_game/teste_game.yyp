@@ -41,6 +41,7 @@
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"sCenario","path":"sprites/sCenario/sCenario.yy",},},
     {"id":{"name":"SMarco","path":"sprites/SMarco/SMarco.yy",},},
+    {"id":{"name":"Sprite5","path":"sprites/Sprite5/Sprite5.yy",},},
     {"id":{"name":"sSoldado","path":"sprites/sSoldado/sSoldado.yy",},},
     {"id":{"name":"steste","path":"sprites/steste/steste.yy",},},
   ],

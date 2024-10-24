@@ -22,6 +22,7 @@
     {"name":"OMarco","order":1,"path":"objects/OMarco/OMarco.yy",},
     {"name":"oSoldado","order":4,"path":"objects/oSoldado/oSoldado.yy",},
     {"name":"sCenario","order":1,"path":"sprites/sCenario/sCenario.yy",},
+    {"name":"Sprite5","order":4,"path":"sprites/Sprite5/Sprite5.yy",},
     {"name":"sSoldado","order":3,"path":"sprites/sSoldado/sSoldado.yy",},
     {"name":"steste","order":2,"path":"sprites/steste/steste.yy",},
   ],
