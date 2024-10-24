@@ -20,7 +20,9 @@
     {"name":"Object3","order":3,"path":"objects/Object3/Object3.yy",},
     {"name":"oCenario","order":2,"path":"objects/oCenario/oCenario.yy",},
     {"name":"OMarco","order":1,"path":"objects/OMarco/OMarco.yy",},
+    {"name":"oSoldado","order":4,"path":"objects/oSoldado/oSoldado.yy",},
     {"name":"sCenario","order":1,"path":"sprites/sCenario/sCenario.yy",},
+    {"name":"sSoldado","order":3,"path":"sprites/sSoldado/sSoldado.yy",},
     {"name":"steste","order":2,"path":"sprites/steste/steste.yy",},
   ],
 }

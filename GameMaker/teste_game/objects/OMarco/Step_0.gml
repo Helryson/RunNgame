@@ -4,8 +4,8 @@ window_set_fullscreen(!window_get_fullscreen())
 }
 
 //Get Player Input
-key_left = keyboard_check(vk_left);
-key_right = keyboard_check(vk_right);
+key_left = keyboard_check(ord("A"));
+key_right = keyboard_check(ord("D"));
 key_jump = keyboard_check_pressed(vk_space);
 
 //Calculate Movement
@@ -20,7 +20,13 @@ if(place_meeting(x, y+1, oCenario)) && (key_jump) {
 
 if key_left
 {
-    x-=1 image_xscale=-1
+    x-=1 
+	image_xscale = -0.2470145
+}
+
+if key_right{
+	x+=1 
+	image_xscale = 0.2470145
 }
 
 
