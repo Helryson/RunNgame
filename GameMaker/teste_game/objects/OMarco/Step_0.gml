@@ -1,12 +1,19 @@
 //Windows options
 if keyboard_check_pressed(vk_f11){
-window_set_fullscreen(!window_get_fullscreen())	
-}
+window_set_fullscreen(!window_get_fullscreen());
+};
 
 //Get Player Input
-key_left = keyboard_check(ord("A"));
-key_right = keyboard_check(ord("D"));
-key_jump = keyboard_check_pressed(vk_space);
+var key_left = keyboard_check(ord("A"));
+var key_right = keyboard_check(ord("D"));
+var key_jump = keyboard_check_pressed(vk_space);
+var left_mouse = mouse_check_button_pressed(mb_left);
+
+//Cria instância de bala na camada instances_1 quando clica com botão esquerdo
+if (left_mouse) {
+    var proj = instance_create_layer(x+16, y, "Instances_1", oBala);
+    proj.direction = direction; // Define a direção do projétil, se necessário
+}
 
 //Calculate Movement
 var move = key_right - key_left;
@@ -20,13 +27,15 @@ if(place_meeting(x, y+1, oCenario)) && (key_jump) {
 
 if key_left
 {
-    x-=1 
-	image_xscale = -0.2470145
+    x-=1
+	image_xscale = -0.2
+	direction = 180
 }
 
 if key_right{
 	x+=1 
-	image_xscale = 0.2470145
+	image_xscale = 0.2
+	direction = 0
 }
 
 
@@ -49,3 +58,4 @@ if (place_meeting(x, y+vsp, oCenario)){
 	vsp = 0;
 }
 y = y + vsp;
+
