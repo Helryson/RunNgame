@@ -49,6 +49,19 @@ if (place_meeting(x+hsp, y, Object3)){
 }
 x = x + hsp;
 
+// Define o meio do sprite para verificar os limites
+var half_width = sprite_width / 2;
+var half_height = sprite_height / 2;
+
+// Limite Horizontal - Impede ultrapassar as bordas esquerda e direita
+if (x - half_width < 0) {
+    x = half_width; // Limite da borda esquerda
+} 
+else if (x + half_width > room_width) {
+    x = room_width - half_width; // Limite da borda direita
+}
+
+
 //Vertical Collision
 if (place_meeting(x, y+vsp, oCenario)){
 	while(!place_meeting(x, y+sign(vsp), oCenario)){

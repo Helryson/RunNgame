@@ -29,7 +29,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"coracao1",
+    "path":"sprites/coracao1/coracao1.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
