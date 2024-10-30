@@ -1,53 +1,102 @@
-/// @description Insert description here
-// You can write your code in this editor
+// Instancia do player mais próxima
+var player_perto = instance_nearest(x, y, OMarco);
 
-// Instancia do player mais proxima
-var player_perto = instance_nearest(x, y, OMarco)
+// Distância do player e o soldado
+var distancia = x - player_perto.x;
 
-// Distancia do plaayer e o soldado
-var distancia = x - player_perto.x
-
-// Se o player tiver perto, C O L I D I R!
-
-// Verifica mudança de direção e pausa o movimento por 0.3 segundos
+// Verifica mudança de direção
 var nova_direcao = (distancia < 0) ? -0.2608365 : 0.2608365;
 if (image_xscale != nova_direcao) {
     image_xscale = nova_direcao;
     espera = room_speed * 0.3; // Define espera de 0,3 segundos (room_speed é a taxa de FPS)
+    can_shoot = false; // Impede o disparo ao mudar de direção
+    shoot_wait_time = room_speed * 1; // Tempo de espera de 3 segundos em frames
 }
 
-// Se o temporizador estiver ativo, decrementa e pausa o movimento
+// Se o temporizador de espera estiver ativo, decrementa e pausa o movimento
 if (espera > 0) {
     espera -= 1; // Decrementa o temporizador
     hsp = 0; // Interrompe o movimento horizontal durante a pausa
 } else {
-    // Se o jogador estiver perto, mover o soldado para ele
-    if (distancia < 200 && distancia > 10) {
-        hsp = -walkspd; // Move para a esquerda
+    // Controle de movimento e pausa
+    if (move_timer > 0) {
+        // Se o jogador estiver perto, mover o soldado para ele
+        if (distancia < 200 && distancia > 10) {
+            hsp = -walkspd; // Move para a esquerda
+        }
+        else if (distancia > -200 && distancia < -10) {
+            hsp = walkspd; // Move para a direita
+        }
+        move_timer -= 1; // Decrementa o temporizador de movimento
+    } 
+
+    // Se o temporizador de pausa estiver ativo, decrementa
+    if (pause_timer > 0) {
+        pause_timer -= 1; // Decrementa o temporizador de pausa
+    } else {
+        // Ativar pausa
+        hsp = 0; // Interrompe o movimento
+        pause_timer = room_speed * 2; // Reinicia o temporizador de pausa (2 segundos)
+        move_timer = room_speed * 2; // Reinicia o temporizador de movimento (2 segundos)
     }
-    else if (distancia > -200 && distancia < -10) {
-        hsp = walkspd; // Move para a direita
+
+    // Se o tempo de espera para disparo estiver ativo, decrementa
+    if (shoot_wait_time > 0) {
+        shoot_wait_time -= 1; // Decrementa o tempo de espera para disparo
+    } else {
+        can_shoot = true; // Permite o disparo após a espera
     }
 }
 
-//Horizontal Collision
-if (place_meeting(x+hsp, y, Object3)){
-	while(!place_meeting(x+sign(hsp), y, Object3)){
-		x = x + sign(hsp);
-	}
-	
-	hsp = 0;
-}
-x = x + hsp;
+// Horizontal Collision
+x += hsp;
 
-//Vertical Collision
-vsp += grv
+// Vertical Collision
+vsp += grv;
 
-if (place_meeting(x, y+vsp, oCenario)){
-	while(!place_meeting(x, y+sign(vsp), oCenario)){
-		y = y + sign(vsp);
-	}
-	
-	vsp = 0;
+if (place_meeting(x, y + vsp, oCenario)) {
+    while (!place_meeting(x, y + sign(vsp), oCenario)) {
+        y += sign(vsp);
+    }
+    vsp = 0;
 }
-y = y + vsp;
+y += vsp;
+
+// Lógica de disparo
+if (can_shoot) {
+    if (shot_timer > 0) {
+        shot_timer -= 1; // Decrementa o timer
+    }
+
+    if (shot_timer <= 0) {
+        if (wait_time > 0) {
+            wait_time -= 1; // Decrementa o tempo de espera
+        } else {
+            var proj = instance_create_layer(x + 16, y, "Instances_1", oBalaInimigo);
+            proj.direction = direction; // Define a direção do projétil
+            shot_timer = fire_rate; // Reseta o timer para o próximo disparo
+        }
+    }
+}
+
+// Colisão com a bala
+if (place_meeting(x, y, oBala)) {
+    var bala = instance_place(x, y, oBala); // Encontra a bala em colisão
+    if (bala != noone) {
+        vida -= 1; // Reduz a saúde do inimigo
+
+        // Destrói a bala após causar dano
+        instance_destroy(bala);
+
+        // Verifica se a vida do inimigo chegou a zero
+        if (vida <= 0) {
+            instance_destroy(); // Destrói o inimigo
+        }
+    }
+}
+
+if (nova_direcao > 0) {
+    direction = 180;	
+} else {
+    direction = 0;
+}
