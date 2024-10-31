@@ -9,17 +9,12 @@ if keyboard_check_pressed(vk_f11){
 window_set_fullscreen(!window_get_fullscreen());
 };
 
-//Get Player Input
-var key_left = keyboard_check(ord("A"));
-var key_right = keyboard_check(ord("D"));
-var key_jump = keyboard_check_pressed(vk_space);
-var left_mouse = mouse_check_button(mb_left);
 
 // Atualiza o tempo do tiro
 global.shot_timer -= 1 / room_speed; // Diminui o timer a cada passo
 
 // Cria instância de bala na camada instances_1 quando clica com botão esquerdo
-if (left_mouse) {
+if (global.left_mouse) {
     if (global.shot_timer <= 0) { // Verifica se é hora de disparar
         var proj = instance_create_layer(x + 16, y, "Instances_1", oBala);
         proj.direction = direction; // Define a direção do projétil
@@ -27,23 +22,23 @@ if (left_mouse) {
     }
 }
 //Calculate Movement
-var move = key_right - key_left;
+var move = global.key_right - global.key_left;
 
 global.hsp_player = move * global.walkspd_player
 global.vsp_player = global.vsp_player + global.grv_player;
 
-if(key_jump and y >= max_y) {
+if(global.key_jump and y >= max_y) {
 	global.vsp_player = -17
 }
 
-if key_left
+if global.key_left
 {
     x-=1
 	image_xscale = -0.2
 	direction = 180
 }
 
-if key_right{
+if global.key_right{
 	x+=1 
 	image_xscale = 0.2
 	direction = 0
@@ -103,8 +98,15 @@ if (place_meeting(x, y+global.vsp_player, oCenario)){
 	}
 	
 	global.vsp_player = 0;
-}*/
+}
+*/
+
 y = y + global.vsp_player;
+
+// Voltar para o y inicial
+if (y > y_inicial){
+	y = y_inicial
+}
 
 // Vertical Limit - Prevents crossing top and bottom edges
 if (y - half_height < 0) {

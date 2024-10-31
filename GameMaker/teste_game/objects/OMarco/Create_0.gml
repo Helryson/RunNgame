@@ -3,6 +3,10 @@
 
 y_inicial = y
 
+// define se é possivel colidir com o objeto de queda ou não (apenas na sala)
+colidir_queda = true
+
+
 /*
 hsp = global.hsp_player;
 vsp = global.vsp_player;

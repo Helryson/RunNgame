@@ -22,3 +22,6 @@ global.vsp_player = 0
 global.grv_player = 0.75
 global.walkspd_player = 4
 global.shot_timer = 0
+
+// Gravidade
+global.gravidade = 17
