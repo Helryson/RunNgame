@@ -94,28 +94,25 @@ else if (y + half_height > room_height) {
 }
 
 // Colisão com a bala
-if (place_meeting(x, y, oBalaInimigo)) {
+/*if (place_meeting(x, y, oBalaInimigo)) {
     var bala = instance_place(x, y, oBalaInimigo); // Encontra a bala em colisão
     if (bala != noone) {
         vida -= 1; // Reduz a saúde do inimigo
         
         // Altera o sprite baseado na vida restante
-        switch (vida) {
-            case 6: oCoracao.sprite_index = coracao1; break;
-            case 5: oCoracao.sprite_index = coracao2; break;
-            case 4: oCoracao.sprite_index = coracao3; break;
-            case 3: oCoracao.sprite_index = coracao4; break;
-            case 2: oCoracao.sprite_index = coracao5; break;
-            case 1: oCoracao.sprite_index = coracao6; break;
-            case 0: oCoracao.sprite_index = coracao7; break;
-        }
-
-        // Destrói a bala após causar dano
-        instance_destroy(bala);
-
-        // Verifica se a vida do inimigo chegou a zero
-        if (vida <= 0) {
-            instance_destroy(); // Destrói o inimigo
-        }
-    }
+*/        
+switch (vida) {
+    case 6: oCoracao.sprite_index = coracao1; break;
+    case 5: oCoracao.sprite_index = coracao2; break;
+    case 4: oCoracao.sprite_index = coracao3; break;
+    case 3: oCoracao.sprite_index = coracao4; break;
+    case 2: oCoracao.sprite_index = coracao5; break;
+    case 1: oCoracao.sprite_index = coracao6; break;
+    case 0: oCoracao.sprite_index = coracao7; break;
 }
+
+// Se o player morrer acabou
+if vida <= 0{
+	instance_destroy()
+}
+

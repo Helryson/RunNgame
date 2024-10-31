@@ -79,24 +79,15 @@ if (can_shoot) {
     }
 }
 
-// Colisão com a bala
-if (place_meeting(x, y, oBala)) {
-    var bala = instance_place(x, y, oBala); // Encontra a bala em colisão
-    if (bala != noone) {
-        vida -= 1; // Reduz a saúde do inimigo
 
-        // Destrói a bala após causar dano
-        instance_destroy(bala);
-
-        // Verifica se a vida do inimigo chegou a zero
-        if (vida <= 0) {
-            instance_destroy(); // Destrói o inimigo
-        }
-    }
-}
 
 if (nova_direcao > 0) {
     direction = 180;	
 } else {
     direction = 0;
+}
+
+// Se o soldado tiver zerado de vida, MORRA!
+if vida <= 0{
+	instance_destroy()
 }
