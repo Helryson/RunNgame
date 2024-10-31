@@ -38,10 +38,10 @@
     {"id":{"name":"oBalaInimigo","path":"objects/oBalaInimigo/oBalaInimigo.yy",},},
     {"id":{"name":"oCenario","path":"objects/oCenario/oCenario.yy",},},
     {"id":{"name":"oCoracao","path":"objects/oCoracao/oCoracao.yy",},},
+    {"id":{"name":"oGlobal","path":"objects/oGlobal/oGlobal.yy",},},
     {"id":{"name":"OMarco","path":"objects/OMarco/OMarco.yy",},},
     {"id":{"name":"oSoldado","path":"objects/oSoldado/oSoldado.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
-    {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
     {"id":{"name":"coracao1","path":"sprites/coracao1/coracao1.yy",},},
     {"id":{"name":"coracao2","path":"sprites/coracao2/coracao2.yy",},},
     {"id":{"name":"coracao3","path":"sprites/coracao3/coracao3.yy",},},
@@ -59,7 +59,6 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
-    {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

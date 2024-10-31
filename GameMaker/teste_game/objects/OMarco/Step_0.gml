@@ -1,4 +1,10 @@
 //Windows options
+
+// O máximo que o player pode chegar
+var max_y = y_inicial / global.max_playerY
+
+show_debug_message(string(max_y)+", "+string(y))
+
 if keyboard_check_pressed(vk_f11){
 window_set_fullscreen(!window_get_fullscreen());
 };
@@ -10,24 +16,24 @@ var key_jump = keyboard_check_pressed(vk_space);
 var left_mouse = mouse_check_button(mb_left);
 
 // Atualiza o tempo do tiro
-shot_timer -= 1 / room_speed; // Diminui o timer a cada passo
+global.shot_timer -= 1 / room_speed; // Diminui o timer a cada passo
 
 // Cria instância de bala na camada instances_1 quando clica com botão esquerdo
 if (left_mouse) {
-    if (shot_timer <= 0) { // Verifica se é hora de disparar
+    if (global.shot_timer <= 0) { // Verifica se é hora de disparar
         var proj = instance_create_layer(x + 16, y, "Instances_1", oBala);
         proj.direction = direction; // Define a direção do projétil
-        shot_timer = 0.2; // Reseta o timer para o próximo disparo
+        global.shot_timer = 0.2; // Reseta o timer para o próximo disparo
     }
 }
 //Calculate Movement
 var move = key_right - key_left;
 
-hsp = move * walkspd
-vsp = vsp + grv;
+global.hsp_player = move * global.walkspd_player
+global.vsp_player = global.vsp_player + global.grv_player;
 
-if(place_meeting(x, y+1, oCenario)) && (key_jump) {
-	vsp = -17
+if(key_jump and y >= max_y) {
+	global.vsp_player = -17
 }
 
 if key_left
@@ -52,7 +58,7 @@ if key_right{
 	
 	hsp = 0;
 }*/
-x = x + hsp;
+x = x + global.hsp_player;
 
 // Define o meio do sprite para verificar os limites
 var half_width = sprite_width / 2;
@@ -76,14 +82,15 @@ else if (x + half_width > room_width) {
 
 
 //Vertical Collision
-if (place_meeting(x, y+vsp, oCenario)){
-	while(!place_meeting(x, y+sign(vsp), oCenario)){
-		y = y + sign(vsp);
+/*
+if (place_meeting(x, y+global.vsp_player, oCenario)){
+	while(!place_meeting(x, y+sign(global.vsp_player), oCenario)){
+		y = y + sign(global.vsp_player);
 	}
 	
-	vsp = 0;
-}
-y = y + vsp;
+	global.vsp_player = 0;
+}*/
+y = y + global.vsp_player;
 
 // Vertical Limit - Prevents crossing top and bottom edges
 if (y - half_height < 0) {
@@ -101,18 +108,10 @@ else if (y + half_height > room_height) {
         
         // Altera o sprite baseado na vida restante
 */        
-switch (vida) {
-    case 6: oCoracao.sprite_index = coracao1; break;
-    case 5: oCoracao.sprite_index = coracao2; break;
-    case 4: oCoracao.sprite_index = coracao3; break;
-    case 3: oCoracao.sprite_index = coracao4; break;
-    case 2: oCoracao.sprite_index = coracao5; break;
-    case 1: oCoracao.sprite_index = coracao6; break;
-    case 0: oCoracao.sprite_index = coracao7; break;
-}
 
-// Se o player morrer acabou
-if vida <= 0{
+
+// Se o player morrer, acabou
+if global.vida_player <= 0{
 	instance_destroy()
 }
 

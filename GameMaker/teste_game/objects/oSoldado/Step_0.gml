@@ -1,5 +1,4 @@
 // Instancia do player mais próxima
-var player_perto = instance_nearest(x, y, OMarco);
 
 // Distância do player e o soldado
 var distancia = x - player_perto.x;
@@ -51,7 +50,7 @@ if (espera > 0) {
 // Horizontal Collision
 x += hsp;
 
-// Vertical Collision
+/* Vertical Collision
 vsp += grv;
 
 if (place_meeting(x, y + vsp, oCenario)) {
@@ -60,7 +59,7 @@ if (place_meeting(x, y + vsp, oCenario)) {
     }
     vsp = 0;
 }
-y += vsp;
+y += ;*/
 
 // Lógica de disparo
 if (can_shoot) {

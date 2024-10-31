@@ -1,6 +1,4 @@
 // player mais proximo
-var player = instance_nearest(x, y, OMarco) 
-
-player.vida -= 1
+global.vida_player -= 1
 
 instance_destroy()

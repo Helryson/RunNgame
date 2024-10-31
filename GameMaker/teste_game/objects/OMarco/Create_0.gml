@@ -1,12 +1,13 @@
 /// @description Inserir descrição aqui
 // Você pode escrever seu código neste editor
 
-window_get_fullscreen()
+y_inicial = y
 
-hsp = 0;
-vsp = 0;
+/*
+hsp = global.hsp_player;
+vsp = global.vsp_player;
 grv = 0.75;
 walkspd = 4;
 
 shot_timer = 0; // Inicializa o timer
-vida = 6; // Inicializa a saúde do inimigo
+vida = global.vida_player; // Inicializa a saúde do inimigo*/
