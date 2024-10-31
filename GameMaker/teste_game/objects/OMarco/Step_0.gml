@@ -65,19 +65,33 @@ var half_width = sprite_width / 2;
 var half_height = sprite_height / 2;
 
 // Limite Horizontal - Impede ultrapassar as bordas esquerda e direita
-if (x - half_width < 0) {
-    x = half_width; // Limite da borda esquerda
-} 
-else if (x + half_width > room_width) {
-    x = room_width - half_width; // Limite da borda direita
-}
-
-// Horizontal Limit - Prevents crossing left and right edges
+/* Horizontal Limit - Prevents crossing left and right edges
 if (x - half_width < 0) {
     x = half_width; // Left edge limit
 } 
 else if (x + half_width > room_width) {
     x = room_width - half_width; // Right edge limit
+}
+
+*/
+
+// Se o x for >= que room_width, ir pra proxima "sala"
+
+if x >= room_width{
+	if room != room_last{
+		room_goto_next()
+	}else{
+		x = room_width
+	}
+}
+
+// Se o x <= 0, sala anterior
+if x <= 0{
+	if room != room_first{
+		room_goto_previous()
+	}else{
+		x = 0
+	}
 }
 
 

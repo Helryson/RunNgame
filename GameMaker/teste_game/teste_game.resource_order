@@ -22,6 +22,7 @@
     {"name":"oCoracao","order":3,"path":"objects/oCoracao/oCoracao.yy",},
     {"name":"oGlobal","order":6,"path":"objects/oGlobal/oGlobal.yy",},
     {"name":"oSoldado","order":2,"path":"objects/oSoldado/oSoldado.yy",},
+    {"name":"Room1_2","order":1,"path":"rooms/Room1_2/Room1_2.yy",},
     {"name":"coracao1","order":5,"path":"sprites/coracao1/coracao1.yy",},
     {"name":"coracao2","order":6,"path":"sprites/coracao2/coracao2.yy",},
     {"name":"coracao3","order":7,"path":"sprites/coracao3/coracao3.yy",},
