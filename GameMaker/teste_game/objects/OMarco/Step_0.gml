@@ -2,8 +2,7 @@
 
 // O máximo que o player pode chegar
 var max_y = y_inicial / global.max_playerY
-
-show_debug_message(string(max_y)+", "+string(y))
+var armas_tamanho = array_length(global.armas_player)
 
 if keyboard_check_pressed(vk_f11){
 window_set_fullscreen(!window_get_fullscreen());
@@ -11,15 +10,36 @@ window_set_fullscreen(!window_get_fullscreen());
 
 
 // Atualiza o tempo do tiro
-global.shot_timer -= 1 / room_speed; // Diminui o timer a cada passo
+global.shot_timer -= 0.1; // Diminui o timer a cada passo
+
+
+// Troca de arma
+if (global.middle_mouse){ 
+		// Se o indice for menor que o numero total de armas... adicionar mais um no index
+		if global.arma_player_indx < armas_tamanho{
+			global.arma_player_indx += 1
+		}else{
+			global.arma_player_indx = 0
+		}
+	}else{
+		global.arma_player_indx = 0
+	}
+}
+
 
 // Cria instância de bala na camada instances_1 quando clica com botão esquerdo
 if (global.left_mouse) {
-    if (global.shot_timer <= 0) { // Verifica se é hora de disparar
-        var proj = instance_create_layer(x + 16, y, "Instances_1", oBala);
-        proj.direction = direction; // Define a direção do projétil
-        global.shot_timer = 0.2; // Reseta o timer para o próximo disparo
-    }
+    // Primeiro, checa se o pla r tem alguma arma
+	if armas_tamanho >= 1{
+		if (global.shot_timer <= 0) { // Verifica se é hora de disparar
+	        var proj = instance_create_layer(x + 16, y, "Instances_1", oBala);
+	        proj.direction = direction; // Define a direção do projétil
+	        //global.shot_timer = global.armas_tempo[global.arma_player_indx]; // Reseta o timer para o próximo disparo
+			// Reseta o timer e troca o sprite
+			global.shot_timer = global.armas_tempo_player[global.arma_player_indx]
+			sprite_index = global.armas_player[global.arma_player_indx]
+			}
+	}
 }
 //Calculate Movement
 var move = global.key_right - global.key_left;

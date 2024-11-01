@@ -1,3 +1,6 @@
+// Para não ser os mesmos numeros aleatórios a cada abertura
+randomize()
+
 // Define o maximo de Y (em quantidade de vezes) para evitar o glitch do player voador
 global.max_playerY = 1.25
 
@@ -25,3 +28,11 @@ global.shot_timer = 0
 
 // Gravidade
 global.gravidade = 17
+
+// Armas do player
+
+global.armas_player = []
+global.arma_player_indx = 0
+
+
+
