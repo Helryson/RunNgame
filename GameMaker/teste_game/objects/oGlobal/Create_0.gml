@@ -24,15 +24,26 @@ global.hsp_player = 0
 global.vsp_player = 0
 global.grv_player = 0.75
 global.walkspd_player = 4
-global.shot_timer = 0
+//global.shot_timer = 0
 
-// Gravidade
-global.gravidade = 17
+// As armas do jogo 
+global.armas = [ak47, pistola]
+global.armas_tempo_player = [] // Array contendo cada velocidade de tiro respectivamente
 
 // Armas do player
 
 global.armas_player = []
 global.arma_player_indx = 0
+
+// Sobre atirar
+global.velocidade_tiro = 0
+global.velcoidade_tiro_o = 80
+global.tempo_balas = [-9999, 0]
+
+// Gravidade
+global.gravidade = 17
+
+
 
 
 
