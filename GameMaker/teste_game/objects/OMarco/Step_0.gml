@@ -27,6 +27,7 @@ if (global.middle_mouse){
 // Cria instância de bala na camada instances_1 quando clica com botão esquerdo
 if (global.left_mouse) {
 	// Sistema de tiro refeito
+
 	
 	if current_time - global.ultima_bala >= 0.2 * 1000{
 		var bala
@@ -45,7 +46,9 @@ if (global.left_mouse) {
 		}
 		
 		
+
 	}
+	*/
 }
 
 //Calculate Movement
