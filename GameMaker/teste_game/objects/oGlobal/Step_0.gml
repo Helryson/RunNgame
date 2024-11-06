@@ -3,7 +3,7 @@ var coracao = instance_nearest(x, y, oCoracao)
 
 //Get Player Input
 global.key_left = keyboard_check(ord("A"));
-global. key_right = keyboard_check(ord("D"));
+global.key_right = keyboard_check(ord("D"));
 global.key_jump = keyboard_check_pressed(vk_space);
 global.left_mouse = mouse_check_button(mb_left);
 global.middle_mouse = mouse_check_button(mb_middle)
