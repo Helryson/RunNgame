@@ -27,33 +27,30 @@ if (global.middle_mouse){
 // Cria instância de bala na camada instances_1 quando clica com botão esquerdo
 if (global.left_mouse) {
 	// Sistema de tiro refeito
-	var ultima_bala = array_length(global.tempo_balas)-1 // O ultimo indice do array de tempo das balas
-	var tempo_jogo = current_time // Quanto tempo se passou no jogo até agora	
+
 	
-	
-	
-	if tempo_jogo - global.tempo_balas[ultima_bala] >= 0.1 {
-		var bala = instance_create_layer(x, y, "Instances_1", oBala)
-		
-		with (bala){
-			speed = 9
+	if current_time - global.ultima_bala >= 0.2 * 1000{
+		var bala
+		if image_xscale < 0 {	
+			bala = instance_create_layer(x, y, "Instances_1", oBala)
+			bala.direction = 180
+			array_push(global.tempo_balas, tempo_jogo)
 		}
-	}
-	
-	/*
-    // Primeiro, checa se o pla r tem alguma arma
-	if armas_tamanho >= 1{
-		if (global.shot_timer <= 0) { // Verifica se é hora de disparar
-	        var proj = instance_create_layer(x + 16, y, "Instances_1", oBala);
-	        proj.direction = direction; // Define a direção do projétil
-	        //global.shot_timer = global.armas_tempo[global.arma_player_indx]; // Reseta o timer para o próximo disparo
-			// Reseta o timer e troca o sprite
-			global.shot_timer = global.armas_tempo_player[global.arma_player_indx]
-			sprite_index = global.armas_player[global.arma_player_indx]
-			}
+		else {	
+			bala = instance_create_layer(x, y, "Instances_1", oBala)
+			bala.direction = 0
+			array_push(global.tempo_balas, tempo_jogo)
+		}
+		with (bala){
+			speed = 7
+		}
+		
+		
+
 	}
 	*/
 }
+
 //Calculate Movement
 var move = global.key_right - global.key_left;
 

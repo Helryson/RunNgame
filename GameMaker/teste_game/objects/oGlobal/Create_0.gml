@@ -1,9 +1,6 @@
 // Para não ser os mesmos numeros aleatórios a cada abertura
 randomize()
 
-// Define o maximo de Y (em quantidade de vezes) para evitar o glitch do player voador
-global.max_playerY = 1.25
-
 // Calcular tamnanho da tela
 
 fatorW = 2
@@ -26,19 +23,28 @@ global.grv_player = 0.75
 global.walkspd_player = 4
 //global.shot_timer = 0
 
-// As armas do jogo 
-global.armas = [ak47, pistola]
-global.armas_tempo_player = [] // Array contendo cada velocidade de tiro respectivamente
+
+// Inicializa global.armas com arrays internos: {arma, tempo}
+global.armas = [
+    [ak47, 0.2],    // [arma, tempo]
+    [pistola, 0.4]
+];
+ // Array contendo cada velocidade de tiro respectivamente
+global.tempo_tiro_arma_player = []
+
 
 // Armas do player
 
-global.armas_player = []
+global.arma_player_atual = pistola
+global.tempo_arma_player_atual = noone
 global.arma_player_indx = 0
 
 // Sobre atirar
 global.velocidade_tiro = 0
 global.velcoidade_tiro_o = 80
-global.tempo_balas = [-9999, 0]
+
+global.ultima_bala = 0
+
 
 // Gravidade
 global.gravidade = 17

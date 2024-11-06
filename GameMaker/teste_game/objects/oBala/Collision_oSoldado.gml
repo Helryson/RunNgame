@@ -1,6 +1,5 @@
 // Soldado mais perto
-var soldado = instance_nearest(x, y, oSoldado)
-
+var soldado = other
 // Tira 1 de vida do alvo
 soldado.vida -= 1
 
