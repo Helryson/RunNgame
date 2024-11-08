@@ -17,7 +17,6 @@
     {"$GMFolder":"","%Name":"Curvas da animação","folderPath":"folders/Curvas da animação.yy","name":"Curvas da animação","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Extensões","folderPath":"folders/Extensões.yy","name":"Extensões","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Fontes","folderPath":"folders/Fontes.yy","name":"Fontes","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"group1","folderPath":"folders/Sprites/group1.yy","name":"group1","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Linhas do tempo","folderPath":"folders/Linhas do tempo.yy","name":"Linhas do tempo","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objetos","folderPath":"folders/Objetos.yy","name":"Objetos","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Particle Systems","folderPath":"folders/Particle Systems.yy","name":"Particle Systems","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -26,6 +25,7 @@
     {"$GMFolder":"","%Name":"Shaders","folderPath":"folders/Shaders.yy","name":"Shaders","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sons","folderPath":"folders/Sons.yy","name":"Sons","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"group1","folderPath":"folders/Sprites/group1.yy","name":"group1","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"ak47","CopyToMask":-1,"filePath":"datafiles","name":"ak47","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -35,7 +35,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.1100.0.659",
+    "IDEVersion":"2024.8.1.171",
   },
   "name":"teste_game",
   "resources":[
@@ -44,11 +44,11 @@
     {"id":{"name":"oBalaInimigo","path":"objects/oBalaInimigo/oBalaInimigo.yy",},},
     {"id":{"name":"oBranco","path":"objects/oBranco/oBranco.yy",},},
     {"id":{"name":"oCenario","path":"objects/oCenario/oCenario.yy",},},
+    {"id":{"name":"oChao","path":"objects/oChao/oChao.yy",},},
     {"id":{"name":"oCoracao","path":"objects/oCoracao/oCoracao.yy",},},
     {"id":{"name":"oGlobal","path":"objects/oGlobal/oGlobal.yy",},},
     {"id":{"name":"OMarco","path":"objects/OMarco/OMarco.yy",},},
     {"id":{"name":"oPlataforma","path":"objects/oPlataforma/oPlataforma.yy",},},
-    {"id":{"name":"oQueda","path":"objects/oQueda/oQueda.yy",},},
     {"id":{"name":"oSoldado","path":"objects/oSoldado/oSoldado.yy",},},
     {"id":{"name":"Room1_1","path":"rooms/Room1_1/Room1_1.yy",},},
     {"id":{"name":"Room1_10","path":"rooms/Room1_10/Room1_10.yy",},},

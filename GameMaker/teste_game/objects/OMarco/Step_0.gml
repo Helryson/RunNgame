@@ -72,7 +72,7 @@ if (global.left_mouse) {
 		show_debug_message(string(global.ultima_bala), string(global.tempo_arma_player_atual))
 		var bala
 		
-		bala = instance_create_layer(x, y, "Instances_1", oBala)
+		bala = instance_create_layer(x, y-(sprite_height/2.5), "Instances_1", oBala)
 		global.ultima_bala = global.tempo_jogo
 		
 		if !global.key_up and !global.key_down{
@@ -82,19 +82,36 @@ if (global.left_mouse) {
 			else {	
 				bala.direction = 0
 			}
-		}else{
+		}
+		else if global.key_up and global.key_left{
+			bala.direction = 155
+			bala.image_angle = 155
+		}
+		else if global.key_up and global.key_right{
+			bala.direction = 25
+			bala.image_angle = 25
+		}
+		else{
 			if global.key_up{
 				bala.direction = 90
 				bala.image_angle = 90
 			}
 			
-			if global.key_down and global.pulo{
+			else if global.key_down and global.pulo{
 				bala.direction = -90
 				bala.image_angle = -90
 			}
+			else if global.key_down{
+				if image_xscale < 0{
+					bala.direction = 180 
+				}
+				else{
+					bala.direction = 0 
+				}
+			}
 		}
-		
 	}
+		
 }
 
 //Horizontal Collision
@@ -142,16 +159,6 @@ if x <= 0{
 }
 
 
-//Vertical Collision
-/*
-if (place_meeting(x, y+global.vsp_player, oCenario)){
-	while(!place_meeting(x, y+sign(global.vsp_player), oCenario)){
-		y = y + sign(global.vsp_player);
-	}
-	
-	global.vsp_player = 0;
-}
-*/
 
 y = y + global.vsp_player;
 
@@ -162,12 +169,24 @@ if (y > y_inicial){
 }
 
 // Vertical Limit - Prevents crossing top and bottom edges
-if (y - half_height < 0) {
-    y = half_height; // Top edge limit
-} 
-else if (y + half_height > room_height) {
-    y = room_height - half_height; // Bottom edge limit
+//if (y - half_height < 0) {
+//    y = half_height; // Top edge limit
+//} 
+//else if (y + half_height > room_height) {
+//    y = room_height - half_height; // Bottom edge limit
+//}
+
+
+//Vertical Collision
+/*
+if (place_meeting(x, y+global.vsp_player, oCenario)){
+	while(!place_meeting(x, y+sign(global.vsp_player), oCenario)){
+		y = y + sign(global.vsp_player);
+	}
+	
+	global.vsp_player = 0;
 }
+*/
 
 // Colisão com a bala
 /*if (place_meeting(x, y, oBalaInimigo)) {
@@ -183,4 +202,5 @@ else if (y + half_height > room_height) {
 if global.vida_player <= 0{
 	instance_destroy()
 }
+
 

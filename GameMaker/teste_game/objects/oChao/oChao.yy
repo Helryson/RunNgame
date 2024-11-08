@@ -1,12 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oPlataforma",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oChao",
+  "eventList":[],
   "managed":true,
-  "name":"oPlataforma",
+  "name":"oChao",
   "overriddenProperties":[],
   "parent":{
     "name":"Objetos",
@@ -31,9 +28,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sPlataforma",
-    "path":"sprites/sPlataforma/sPlataforma.yy",
+    "name":"semtextura",
+    "path":"sprites/semtextura/semtextura.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

@@ -71,7 +71,7 @@ if (can_shoot) {
         if (wait_time > 0) {
             wait_time -= 1; // Decrementa o tempo de espera
         } else {
-            var proj = instance_create_layer(x + 16, y, "Instances_1", oBalaInimigo);
+            var proj = instance_create_layer(x, y-(sprite_height/2.5), "Instances_1", oBalaInimigo);
             proj.direction = direction; // Define a direção do projétil
             shot_timer = fire_rate; // Reseta o timer para o próximo disparo
         }
