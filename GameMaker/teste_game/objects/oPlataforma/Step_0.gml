@@ -1,29 +1,22 @@
 /// @description Platform collision detection
 // Get all instances of player within range
-var list = ds_list_create();
-var count = collision_rectangle_list(
-    x - 32, y - global.vsp_player,
-    x + 32, y + global.vsp_player,
-    OMarco, false, true, list, false
-);
 
-// Check each instance in range
-for (var i = 0; i < count; i++) {
-    var player = list[| i];
-    
+// Check if the player is on top of any platform
+var on_any_platform = false;
+
+// Loop through all instances of platforms
+with (oPlataforma) {
     // Vertical collision check
     if (player.y >= y - global.vsp_player && player.y <= y + global.vsp_player) {
         // Horizontal collision check
         if (player.x + 32 >= x - 32 && player.x - 32 <= x + 32) {
             player.y_inicial = y;
+            on_any_platform = true;  // Player is on a platform
         }
-    }
-    
-    // Check if player left the platform
-    if (player.x - 32 > x + 32 || player.x + 32 < x - 32) {
-        player.y_inicial = player_inicial_y;
     }
 }
 
-// Clean up
-ds_list_destroy(list);
+// If the player is not on any platform, reset the ground level
+if (!on_any_platform) {
+    player.y_inicial = player_inicial_y;
+}

@@ -69,7 +69,7 @@ if (global.left_mouse) {
 	
 	// Sistema de tiro refeito
 	if global.tempo_jogo - global.ultima_bala >= global.tempo_arma_player_atual * 1000{
-		show_debug_message(string(global.ultima_bala), string(global.tempo_arma_player_atual))
+		//show_debug_message(string(global.ultima_bala), string(global.tempo_arma_player_atual))
 		var bala
 		
 		bala = instance_create_layer(x, y-(sprite_height/2.5), "Instances_1", oBala)
@@ -162,8 +162,14 @@ if x <= 0{
 
 y = y + global.vsp_player;
 
+show_debug_message(string(y)+", "+string(y_inicial))
+
 // Voltar para o y inicial
 if (y > y_inicial){
+	// Diminuir o y gradativamente até chegar em y_inicial
+	//y -= global.vsp_player
+	global.vsp_player = 17
+	
 	y = y_inicial
 	//global.pulo = false // Significa que o player chegou no chão
 }
