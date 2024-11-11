@@ -152,10 +152,30 @@ else if (x + half_width > room_width) {
 
 */
 
+var valores_2 = [global.vida_player,
+						global.hsp_player,
+						global.vsp_player,
+						global.grv_player,
+						global.walkspd_player,
+						0,
+						global.arma_player_atual,
+						global.tempo_arma_player_atual,
+						global.ultima_bala,
+						global.velcoidade_tiro,
+						global.velcoidade_tiro_o,
+						global.ultima_bala,
+						global.gravidade]
 // Se o x for >= que room_width, ir pra proxima "sala"
-
 if x >= room_width{
 	if room != room_last{
+		
+						
+		// salvar os valores
+		for (var i=0; i<array_length(global.valores); i+=0)
+			if global.valores[i] != string(valores_2[i]){
+				global.valores[i] = string(valores_2[i])
+			}
+			
 		room_goto_next()
 	}else{
 		x = room_width
@@ -165,6 +185,10 @@ if x >= room_width{
 // Se o x <= 0, sala anterior
 if x <= 0{
 	if room != room_first{
+		for (var i=0; i<array_length(global.valores); i+=0)
+			if global.valores[i] != string(valores_2[i]){
+				global.valores[i] = string(valores_2[i])
+			}
 		room_goto_previous()
 	}else{
 		x = 0

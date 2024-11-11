@@ -24,12 +24,11 @@ var lines = [];
 // Open the file in read mode
 var file = file_text_open_read("global.txt");
 
-if (file != -1) {  // Check if the file opened successfully
+if (file != -1) {  // Checa se o arquivo abriu com sucesso
     var line_index = 0;
 
-    // Loop through each line in the file
+    // Anda sobre o arquivo
     while (!file_text_eof(file)) {
-        // Read a line and store it in the array
         lines[line_index] = file_text_readln(file);
         line_index++;
     }
@@ -40,6 +39,7 @@ if (file != -1) {  // Check if the file opened successfully
     show_message("Erro ao abrir o arquivo");
 }
 
+global.valores = lines // Valores do array de line para salvar depois
 global.vida_player = real(lines[0])
 global.hsp_player = real(lines[1])
 global.vsp_player = real(lines[2])
