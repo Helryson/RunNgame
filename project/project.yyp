@@ -41,6 +41,7 @@
     {"$GMIncludedFile":"","%Name":"ak47","CopyToMask":-1,"filePath":"datafiles","name":"ak47","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"ak47.jpg","CopyToMask":-1,"filePath":"datafiles","name":"ak47.jpg","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"ak47(1).jpg","CopyToMask":-1,"filePath":"datafiles","name":"ak47(1).jpg","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"global.txt","CopyToMask":-1,"filePath":"datafiles","name":"global.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],

@@ -16,11 +16,35 @@ window_set_size(w, h)
 // Define a variável global para as variáveis do player
 // para não resetar caso mude de sala
 
-global.vida_player = 6
-global.hsp_player = 0
-global.vsp_player = 0
-global.grv_player = 0.75
-global.walkspd_player = 4
+global.armas = [pistola, ak47] // Array com as armas que existem no jogo
+
+// Pegar os valores no arquivo de configurações (para manter os valores)
+var lines = [];
+
+// Open the file in read mode
+var file = file_text_open_read("global.txt");
+
+if (file != -1) {  // Check if the file opened successfully
+    var line_index = 0;
+
+    // Loop through each line in the file
+    while (!file_text_eof(file)) {
+        // Read a line and store it in the array
+        lines[line_index] = file_text_readln(file);
+        line_index++;
+    }
+
+    // Close the file
+    file_text_close(file);
+} else {
+    show_message("Erro ao abrir o arquivo");
+}
+
+global.vida_player = real(lines[0])
+global.hsp_player = real(lines[1])
+global.vsp_player = real(lines[2])
+global.grv_player = real(lines[3])
+global.walkspd_player = real(lines[4])
 global.pulo = false // Define se o player ta no evento de pulo
 
 //global.shot_timer = 0
@@ -29,20 +53,25 @@ global.pulo = false // Define se o player ta no evento de pulo
  // Array contendo cada velocidade de tiro respectivamente
 //global.tempo_tiro_arma_player = []
 
+
+
+// 'lines' array now contains each line from the file
+
 // Armas do player
-global.arma_player_atual = pistola
-global.tempo_arma_player_atual = 0.4
-global.ultima_bala = 0
+global.arma_player_atual = global.armas[real(lines[6])]
+
+//pistola if lines[4] == "pistola" else ak47 if lines[4] == "ak47" else semtextura
+global.tempo_arma_player_atual = real(lines[7])
+global.ultima_bala = real(lines[8])
 //global.arma_player_indx = 0
 
 // Sobre atirar
-global.velocidade_tiro = 0
-global.velcoidade_tiro_o = 80
-global.ultima_bala = 0
+global.velocidade_tiro = real(lines[9])
+global.velcoidade_tiro_o = real(lines[10])
+global.ultima_bala = real(lines[11])
 
 // Gravidade
-global.gravidade = 17
-
+global.gravidade = real(lines[12])
 
 
 
