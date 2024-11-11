@@ -6,11 +6,14 @@ var on_any_platform = false;
 
 // Loop through all instances of platforms
 with (oPlataforma) {
-    // Vertical collision check
-    if ((player.y >= y - global.vsp_player && player.y <= y + global.vsp_player && player.x + 32 >= x - 32 && player.x - 32 <= x + 32) or (player.x + 32 >= x - 32 && player.x - 32 <= x + 32)) {
-        // Horizontal collision check
+    // Verifica coisão em relação ao objeto da plataforma
+    if ((player.y >= y - sprite_height and player.y <= y + sprite_height and player.x >= x - sprite_width/2 and player.x <= x + sprite_width/2)){ //or (player.x >= x - sprite_width/2 and player.x <= x + sprite_width/2)) {
         player.y_inicial = y;
         on_any_platform = true;  // Player is on a platform
+	}else{
+		// Verifica colisão em relação ao player
+		//if ((((player.y - sprite_height) - sprite_height / 2) >= y-sprite_height and player.y >= y and player.x >= x - sprite_width/2 and player.x <= x + sprite_width/2)){
+	
 	}
 }
 

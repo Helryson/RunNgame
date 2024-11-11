@@ -1,5 +1,16 @@
 //Windows options
 
+// Trocar o sprite dependendo da arma
+switch (global.arma_player_atual){
+	case pistola:
+		sprite_index = sMarcoPistola
+		break
+	case ak47:
+		sprite_index = sMarcoAK47
+		break
+}
+
+
 // O máximo que o player pode chegar
 var max_y = y_inicial
 
