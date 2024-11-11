@@ -56,13 +56,13 @@ if(global.key_jump and y >= max_y) {
 if global.key_left
 {
     x-=1
-	image_xscale = -0.2
+	image_xscale = -1
 	direction = 180
 }
 
 if global.key_right{
 	x+=1 
-	image_xscale = 0.2
+	image_xscale = 1
 	direction = 0
 }
 
@@ -85,7 +85,7 @@ if (global.left_mouse) {
 		//show_debug_message(string(global.ultima_bala), string(global.tempo_arma_player_atual))
 		var bala
 		
-		bala = instance_create_layer(x, y-(sprite_height/2.5), "Instances_1", oBala)
+		bala = instance_create_layer(x, y-(sprite_height/2.5), "Instances", oBala)
 		global.ultima_bala = global.tempo_jogo
 		
 		if !global.key_up and !global.key_down{

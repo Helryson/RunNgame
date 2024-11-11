@@ -4,13 +4,15 @@
 var distancia = x - player_perto.x;
 
 // Verifica mudança de direção
-var nova_direcao = (distancia < 0) ? -0.2608365 : 0.2608365;
-if (image_xscale != nova_direcao) {
-    image_xscale = nova_direcao;
-    espera = room_speed * 0.3; // Define espera de 0,3 segundos (room_speed é a taxa de FPS)
-    can_shoot = false; // Impede o disparo ao mudar de direção
-    shoot_wait_time = room_speed * 1; // Tempo de espera de 3 segundos em frames
+
+if distancia <= 0{
+	image_xscale = -1
+	direction = 0
+}else{
+	image_xscale = 1
+	direction = 180
 }
+
 
 // Se o temporizador de espera estiver ativo, decrementa e pausa o movimento
 if (espera > 0) {
@@ -71,19 +73,11 @@ if (can_shoot) {
         if (wait_time > 0) {
             wait_time -= 1; // Decrementa o tempo de espera
         } else {
-            var proj = instance_create_layer(x, y-(sprite_height/2.5), "Instances_1", oBalaInimigo);
+            var proj = instance_create_layer(x, y-(sprite_height/2.5), "Instances", oBalaInimigo);
             proj.direction = direction; // Define a direção do projétil
             shot_timer = fire_rate; // Reseta o timer para o próximo disparo
         }
     }
-}
-
-
-
-if (nova_direcao > 0) {
-    direction = 180;	
-} else {
-    direction = 0;
 }
 
 // Se o soldado tiver zerado de vida, MORRA!
