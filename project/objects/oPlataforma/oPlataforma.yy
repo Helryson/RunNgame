@@ -9,8 +9,8 @@
   "name":"oPlataforma",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Interativos",
+    "path":"folders/Objetos/Interativos.yy",
   },
   "parentObjectId":null,
   "persistent":false,
