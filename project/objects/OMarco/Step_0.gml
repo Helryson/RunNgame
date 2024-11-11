@@ -3,6 +3,8 @@
 // O máximo que o player pode chegar
 var max_y = y_inicial
 
+
+
 if y < y_inicial{
 	// SE o y for menor que o y inicial, pulando
 	global.pulo = true
@@ -162,7 +164,6 @@ if x <= 0{
 
 y = y + global.vsp_player;
 
-show_debug_message(string(y)+", "+string(y_inicial))
 
 // Voltar para o y inicial
 if (y > y_inicial){
