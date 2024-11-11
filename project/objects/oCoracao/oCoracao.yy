@@ -8,8 +8,8 @@
   "name":"oCoracao",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Jogo",
+    "path":"folders/Objetos/Jogo.yy",
   },
   "parentObjectId":null,
   "persistent":false,
