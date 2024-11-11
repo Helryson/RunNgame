@@ -1,6 +1,6 @@
 {
   "$GMProject":"",
-  "%Name":"teste_game",
+  "%Name":"project",
   "AudioGroups":[
     {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
@@ -44,7 +44,7 @@
   "MetaData":{
     "IDEVersion":"2024.1100.0.674",
   },
-  "name":"teste_game",
+  "name":"project",
   "resources":[
     {"id":{"name":"oArma","path":"objects/oArma/oArma.yy",},},
     {"id":{"name":"oBala","path":"objects/oBala/oBala.yy",},},
