@@ -30,6 +30,7 @@ if (file != -1) {  // Checa se o arquivo abriu com sucesso
     // Anda sobre o arquivo
     while (!file_text_eof(file)) {
         lines[line_index] = file_text_readln(file);
+		show_debug_message(string(lines[line_index]))
         line_index++;
     }
 

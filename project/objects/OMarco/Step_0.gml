@@ -161,7 +161,7 @@ var valores_2 = [global.vida_player,
 						global.arma_player_atual,
 						global.tempo_arma_player_atual,
 						global.ultima_bala,
-						global.velcoidade_tiro,
+						global.velocidade_tiro,
 						global.velcoidade_tiro_o,
 						global.ultima_bala,
 						global.gravidade]
@@ -171,9 +171,10 @@ if x >= room_width{
 		
 						
 		// salvar os valores
-		for (var i=0; i<array_length(global.valores); i+=0)
+		for (var i=0; i<array_length(global.valores); i+=1)
 			if global.valores[i] != string(valores_2[i]){
 				global.valores[i] = string(valores_2[i])
+				show_debug_message("Player: "+string(valores_2[i]))
 			}
 			
 		room_goto_next()
@@ -185,7 +186,7 @@ if x >= room_width{
 // Se o x <= 0, sala anterior
 if x <= 0{
 	if room != room_first{
-		for (var i=0; i<array_length(global.valores); i+=0)
+		for (var i=0; i<array_length(global.valores); i+=1)
 			if global.valores[i] != string(valores_2[i]){
 				global.valores[i] = string(valores_2[i])
 			}
