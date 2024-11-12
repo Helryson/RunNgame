@@ -1,3 +1,4 @@
+
 // Para não ser os mesmos numeros aleatórios a cada abertura
 randomize()
 
@@ -74,7 +75,4 @@ global.ultima_bala = real(lines[11])
 
 // Gravidade
 global.gravidade = real(lines[12])
-
-
-
 

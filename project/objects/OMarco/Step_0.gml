@@ -191,7 +191,7 @@ if salvar{
 						global.velocidade_tiro,
 						global.velcoidade_tiro_o,
 						global.ultima_bala,
-						global.gravidade]
+						global.gravidade, 0]
 						
 	for (var i=0; i<array_length(global.valores); i+=1){
 		var valor_string = string(valores_2[i])
@@ -280,6 +280,34 @@ if (place_meeting(x, y+global.vsp_player, oCenario)){
 
 // Se o player morrer, acabou
 if global.vida_player <= 0{
+	
+	// Reseta o arquivo de configurações do player na morte
+	
+	var file = file_text_open_read("original.txt");
+	var lines = []
+	
+	if (file != -1) {  // Checa se o arquivo abriu com sucesso
+	    var line_index = 0;
+
+	    // Anda sobre o arquivo
+	    while (!file_text_eof(file)) {
+	        lines[line_index] = file_text_readln(file);
+			show_debug_message(string(lines[line_index]))
+	        line_index++;
+	    }
+
+	    // Close the file
+	    file_text_close(file);
+	}
+	
+	// Salvar as linhas do arquivo original
+	var file_player = file_text_open_write("player_settings.txt");
+	for (var i = 0; i < array_length(lines); i++) {
+	    file_text_write_string(file_player, lines[i]); // Escreve o item do array
+	}
+
+	file_text_writeln(file_player); // Adiciona uma nova linha	
+	file_text_close(file_player)
 	instance_destroy()
 }
 

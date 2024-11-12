@@ -17,6 +17,7 @@
     {"$GMFolder":"","%Name":"Curvas da animação","folderPath":"folders/Curvas da animação.yy","name":"Curvas da animação","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Extensões","folderPath":"folders/Extensões.yy","name":"Extensões","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Fontes","folderPath":"folders/Fontes.yy","name":"Fontes","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Telas","folderPath":"folders/Telas.yy","name":"Telas","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Linhas do tempo","folderPath":"folders/Linhas do tempo.yy","name":"Linhas do tempo","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objetos","folderPath":"folders/Objetos.yy","name":"Objetos","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Efeitos","folderPath":"folders/Objetos/Efeitos.yy","name":"Efeitos","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -38,6 +39,7 @@
     {"$GMFolder":"","%Name":"Players","folderPath":"folders/Sprites/Players.yy","name":"Players","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"original.txt","CopyToMask":-1,"filePath":"datafiles","name":"original.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"player_settings.txt","CopyToMask":-1,"filePath":"datafiles","name":"player_settings.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
