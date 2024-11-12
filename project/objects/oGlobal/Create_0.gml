@@ -1,6 +1,21 @@
 
 // Para não ser os mesmos numeros aleatórios a cada abertura
 randomize()
+// Valores padrões
+global.originais = [6,
+0,
+0,
+0.75,
+4,
+0,
+0,
+0.4,
+0,
+0,
+80,
+0,
+17,
+15]
 
 // Calcular tamnanho da tela
 
@@ -34,17 +49,27 @@ if (file != -1) {  // Checa se o arquivo abriu com sucesso
     // Anda sobre o arquivo
     while (!file_text_eof(file)) {
         lines[line_index] = file_text_readln(file);
-		show_debug_message(string(lines[line_index]))
         line_index++;
     }
 
     // Close the file
     file_text_close(file);
-} else {
-    show_message("Erro ao abrir o arquivo");
 }
 
+// Caso dê merda no arquivo, reseta para o original
+if array_length(lines) < array_length(global.originais){
+	lines = global.originais
+	show_debug_message("Erro no arquivo. Resetando para original.")
+}
+
+// Se o jogo acabou de começar, carrega o arquivo default
+if current_time <= 1000{
+	lines = global.originais
+}
+
+
 global.valores = lines // Valores do array de line para salvar depois
+
 global.vida_player = real(lines[0])
 global.hsp_player = real(lines[1])
 global.vsp_player = real(lines[2])

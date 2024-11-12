@@ -47,18 +47,4 @@ if instance_number(oArma) <= 0{
 
 }
 
-// Valores padrões
-global.originais = [6,
-0,
-0,
-0.75,
-4,
-0,
-0,
-0.4,
-0,
-0,
-80,
-0,
-17,
-15]
+
