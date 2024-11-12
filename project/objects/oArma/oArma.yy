@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"nogun",
-    "path":"sprites/nogun/nogun.yy",
+    "name":"sCaixa",
+    "path":"sprites/sCaixa/sCaixa.yy",
   },
   "spriteMaskId":null,
   "visible":true,

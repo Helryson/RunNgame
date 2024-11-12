@@ -1,6 +1,15 @@
+
+
 // INstancia de coração mais proxima
 var coracao = instance_nearest(x, y, oCoracao)
 global.tempo_jogo = current_time
+
+// Tempo de invencibilidade no player
+if global.tempo_jogo <= global.tempo_invencibilidade_player{
+	global.invencibilidade_player= true
+}else{
+	global.invencibilidade_player = false
+}
 
 //Get Player Input
 global.key_left = keyboard_check(ord("A"));
@@ -37,3 +46,19 @@ switch(global.vida_player) {
 if instance_number(oArma) <= 0{
 
 }
+
+// Valores padrões
+global.originais = [6,
+0,
+0,
+0.75,
+4,
+0,
+0,
+0.4,
+0,
+0,
+80,
+0,
+17,
+15]

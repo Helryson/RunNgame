@@ -75,6 +75,7 @@
     {"name":"nogun","order":1,"path":"sprites/nogun/nogun.yy",},
     {"name":"pistola","order":2,"path":"sprites/pistola/pistola.yy",},
     {"name":"sBalaInimigo","order":1,"path":"sprites/sBalaInimigo/sBalaInimigo.yy",},
+    {"name":"sCaixa","order":2,"path":"sprites/sCaixa/sCaixa.yy",},
     {"name":"sMarcoAK47","order":1,"path":"sprites/sMarcoAK47/sMarcoAK47.yy",},
     {"name":"sMarcoPistola","order":2,"path":"sprites/sMarcoPistola/sMarcoPistola.yy",},
     {"name":"sPlataforma","order":1,"path":"sprites/sPlataforma/sPlataforma.yy",},

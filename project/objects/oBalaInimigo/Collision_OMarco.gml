@@ -1,4 +1,6 @@
 // player mais proximo
-global.vida_player -= 1
 
+if !global.invencibilidade_player{
+	global.vida_player -= 1
+}
 instance_destroy()

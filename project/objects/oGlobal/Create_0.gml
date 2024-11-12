@@ -19,6 +19,8 @@ window_set_size(w, h)
 
 
 global.armas = [pistola, ak47] // Array com as armas que existem no jogo
+global.invencibilidade_player = false //Se o player é invencivel
+global.tempo_invencibilidade_player = 1000
 
 // Pegar os valores no arquivo de configurações (para manter os valores)
 var lines = [];
@@ -75,4 +77,5 @@ global.ultima_bala = real(lines[11])
 
 // Gravidade
 global.gravidade = real(lines[12])
+global.num_balas_player = real(lines[13])
 

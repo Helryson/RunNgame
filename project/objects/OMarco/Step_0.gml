@@ -81,10 +81,10 @@ if (global.left_mouse) {
 	
 	
 	// Sistema de tiro refeito
-	if global.tempo_jogo - global.ultima_bala >= global.tempo_arma_player_atual * 1000{
+	if global.tempo_jogo - global.ultima_bala >= global.tempo_arma_player_atual * 1000 && global.num_balas_player >= 1{
 		//show_debug_message(string(global.ultima_bala), string(global.tempo_arma_player_atual))
 		var bala
-		
+		global.num_balas_player -= 1
 		bala = instance_create_layer(x, y-(sprite_height/2.5), "Instances", oBala)
 		global.ultima_bala = global.tempo_jogo
 		
@@ -191,7 +191,8 @@ if salvar{
 						global.velocidade_tiro,
 						global.velcoidade_tiro_o,
 						global.ultima_bala,
-						global.gravidade, 0]
+						global.gravidade,
+						global.num_balas_player]
 						
 	for (var i=0; i<array_length(global.valores); i+=1){
 		var valor_string = string(valores_2[i])
@@ -283,22 +284,8 @@ if global.vida_player <= 0{
 	
 	// Reseta o arquivo de configurações do player na morte
 	
-	var file = file_text_open_read("original.txt");
-	var lines = []
-	
-	if (file != -1) {  // Checa se o arquivo abriu com sucesso
-	    var line_index = 0;
-
-	    // Anda sobre o arquivo
-	    while (!file_text_eof(file)) {
-	        lines[line_index] = file_text_readln(file);
-			show_debug_message(string(lines[line_index]))
-	        line_index++;
-	    }
-
-	    // Close the file
-	    file_text_close(file);
-	}
+	var file = file_text_open_read("global_default.txt");
+	var lines = global.originais
 	
 	// Salvar as linhas do arquivo original
 	var file_player = file_text_open_write("player_settings.txt");
