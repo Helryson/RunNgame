@@ -49,7 +49,7 @@ global.hsp_player = move * global.walkspd_player
 global.vsp_player = global.vsp_player + global.grv_player;
 
 if(global.key_jump and y >= max_y) {
-	global.vsp_player = -17
+	global.vsp_player = global.velocidade_pulo
 	
 }
 
@@ -184,7 +184,7 @@ if salvar{
 						global.vsp_player,
 						global.grv_player,
 						global.walkspd_player,
-						0,
+						global.velocidade_pulo,
 						global.arma_player_atual,
 						global.tempo_arma_player_atual,
 						global.ultima_bala,

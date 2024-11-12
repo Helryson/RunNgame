@@ -7,7 +7,7 @@ global.originais = [6,
 0,
 0.75,
 4,
-0,
+-17,
 0,
 0.4,
 0,
@@ -76,6 +76,7 @@ global.vsp_player = real(lines[2])
 global.grv_player = real(lines[3])
 global.walkspd_player = real(lines[4])
 global.pulo = false // Define se o player ta no evento de pulo
+global.velocidade_pulo = real(lines[5]) // Velocidade do pulo
 
 //global.shot_timer = 0
 

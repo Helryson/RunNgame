@@ -4,7 +4,7 @@
   "bboxMode":1,
   "bbox_bottom":99,
   "bbox_left":0,
-  "bbox_right":78,
+  "bbox_right":104,
   "bbox_top":0,
   "collisionKind":0,
   "collisionTolerance":0,
@@ -12,18 +12,18 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"7eaa245a-4044-411a-a5e3-11ae497733a9","name":"7eaa245a-4044-411a-a5e3-11ae497733a9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"1a1829af-b311-4962-9477-bad0d821506f","name":"1a1829af-b311-4962-9477-bad0d821506f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":100,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"9c908de8-d2fe-4ec8-b6d8-3e22899e004e","blendMode":0,"displayName":"default","isLocked":false,"name":"9c908de8-d2fe-4ec8-b6d8-3e22899e004e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"14fb4c9c-dd53-420f-82bb-e5def9132c8e","blendMode":0,"displayName":"default","isLocked":false,"name":"14fb4c9c-dd53-420f-82bb-e5def9132c8e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sMarcoAK47",
   "nineSlice":null,
-  "origin":9,
+  "origin":7,
   "parent":{
     "name":"Players",
     "path":"folders/Sprites/Players.yy",
@@ -69,14 +69,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7eaa245a-4044-411a-a5e3-11ae497733a9","path":"sprites/sMarcoAK47/sMarcoAK47.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d7888804-a8e6-4b23-a861-f8f718d1d586","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1a1829af-b311-4962-9477-bad0d821506f","path":"sprites/sMarcoAK47/sMarcoAK47.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"61bca9a2-8090-4f08-9cfb-bce3e31979ea","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":39,
-    "yorigin":0,
+    "xorigin":52,
+    "yorigin":100,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":79,
+  "width":105,
 }
