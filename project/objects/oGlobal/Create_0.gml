@@ -16,13 +16,14 @@ window_set_size(w, h)
 // Define a variável global para as variáveis do player
 // para não resetar caso mude de sala
 
+
 global.armas = [pistola, ak47] // Array com as armas que existem no jogo
 
 // Pegar os valores no arquivo de configurações (para manter os valores)
 var lines = [];
 
 // Open the file in read mode
-var file = file_text_open_read("global.txt");
+var file = file_text_open_read("player_settings.txt");
 
 if (file != -1) {  // Checa se o arquivo abriu com sucesso
     var line_index = 0;

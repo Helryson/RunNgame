@@ -151,8 +151,35 @@ else if (x + half_width > room_width) {
 }
 
 */
+var salvar = false // Salvar as alteraçoes
+var anterior_ou_prox = "" // "anterior" vai para a sala anterior, "prox" para a proxima
 
-var valores_2 = [global.vida_player,
+
+// Se o x for >= que room_width, ir pra proxima "sala"
+if x >= room_width{
+	if room != room_last{
+		
+		salvar = true	
+		anterior_ou_prox = "prox"
+	}else{
+		x = room_width
+	}
+}
+
+// Se o x <= 0, sala anterior
+if x <= 0{
+	if room != room_first{
+		
+		salvar = true
+		anterior_ou_prox = "anterior"
+	}else{
+		x = 0
+	}
+}
+
+// Se salvar for true, vai salvar tudo no arquivo
+if salvar{
+	var valores_2 = [global.vida_player,
 						global.hsp_player,
 						global.vsp_player,
 						global.grv_player,
@@ -165,37 +192,47 @@ var valores_2 = [global.vida_player,
 						global.velcoidade_tiro_o,
 						global.ultima_bala,
 						global.gravidade]
-// Se o x for >= que room_width, ir pra proxima "sala"
-if x >= room_width{
-	if room != room_last{
-		
 						
-		// salvar os valores
-		for (var i=0; i<array_length(global.valores); i+=1)
-			if global.valores[i] != string(valores_2[i]){
-				global.valores[i] = string(valores_2[i])
-				show_debug_message("Player: "+string(valores_2[i]))
+	for (var i=0; i<array_length(global.valores); i+=1){
+		var valor_string = string(valores_2[i])
+		var valor_normal = valores_2[i]
+		
+		// Converter sprite para o indice do sprite
+		for (var arma=0; arma < array_length(global.armas); arma+=1){
+			if global.armas[arma] == valor_normal{
+				valor_string = string(arma)
+				break
 			}
-			
-		room_goto_next()
-	}else{
-		x = room_width
+		}
+		
+		if global.valores[i] != valor_string{
+			global.valores[i] = valor_string
+			show_debug_message("Player: "+string(valores_2[i]))
+		}
 	}
+	
+	// Abrindo/criando o arquivo para escrita
+	var file = file_text_open_write("player_settings.txt");
+
+	// Iterando pelo array e escrevendo cada item em uma linha do arquivo
+	for (var i = 0; i < array_length(global.valores); i++) {
+	    file_text_write_string(file, string(global.valores[i])); // Escreve o item do array
+	    file_text_writeln(file); // Adiciona uma nova linha
+	}
+
+	// Fechando o arquivo
+	file_text_close(file);
 }
 
-// Se o x <= 0, sala anterior
-if x <= 0{
-	if room != room_first{
-		for (var i=0; i<array_length(global.valores); i+=1)
-			if global.valores[i] != string(valores_2[i]){
-				global.valores[i] = string(valores_2[i])
-			}
-		room_goto_previous()
-	}else{
-		x = 0
-	}
+// Para proxima ou para a sala anterior
+if anterior_ou_prox == "anterior"{
+	room_goto_previous()
+}else if anterior_ou_prox == "prox"{
+	room_goto_next()
+}else{
+	// Redundancia para evitar problemas
+	salvar = false
 }
-
 
 
 y = y + global.vsp_player;
