@@ -2,7 +2,7 @@
 // Para não ser os mesmos numeros aleatórios a cada abertura
 randomize()
 // Valores padrões
-global.originais = [6,
+global.originais = [60,
 0,
 0,
 0.75,
@@ -15,7 +15,7 @@ global.originais = [6,
 80,
 0,
 17,
-15]
+100]
 
 // Calcular tamnanho da tela
 
