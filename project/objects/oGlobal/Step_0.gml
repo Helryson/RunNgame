@@ -28,7 +28,7 @@ var player_proximo = instance_nearest(x, y, OMarco)
 var coracoes = [coracao7, coracao6, coracao5, coracao4, coracao3, coracao2, coracao1]
 
 // Pega um sprite da lista de corações
-coracao.sprite_index = coracoes[global.vida_player]
+coracao.sprite_index = coracoes[int64(global.vida_player/100)]
 
 /*
 switch(global.vida_player) {

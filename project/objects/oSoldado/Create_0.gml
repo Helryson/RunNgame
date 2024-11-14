@@ -16,12 +16,13 @@ pause_timer = 0; // Novo temporizador para pausar
 pause_duration = room_speed * 2; // Duração da pausa em frames (2 segundos)
 
 
-vida = 4; // Inicializa a saúde do inimigo
+vida = 10; // Inicializa a saúde do inimigo
 shot_timer = 0; // Timer inicial
 wait_time = 120; // 2 segundos (a 60 FPS)
 fire_rate = 60; // 1 segundo (a 60 FPS)
 can_shoot = true; // Permite disparar inicialmente
 shoot_wait_time = 0; // Inicializa o tempo de espera para disparo
+dano_player = global.dano_armas[1] // Mesmo dano da AK-47
 
 // Variáveis para controle de parada
 move_timer = 0; // Timer para controle de movimento

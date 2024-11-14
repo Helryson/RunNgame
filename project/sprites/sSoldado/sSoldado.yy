@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"sSoldado",
   "bboxMode":0,
-  "bbox_bottom":140,
-  "bbox_left":21,
-  "bbox_right":103,
+  "bbox_bottom":93,
+  "bbox_left":0,
+  "bbox_right":102,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"06e8ac08-b814-4a35-add8-790835ab5ce5","name":"06e8ac08-b814-4a35-add8-790835ab5ce5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"961df9e6-b98c-413b-a9ed-e3236ef751f3","name":"961df9e6-b98c-413b-a9ed-e3236ef751f3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":141,
+  "height":94,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"ffc9c956-2317-4465-886d-49130bb6d5a0","blendMode":0,"displayName":"default","isLocked":false,"name":"ffc9c956-2317-4465-886d-49130bb6d5a0","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"a809beb9-86aa-4cf9-8aa6-f54dff39602a","blendMode":0,"displayName":"default","isLocked":false,"name":"a809beb9-86aa-4cf9-8aa6-f54dff39602a","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sSoldado",
   "nineSlice":{
@@ -88,14 +88,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"06e8ac08-b814-4a35-add8-790835ab5ce5","path":"sprites/sSoldado/sSoldado.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"80264037-d641-4d37-9e67-7bba019a8c0a","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"961df9e6-b98c-413b-a9ed-e3236ef751f3","path":"sprites/sSoldado/sSoldado.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"e3b6e4b6-3434-4cf6-ad40-fa31804a24f1","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":64,
-    "yorigin":141,
+    "xorigin":51,
+    "yorigin":94,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
@@ -105,5 +105,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":128,
+  "width":103,
 }

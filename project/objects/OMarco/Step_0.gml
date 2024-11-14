@@ -1,5 +1,13 @@
 //Windows options
 
+// Recuperar hp
+hp_tempo -= 1
+
+if hp_tempo <= 0{
+	global.vida_player += 1
+	hp_tempo = global.hp_tempo
+}
+
 // Trocar o sprite dependendo da arma
 switch (global.arma_player_atual){
 	case pistola:
@@ -50,7 +58,15 @@ global.vsp_player = global.vsp_player + global.grv_player;
 
 if(global.key_jump and y >= max_y) {
 	global.vsp_player = global.velocidade_pulo
+	global.tecla_pressionada = true
 	
+	// Troca o sprite para o de pulo
+	if global.arma_player_atual == pistola{
+		sprite_index = sMarcoPistolaPuando
+	}
+	
+}else{
+	global.tecla_pressionada = false
 }
 
 if global.key_left
@@ -66,6 +82,16 @@ if global.key_right{
 	direction = 0
 }
 
+
+// Trocar sprite caso esteja andando
+if global.key_left or global.key_right{
+	global.tecla_pressionada = true
+	if global.arma_player_atual == pistola{
+		sprite_index = sMarcoPistolaAndando
+	}
+}else{
+	global.tecla_pressionada = false
+}
 
 
 // Cria instância de bala na camada instances_1 quando clica com botão esquerdo
@@ -127,6 +153,14 @@ if (global.left_mouse) {
 		
 }
 
+// Se nenhuma tecla que troca sprite tiver pressionada
+if not global.tecla_pressionada{
+	if global.arma_player_atual == pistola{
+		sprite_index = sMarcoPistola
+	}
+}
+
+
 //Horizontal Collision
 /* if (place_meeting(x+hsp, y, Object3)){
 	while(!place_meeting(x+sign(hsp), y, Object3)){
@@ -157,9 +191,8 @@ var anterior_ou_prox = "" // "anterior" vai para a sala anterior, "prox" para a 
 
 // Se o x for >= que room_width, ir pra proxima "sala"
 if x >= room_width{
-	if room != room_last{
-		
-		salvar = true	
+	if room != room_last and room != gameover{
+		salvar = true
 		anterior_ou_prox = "prox"
 	}else{
 		x = room_width
@@ -179,6 +212,8 @@ if x <= 0{
 
 // Se salvar for true, vai salvar tudo no arquivo
 if salvar{
+	// Parar a musica de fundo para não duplicar
+	audio_stop_sound(fundo)
 	var valores_2 = [global.vida_player,
 						global.hsp_player,
 						global.vsp_player,
@@ -193,7 +228,8 @@ if salvar{
 						global.ultima_bala,
 						global.gravidade,
 						global.num_balas_player]
-						
+	
+	var novos_valores = []
 	for (var i=0; i<array_length(global.valores); i+=1){
 		var valor_string = string(valores_2[i])
 		var valor_normal = valores_2[i]
@@ -206,17 +242,17 @@ if salvar{
 			}
 		}
 		
-		if global.valores[i] != valor_string{
-			global.valores[i] = valor_string
-			show_debug_message("Player: "+string(valores_2[i]))
-		}
+		array_insert(novos_valores, array_length(novos_valores), valor_string)
 	}
+	global.valores = novos_valores
+	
 	
 	// Abrindo/criando o arquivo para escrita
 	var file = file_text_open_write("player_settings.txt");
 
 	// Iterando pelo array e escrevendo cada item em uma linha do arquivo
 	for (var i = 0; i < array_length(global.valores); i++) {
+		show_debug_message(global.valores[i])
 	    file_text_write_string(file, string(global.valores[i])); // Escreve o item do array
 	    file_text_writeln(file); // Adiciona uma nova linha
 	}
@@ -229,7 +265,9 @@ if salvar{
 if anterior_ou_prox == "anterior"{
 	room_goto_previous()
 }else if anterior_ou_prox == "prox"{
-	room_goto_next()
+	if room_next(room) != gameover{
+		room_goto_next()
+	}
 }else{
 	// Redundancia para evitar problemas
 	salvar = false
@@ -281,7 +319,6 @@ if (place_meeting(x, y+global.vsp_player, oCenario)){
 
 // Se o player morrer, acabou
 if global.vida_player <= 0{
-	
 	// Reseta o arquivo de configurações do player na morte
 	
 	var file = file_text_open_read("global_default.txt");
@@ -295,7 +332,8 @@ if global.vida_player <= 0{
 
 	file_text_writeln(file_player); // Adiciona uma nova linha	
 	file_text_close(file_player)
-	instance_destroy()
+	audio_stop_sound(audio)
+	room_goto(gameover)
 }
 
 

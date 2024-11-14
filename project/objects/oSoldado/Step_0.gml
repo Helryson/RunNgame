@@ -24,9 +24,11 @@ if (espera > 0) {
         // Se o jogador estiver perto, mover o soldado para ele
         if (distancia < 200 && distancia > 10) {
             hsp = -walkspd; // Move para a esquerda
+			sprite_index = sSoldado_andando
         }
         else if (distancia > -200 && distancia < -10) {
             hsp = walkspd; // Move para a direita
+			sprite_index = sSoldado_andando
         }
         move_timer -= 1; // Decrementa o temporizador de movimento
     } 
@@ -75,7 +77,8 @@ if (can_shoot) {
         } else {
             var proj = instance_create_layer(x, y-(sprite_height/2.5), "Instances", oBalaInimigo);
             proj.direction = direction; // Define a direção do projétil
-            shot_timer = fire_rate; // Reseta o timer para o próximo disparo
+            proj.atirador = oSoldado
+			shot_timer = fire_rate; // Reseta o timer para o próximo disparo
         }
     }
 }
