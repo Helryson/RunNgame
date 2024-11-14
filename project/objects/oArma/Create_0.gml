@@ -1,5 +1,5 @@
 
-// Escolhe uma arma aleatória com base no tamanho do array
+// Escolhe uma arma aleatória com base no tamanho do dd6array
 arma_indice = irandom(array_length(global.armas) - 1);
 
 // Atribui a arma escolhida ao jogador

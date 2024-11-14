@@ -39,6 +39,30 @@ window_set_fullscreen(!window_get_fullscreen());
 // Atualiza o tempo do tiro
 //global.shot_timer -= 0.1; // Diminui o timer a cada passo
 
+if place_meeting(x+global.hsp_player, y, oArma){
+	while(!place_meeting(x+sign(global.hsp_player), y, oArma)){
+		x = x + sign(global.hsp_player)
+	}
+	global.hsp_player = 0
+}
+
+if place_meeting(x+global.hsp_player, y, oPlataforma){
+	while(!place_meeting(x+sign(global.hsp_player), y, oPlataforma)){
+		x = x + sign(global.hsp_player)
+	}
+	global.hsp_player = -7
+}
+x = x +  global.hsp_player
+
+if place_meeting(x, y+global.hsp_player, oPlataforma){
+	while(!place_meeting(x, y+sign(global.hsp_player), oPlataforma)){
+		y = y + sign(global.hsp_player)
+	}
+	global.vsp_player = -7
+}
+
+y = y +  global.hsp_player
+
 
 //// Troca de arma
 //if (global.middle_mouse){ 
@@ -53,7 +77,7 @@ window_set_fullscreen(!window_get_fullscreen());
 //Calculate Movement
 var move = global.key_right - global.key_left;
 
-global.hsp_player = move * global.walkspd_player
+global.hsp_player = move * (global.walkspd_player - 2)
 global.vsp_player = global.vsp_player + global.grv_player;
 
 if(global.key_jump and y >= max_y) {
