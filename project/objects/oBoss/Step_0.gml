@@ -77,8 +77,9 @@ if (can_shoot) {
         } else {
             var proj = instance_create_layer(x, y-(sprite_height/2.5), "Instances", oBalaInimigo);
             proj.direction = direction; // Define a direção do projétil
-            shot_timer = fire_rate; // Reseta o timer para o próximo disparo
-        }
+            proj.atirador = oBoss
+			shot_timer = fire_rate; // Reseta o timer para o próximo disparo
+		}
     }
 }
 

@@ -33,7 +33,7 @@ window_set_size(w, h)
 
 
 global.armas = [pistola, ak47] // Array com as armas que existem no jogo
-global.dano_armas = [5, 10]
+global.dano_armas = [7, 10]
 global.invencibilidade_player = false //Se o player é invencivel
 global.tempo_invencibilidade_player = 1000
 global.tecla_pressionada = false // SE alguma tecla está pressionada
@@ -48,22 +48,24 @@ var lines = [];
 var file = file_text_open_read("player_settings.txt");
 
 if (file != -1) {  // Checa se o arquivo abriu com sucesso
-    var line_index = 0;
+	var line_index = 0;
 
-    // Anda sobre o arquivo
-    while (!file_text_eof(file)) {
-        lines[line_index] = file_text_readln(file);
-        line_index++;
-    }
+	// Anda sobre o arquivo
+	while (!file_text_eof(file)) {
+	    array_insert(lines, array_length(lines), file_text_readln(file));
+	    line_index += 1;
+	}
 
-    // Close the file
-    file_text_close(file);
+	// Close the file
+	file_text_close(file);
+}else{
+	show_message("Erro ao abrir o arquivo do player")
 }
 
 // Caso dê merda no arquivo, reseta para o original
 if array_length(lines) < array_length(global.originais){
+	show_debug_message("Erro no arquivo. Resetando para original."+string(array_length(lines))+" "+string(array_length(global.originais)))
 	lines = global.originais
-	show_debug_message("Erro no arquivo. Resetando para original.")
 }
 
 // Se o jogo acabou de começar, carrega o arquivo default

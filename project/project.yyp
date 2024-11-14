@@ -61,10 +61,12 @@
     {"id":{"name":"oGlobal","path":"objects/oGlobal/oGlobal.yy",},},
     {"id":{"name":"OMarco","path":"objects/OMarco/OMarco.yy",},},
     {"id":{"name":"oPlataforma","path":"objects/oPlataforma/oPlataforma.yy",},},
+    {"id":{"name":"oReset","path":"objects/oReset/oReset.yy",},},
     {"id":{"name":"oSoldado","path":"objects/oSoldado/oSoldado.yy",},},
     {"id":{"name":"oSoldadoSpawner","path":"objects/oSoldadoSpawner/oSoldadoSpawner.yy",},},
     {"id":{"name":"bossfight","path":"rooms/bossfight/bossfight.yy",},},
     {"id":{"name":"game","path":"rooms/game/game.yy",},},
+    {"id":{"name":"gameover","path":"rooms/gameover/gameover.yy",},},
     {"id":{"name":"background","path":"sounds/background/background.yy",},},
     {"id":{"name":"bosstheme","path":"sounds/bosstheme/bosstheme.yy",},},
     {"id":{"name":"introduction","path":"sounds/introduction/introduction.yy",},},
@@ -83,6 +85,7 @@
     {"id":{"name":"sCaixa","path":"sprites/sCaixa/sCaixa.yy",},},
     {"id":{"name":"sCenario","path":"sprites/sCenario/sCenario.yy",},},
     {"id":{"name":"semtextura","path":"sprites/semtextura/semtextura.yy",},},
+    {"id":{"name":"sGamOver","path":"sprites/sGamOver/sGamOver.yy",},},
     {"id":{"name":"SMarco","path":"sprites/SMarco/SMarco.yy",},},
     {"id":{"name":"sMarcoAK47","path":"sprites/sMarcoAK47/sMarcoAK47.yy",},},
     {"id":{"name":"sMarcoPistola","path":"sprites/sMarcoPistola/sMarcoPistola.yy",},},
@@ -98,6 +101,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"game","path":"rooms/game/game.yy",},},
     {"roomId":{"name":"bossfight","path":"rooms/bossfight/bossfight.yy",},},
+    {"roomId":{"name":"gameover","path":"rooms/gameover/gameover.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

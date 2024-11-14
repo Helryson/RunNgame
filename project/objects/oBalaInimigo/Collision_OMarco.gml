@@ -1,6 +1,10 @@
 // player mais proximo
 
 if !global.invencibilidade_player{
-	global.vida_player -= 1
+	if instance_exists(atirador){
+		global.vida_player -= atirador.dano_player
+	}else{
+		instance_destroy()
+	}
 }
 instance_destroy()

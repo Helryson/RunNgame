@@ -205,7 +205,6 @@ if x <= 0{
 
 // Se salvar for true, vai salvar tudo no arquivo
 if salvar{
-	
 	// Parar a musica de fundo para não duplicar
 	audio_stop_sound(fundo)
 	var valores_2 = [global.vida_player,
@@ -222,7 +221,8 @@ if salvar{
 						global.ultima_bala,
 						global.gravidade,
 						global.num_balas_player]
-						
+	
+	var novos_valores = []
 	for (var i=0; i<array_length(global.valores); i+=1){
 		var valor_string = string(valores_2[i])
 		var valor_normal = valores_2[i]
@@ -235,17 +235,17 @@ if salvar{
 			}
 		}
 		
-		if global.valores[i] != valor_string{
-			global.valores[i] = valor_string
-			show_debug_message("Player: "+string(valores_2[i]))
-		}
+		array_insert(novos_valores, array_length(novos_valores), valor_string)
 	}
+	global.valores = novos_valores
+	
 	
 	// Abrindo/criando o arquivo para escrita
 	var file = file_text_open_write("player_settings.txt");
 
 	// Iterando pelo array e escrevendo cada item em uma linha do arquivo
 	for (var i = 0; i < array_length(global.valores); i++) {
+		show_debug_message(global.valores[i])
 	    file_text_write_string(file, string(global.valores[i])); // Escreve o item do array
 	    file_text_writeln(file); // Adiciona uma nova linha
 	}
@@ -258,7 +258,9 @@ if salvar{
 if anterior_ou_prox == "anterior"{
 	room_goto_previous()
 }else if anterior_ou_prox == "prox"{
-	room_goto_next()
+	if room_next(room) != gameover{
+		room_goto_next()
+	}
 }else{
 	// Redundancia para evitar problemas
 	salvar = false
@@ -310,7 +312,6 @@ if (place_meeting(x, y+global.vsp_player, oCenario)){
 
 // Se o player morrer, acabou
 if global.vida_player <= 0{
-	
 	// Reseta o arquivo de configurações do player na morte
 	
 	var file = file_text_open_read("global_default.txt");
@@ -324,7 +325,8 @@ if global.vida_player <= 0{
 
 	file_text_writeln(file_player); // Adiciona uma nova linha	
 	file_text_close(file_player)
-	instance_destroy()
+	audio_stop_sound(audio)
+	room_goto(gameover)
 }
 
 
