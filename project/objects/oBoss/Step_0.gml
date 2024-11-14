@@ -85,5 +85,6 @@ if (can_shoot) {
 
 // Se o soldado tiver zerado de vida, MORRA!
 if vida <= 0{
+	room_goto(endgame)
 	instance_destroy()
 }
