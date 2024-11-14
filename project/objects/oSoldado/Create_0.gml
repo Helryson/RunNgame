@@ -16,7 +16,7 @@ pause_timer = 0; // Novo temporizador para pausar
 pause_duration = room_speed * 2; // Duração da pausa em frames (2 segundos)
 
 
-vida = 4; // Inicializa a saúde do inimigo
+vida = 10; // Inicializa a saúde do inimigo
 shot_timer = 0; // Timer inicial
 wait_time = 120; // 2 segundos (a 60 FPS)
 fire_rate = 60; // 1 segundo (a 60 FPS)
