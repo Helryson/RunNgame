@@ -39,6 +39,30 @@ window_set_fullscreen(!window_get_fullscreen());
 // Atualiza o tempo do tiro
 //global.shot_timer -= 0.1; // Diminui o timer a cada passo
 
+if place_meeting(x+global.hsp_player, y, oArma){
+	while(!place_meeting(x+sign(global.hsp_player), y, oArma)){
+		x = x + sign(global.hsp_player)
+	}
+	global.hsp_player = 0
+}
+
+if place_meeting(x+global.hsp_player, y, oPlataforma){
+	while(!place_meeting(x+sign(global.hsp_player), y, oPlataforma)){
+		x = x + sign(global.hsp_player)
+	}
+	global.hsp_player = -7
+}
+x = x +  global.hsp_player
+
+//if place_meeting(x, y+global.hsp_player, oPlataforma){
+//	while(!place_meeting(x, y+sign(global.hsp_player), oPlataforma)){
+//		y = y + sign(global.hsp_player)
+//	}
+//	global.vsp_player = -7
+//}
+
+// y = y +  global.hsp_player
+
 
 //// Troca de arma
 //if (global.middle_mouse){ 
@@ -53,7 +77,7 @@ window_set_fullscreen(!window_get_fullscreen());
 //Calculate Movement
 var move = global.key_right - global.key_left;
 
-global.hsp_player = move * global.walkspd_player
+global.hsp_player = move * (global.walkspd_player - 2)
 global.vsp_player = global.vsp_player + global.grv_player;
 
 if(global.key_jump and y >= max_y) {
@@ -72,13 +96,13 @@ if(global.key_jump and y >= max_y) {
 if global.key_left
 {
     x-=1
-	image_xscale = -1
+	image_xscale = -0.6235294
 	direction = 180
 }
 
 if global.key_right{
 	x+=1 
-	image_xscale = 1
+	image_xscale = 0.6235294
 	direction = 0
 }
 
@@ -332,7 +356,7 @@ if global.vida_player <= 0{
 
 	file_text_writeln(file_player); // Adiciona uma nova linha	
 	file_text_close(file_player)
-	audio_stop_sound(audio)
+	//audio_stop_sound(audio)
 	room_goto(gameover)
 }
 

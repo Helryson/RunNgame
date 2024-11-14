@@ -1,0 +1,9 @@
+* Aprimorar sistema de regeneração de vida
+* Aumentar dificuldade do boss
+* Criar identificador de dano para o boss
+* Sistema de diálogo
+* Introdução
+* Melhorar a colisão
+* Balancear inimigos
+* Modificar IA do boss
+* Lição de moral no final

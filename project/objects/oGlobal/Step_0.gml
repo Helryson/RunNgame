@@ -1,5 +1,3 @@
-
-
 // INstancia de coração mais proxima
 var coracao = instance_nearest(x, y, oCoracao)
 global.tempo_jogo = current_time

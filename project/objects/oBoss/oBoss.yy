@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sSoldado",
-    "path":"sprites/sSoldado/sSoldado.yy",
+    "name":"sMecha",
+    "path":"sprites/sMecha/sMecha.yy",
   },
   "spriteMaskId":null,
   "visible":true,
