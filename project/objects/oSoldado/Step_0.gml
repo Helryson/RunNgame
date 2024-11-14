@@ -6,10 +6,10 @@ var distancia = x - player_perto.x;
 // Verifica mudança de direção
 
 if distancia <= 0{
-	image_xscale = -1
+	image_xscale = -0.6893204
 	direction = 0
 }else{
-	image_xscale = 1
+	image_xscale = 0.6893204
 	direction = 180
 }
 

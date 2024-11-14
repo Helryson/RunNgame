@@ -96,6 +96,7 @@
     {"id":{"name":"sMarcoPistolaAndando","path":"sprites/sMarcoPistolaAndando/sMarcoPistolaAndando.yy",},},
     {"id":{"name":"sMarcoPistolaPuando","path":"sprites/sMarcoPistolaPuando/sMarcoPistolaPuando.yy",},},
     {"id":{"name":"sPlataforma","path":"sprites/sPlataforma/sPlataforma.yy",},},
+    {"id":{"name":"Sprite28","path":"sprites/Sprite28/Sprite28.yy",},},
     {"id":{"name":"sSoldado_andando","path":"sprites/sSoldado_andando/sSoldado_andando.yy",},},
     {"id":{"name":"sSoldado","path":"sprites/sSoldado/sSoldado.yy",},},
     {"id":{"name":"telabranca","path":"sprites/telabranca/telabranca.yy",},},

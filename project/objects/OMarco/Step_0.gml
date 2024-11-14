@@ -72,13 +72,13 @@ if(global.key_jump and y >= max_y) {
 if global.key_left
 {
     x-=1
-	image_xscale = -1
+	image_xscale = -0.6235294
 	direction = 180
 }
 
 if global.key_right{
 	x+=1 
-	image_xscale = 1
+	image_xscale = 0.6235294
 	direction = 0
 }
 
