@@ -1,5 +1,13 @@
 //Windows options
 
+// Recuperar hp
+hp_tempo -= 1
+
+if hp_tempo <= 0{
+	global.vida_player += 1
+	hp_tempo = global.hp_tempo
+}
+
 // Trocar o sprite dependendo da arma
 switch (global.arma_player_atual){
 	case pistola:
@@ -183,9 +191,8 @@ var anterior_ou_prox = "" // "anterior" vai para a sala anterior, "prox" para a 
 
 // Se o x for >= que room_width, ir pra proxima "sala"
 if x >= room_width{
-	if room != room_last{
-		
-		salvar = true	
+	if room != room_last and room != gameover{
+		salvar = true
 		anterior_ou_prox = "prox"
 	}else{
 		x = room_width

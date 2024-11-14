@@ -37,6 +37,7 @@ global.dano_armas = [7, 10]
 global.invencibilidade_player = false //Se o player é invencivel
 global.tempo_invencibilidade_player = 1000
 global.tecla_pressionada = false // SE alguma tecla está pressionada
+global.hp_tempo = 120 // A cada quantos fps recupera 1 hp
 
 global.salas_gameplay = [game] // Salas do meio do jogo
 global.salas_fim = [bossfight] // Salas do chefão
