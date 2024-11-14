@@ -1,4 +1,12 @@
-fundo = audio_play_sound(background, 1, true)
+
+// Se a sala atual for uma das salas de gameplay
+if array_contains(global.salas_gameplay, room){
+	fundo = audio_play_sound(background, 1, true)
+}else if array_contains(global.salas_fim, room){
+	fundo = audio_play_sound(bosstheme, 1, true)
+}
+
+
 /// @description Inserir descrição aqui
 // Você pode escrever seu código neste editor
 

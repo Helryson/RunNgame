@@ -30,6 +30,7 @@
   "ResourceOrderSettings":[
     {"name":"oArma","order":4,"path":"objects/oArma/oArma.yy",},
     {"name":"oBalaInimigo","order":1,"path":"objects/oBalaInimigo/oBalaInimigo.yy",},
+    {"name":"oBoss","order":6,"path":"objects/oBoss/oBoss.yy",},
     {"name":"oChao","order":1,"path":"objects/oChao/oChao.yy",},
     {"name":"oCoracao","order":1,"path":"objects/oCoracao/oCoracao.yy",},
     {"name":"oGlobal","order":2,"path":"objects/oGlobal/oGlobal.yy",},
@@ -37,7 +38,7 @@
     {"name":"oPlataforma","order":3,"path":"objects/oPlataforma/oPlataforma.yy",},
     {"name":"oSoldado","order":5,"path":"objects/oSoldado/oSoldado.yy",},
     {"name":"oSoldadoSpawner","order":3,"path":"objects/oSoldadoSpawner/oSoldadoSpawner.yy",},
-    {"name":"Room2","order":1,"path":"rooms/Room2/Room2.yy",},
+    {"name":"bossfight","order":1,"path":"rooms/bossfight/bossfight.yy",},
     {"name":"bosstheme","order":1,"path":"sounds/bosstheme/bosstheme.yy",},
     {"name":"introduction","order":2,"path":"sounds/introduction/introduction.yy",},
     {"name":"coracao2","order":1,"path":"sprites/coracao2/coracao2.yy",},
