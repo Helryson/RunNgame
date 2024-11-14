@@ -1,5 +1,5 @@
-var teleporte_numX =  irandom_range(0, room_width) //Quantas unidades a caixa de armas vai reaparecer
-var teleporte_numY =  irandom_range(0, other.y_inicial+global.velocidade_pulo)
+var teleporte_numX =  irandom_range(x-30, x+30) //Quantas unidades a caixa de armas vai reaparecer
+var teleporte_numY =  y
 
 // Se o player colidir com a arma, é para coletar
 global.arma_player_atual = arma_atual
