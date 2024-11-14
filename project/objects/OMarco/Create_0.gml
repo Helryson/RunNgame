@@ -1,3 +1,4 @@
+fundo = audio_play_sound(background, 1, true)
 /// @description Inserir descrição aqui
 // Você pode escrever seu código neste editor
 

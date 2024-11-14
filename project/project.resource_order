@@ -38,6 +38,8 @@
     {"name":"oSoldado","order":5,"path":"objects/oSoldado/oSoldado.yy",},
     {"name":"oSoldadoSpawner","order":3,"path":"objects/oSoldadoSpawner/oSoldadoSpawner.yy",},
     {"name":"Room2","order":1,"path":"rooms/Room2/Room2.yy",},
+    {"name":"bosstheme","order":1,"path":"sounds/bosstheme/bosstheme.yy",},
+    {"name":"introduction","order":2,"path":"sounds/introduction/introduction.yy",},
     {"name":"BG11","order":1,"path":"sprites/BG11/BG11.yy",},
     {"name":"BG12","order":2,"path":"sprites/BG12/BG12.yy",},
     {"name":"BG13","order":3,"path":"sprites/BG13/BG13.yy",},

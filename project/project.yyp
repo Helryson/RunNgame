@@ -65,6 +65,8 @@
     {"id":{"name":"Room1_1","path":"rooms/Room1_1/Room1_1.yy",},},
     {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
     {"id":{"name":"background","path":"sounds/background/background.yy",},},
+    {"id":{"name":"bosstheme","path":"sounds/bosstheme/bosstheme.yy",},},
+    {"id":{"name":"introduction","path":"sounds/introduction/introduction.yy",},},
     {"id":{"name":"ak47","path":"sprites/ak47/ak47.yy",},},
     {"id":{"name":"BG10","path":"sprites/BG10/BG10.yy",},},
     {"id":{"name":"BG11","path":"sprites/BG11/BG11.yy",},},

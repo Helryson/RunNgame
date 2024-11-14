@@ -1,4 +1,3 @@
-audio_play_sound(background, 1, true)
 // Para não ser os mesmos numeros aleatórios a cada abertura
 randomize()
 // Valores padrões

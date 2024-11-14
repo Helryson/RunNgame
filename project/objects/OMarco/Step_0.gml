@@ -179,6 +179,9 @@ if x <= 0{
 
 // Se salvar for true, vai salvar tudo no arquivo
 if salvar{
+	
+	// Parar a musica de fundo para não duplicar
+	audio_stop_sound(fundo)
 	var valores_2 = [global.vida_player,
 						global.hsp_player,
 						global.vsp_player,
