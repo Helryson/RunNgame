@@ -1,24 +1,26 @@
-# RunNgame
+# Créditos
 
-Créditos:
+## Programação
 
-# Programação
+* Breno Martins
+* Helrysson Rodrigues
 
-Breno Martins
-Helrysson Rodrigues
+## Músicas
 
-# Músicas
+* Ian Braga (Remix)
+* Philipe Guimarões (Remix)
 
-Ian Braga (Remix)
-Philipe Guimarões (Remix)
-Toby Fox (Original)
-SNK (Original)
-SEGA (Original)
+### Artes originais
+* Toby Fox
+* SNK
+* SEGA
 
-# Sprites
+## Sprites
 
-Leandro
-Ian Braga
-Marcílio Magalhães
-Lívia Souza
-SNK (Original)
+* Leandro
+* Ian Braga
+* Marcílio Magalhães
+* Lívia Souza
+
+### Artes originais
+* SNK (Original)
