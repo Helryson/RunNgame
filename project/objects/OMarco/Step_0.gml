@@ -50,7 +50,15 @@ global.vsp_player = global.vsp_player + global.grv_player;
 
 if(global.key_jump and y >= max_y) {
 	global.vsp_player = global.velocidade_pulo
+	global.tecla_pressionada = true
 	
+	// Troca o sprite para o de pulo
+	if global.arma_player_atual == pistola{
+		sprite_index = sMarcoPistolaPuando
+	}
+	
+}else{
+	global.tecla_pressionada = false
 }
 
 if global.key_left
@@ -66,6 +74,16 @@ if global.key_right{
 	direction = 0
 }
 
+
+// Trocar sprite caso esteja andando
+if global.key_left or global.key_right{
+	global.tecla_pressionada = true
+	if global.arma_player_atual == pistola{
+		sprite_index = sMarcoPistolaAndando
+	}
+}else{
+	global.tecla_pressionada = false
+}
 
 
 // Cria instância de bala na camada instances_1 quando clica com botão esquerdo
@@ -126,6 +144,14 @@ if (global.left_mouse) {
 	}
 		
 }
+
+// Se nenhuma tecla que troca sprite tiver pressionada
+if not global.tecla_pressionada{
+	if global.arma_player_atual == pistola{
+		sprite_index = sMarcoPistola
+	}
+}
+
 
 //Horizontal Collision
 /* if (place_meeting(x+hsp, y, Object3)){
