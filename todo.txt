@@ -1,4 +1,7 @@
+Feitos
 * Aprimorar sistema de regeneração de vida
+
+Não feitos:
 * Aumentar dificuldade do boss
 * Criar identificador de dano para o boss
 * Sistema de diálogo
@@ -7,3 +10,6 @@
 * Balancear inimigos
 * Modificar IA do boss
 * Lição de moral no final
+
+BUGS A SEREM CORRIGIDOS
+* Musica parando de tocar quando volta de sala
