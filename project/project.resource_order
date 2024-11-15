@@ -1,13 +1,17 @@
 {
   "FolderOrderSettings":[],
   "ResourceOrderSettings":[
+    {"name":"oChaoPraia","order":1,"path":"objects/oChaoPraia/oChaoPraia.yy",},
     {"name":"oLimite","order":1,"path":"objects/oLimite/oLimite.yy",},
+    {"name":"oPedraPraia","order":2,"path":"objects/oPedraPraia/oPedraPraia.yy",},
+    {"name":"sChaoPraia","order":1,"path":"sprites/sChaoPraia/sChaoPraia.yy",},
     {"name":"sGeneral","order":3,"path":"sprites/sGeneral/sGeneral.yy",},
     {"name":"SMarco","order":3,"path":"sprites/SMarco/SMarco.yy",},
     {"name":"sMarcoAK47","order":2,"path":"sprites/sMarcoAK47/sMarcoAK47.yy",},
     {"name":"sMarcoPistola","order":1,"path":"sprites/sMarcoPistola/sMarcoPistola.yy",},
     {"name":"sMarcoPistolaPuando","order":4,"path":"sprites/sMarcoPistolaPuando/sMarcoPistolaPuando.yy",},
     {"name":"sMecha","order":1,"path":"sprites/sMecha/sMecha.yy",},
+    {"name":"sPedraPraia","order":2,"path":"sprites/sPedraPraia/sPedraPraia.yy",},
     {"name":"sPraia","order":1,"path":"sprites/sPraia/sPraia.yy",},
     {"name":"sSoldado_andando","order":2,"path":"sprites/sSoldado_andando/sSoldado_andando.yy",},
   ],
