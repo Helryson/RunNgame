@@ -3,9 +3,10 @@
 
 // Distância do player e o soldado
 var distancia = x - player_perto.x;
+var bala_y = y-(sprite_height*0.3)
 
-// Calcular o angulo entre o x, y do player e o x, y do boss
-var bala_direcao = radtodeg(arctan2((y-player_perto.y), (player_perto.x-x)))
+
+var bala_direcao = radtodeg(arctan2((bala_y-player_perto.y), (player_perto.x-x)))
 // Formula utilizada:
 // atan2(y,x)
 
@@ -120,7 +121,7 @@ if (can_shoot) {
         if (wait_time > 0) {
             wait_time -= 1; // Decrementa o tempo de espera
         } else {
-            var proj = instance_create_layer(x, y-(sprite_height/2.5), "Instances", oBalaInimigo);
+            var proj = instance_create_layer(x, bala_y, "Instances", oBalaInimigo);
             proj.direction = bala_direcao; // Define a direção do projétil
             proj.atirador = oBoss
 			proj.image_angle = bala_direcao

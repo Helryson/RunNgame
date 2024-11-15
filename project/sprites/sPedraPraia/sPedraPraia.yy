@@ -23,7 +23,7 @@
   ],
   "name":"sPedraPraia",
   "nineSlice":null,
-  "origin":1,
+  "origin":4,
   "parent":{
     "name":"Game",
     "path":"folders/Sprites/Game.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":32,
-    "yorigin":0,
+    "yorigin":37,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

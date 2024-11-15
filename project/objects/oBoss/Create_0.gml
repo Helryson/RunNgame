@@ -17,9 +17,9 @@ pause_duration = room_speed * 2; // Duração da pausa em frames (2 segundos)
 
 
 vida = 2000; // Inicializa a saúde do inimigo
-shot_timer = 60; // Timer inicial
+shot_timer = 0; // Timer inicial
 wait_time = 20; // 0.75 segundos (a 60 FPS)
-fire_rate = 15; // 0.5 segundo (a 60 FPS)
+fire_rate = 5; // 0.5 segundo (a 60 FPS)
 can_shoot = true; // Permite disparar inicialmente
 shoot_wait_time = 0; // Inicializa o tempo de espera para disparo
 dano_player = 10 // Dano do chefe
@@ -32,5 +32,5 @@ is_moving = true; // Flag para indicar se está se movendo
 
 
 // Variaveis de movimento
-min_x = 300
-max_x = 600
+min_x = 200
+max_x = 400
