@@ -15,6 +15,7 @@ y_inicial = y
 // define se é possivel colidir com o objeto de queda ou não (apenas na sala)
 colidir_queda = true
 hp_tempo = global.hp_tempo // Variavel local para não interferir na global
+hp_recover = global.tempo_recover
 
 
 /*

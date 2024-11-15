@@ -1,11 +1,24 @@
 //Windows options
 
-// Recuperar hp
-hp_tempo -= 1
+if not global.player_danificado{ // Só recupera dano se o player não estiver danificado
+	// Recuperar hp
+	hp_tempo -= 1
 
-if hp_tempo <= 0{
-	global.vida_player += 1
-	hp_tempo = global.hp_tempo
+	if hp_tempo <= 0{
+		global.vida_player += 1
+		hp_tempo = global.hp_tempo
+	}
+}else{
+	hp_recover -= 1
+	if hp_recover <= 0{ // se o tempo de recover de hp tiver zerado...
+		global.player_danificado = false
+		hp_recover = global.tempo_recover
+	}
+}
+// Se a vida for maior que 100
+
+if global.vida_player > global.originais[0]{
+	global.vida_player = global.originais[0]
 }
 
 // Trocar o sprite dependendo da arma
