@@ -1,14 +1,14 @@
 Feitos
 * Aprimorar sistema de regeneração de vida
+* Aumentar dificuldade do boss
 
 Não feitos:
-* Aumentar dificuldade do boss
+* Modificar IA do boss
 * Criar identificador de dano para o boss
 * Sistema de diálogo
 * Introdução
 * Melhorar a colisão
 * Balancear inimigos
-* Modificar IA do boss
 * Lição de moral no final
 
 BUGS A SEREM CORRIGIDOS
