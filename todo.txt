@@ -2,9 +2,9 @@ Feitos
 * Aprimorar sistema de regeneração de vida
 * Aumentar dificuldade do boss
 * Melhorar a colisão
+* Modificar IA do boss
 
 Não feitos:
-* Modificar IA do boss
 * Criar identificador de dano para o boss
 * Sistema de diálogo
 * Introdução
