@@ -35,7 +35,7 @@ window_set_size(w, h)
 global.armas = [pistola, ak47] // Array com as armas que existem no jogo
 global.dano_armas = [7, 10]
 global.invencibilidade_player = false //Se o player é invencivel
-global.tempo_invencibilidade_player = 5000
+global.tempo_invencibilidade_player = 1000
 global.tecla_pressionada = false // SE alguma tecla está pressionada
 global.hp_tempo = 5 // A cada quantos fps recupera 1 hp
 global.player_danificado = false // Se o player tomou dano

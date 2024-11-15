@@ -5,7 +5,7 @@ if not global.player_danificado{ // Só recupera dano se o player não estiver d
 	hp_tempo -= 1
 
 	if hp_tempo <= 0{
-		global.vida_player += 1
+		global.vida_player += 5
 		hp_tempo = global.hp_tempo
 	}
 }else{
