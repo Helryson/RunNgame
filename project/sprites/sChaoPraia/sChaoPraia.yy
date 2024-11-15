@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"sChaoPraia",
   "bboxMode":1,
-  "bbox_bottom":149,
+  "bbox_bottom":159,
   "bbox_left":0,
-  "bbox_right":64,
+  "bbox_right":63,
   "bbox_top":0,
   "collisionKind":0,
   "collisionTolerance":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":150,
+  "height":160,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"1d947a75-6226-493b-ae0f-ce678f0e998f","blendMode":0,"displayName":"default","isLocked":false,"name":"1d947a75-6226-493b-ae0f-ce678f0e998f","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":65,
+  "width":64,
 }

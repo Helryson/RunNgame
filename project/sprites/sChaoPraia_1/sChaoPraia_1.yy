@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"sPedraPraia",
+  "%Name":"sChaoPraia_1",
   "bboxMode":1,
   "bbox_bottom":63,
   "bbox_left":0,
@@ -12,18 +12,18 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"0213630d-8d5a-41d0-8584-8015ba9a85ba","name":"0213630d-8d5a-41d0-8584-8015ba9a85ba","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"944186df-df07-4579-a13b-25b42b8cf730","name":"944186df-df07-4579-a13b-25b42b8cf730","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":64,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"1d947a75-6226-493b-ae0f-ce678f0e998f","blendMode":0,"displayName":"default","isLocked":false,"name":"1d947a75-6226-493b-ae0f-ce678f0e998f","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"2aff16b4-19cc-4a7a-ab42-44de725776ac","blendMode":0,"displayName":"default","isLocked":false,"name":"2aff16b4-19cc-4a7a-ab42-44de725776ac","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"sPedraPraia",
+  "name":"sChaoPraia_1",
   "nineSlice":null,
-  "origin":4,
+  "origin":1,
   "parent":{
     "name":"Game",
     "path":"folders/Sprites/Game.yy",
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"sPedraPraia",
+    "%Name":"sChaoPraia",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"sPedraPraia",
+    "name":"sChaoPraia",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,14 +69,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0213630d-8d5a-41d0-8584-8015ba9a85ba","path":"sprites/sPedraPraia/sPedraPraia.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"06018a17-5246-4883-8638-f1d6e992c20f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"944186df-df07-4579-a13b-25b42b8cf730","path":"sprites/sChaoPraia_1/sChaoPraia_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"9179b6a2-1a8a-4204-b639-776a897d3b6c","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
     "xorigin":32,
-    "yorigin":32,
+    "yorigin":0,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

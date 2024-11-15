@@ -4,6 +4,8 @@
     {"name":"oChaoPraia","order":1,"path":"objects/oChaoPraia/oChaoPraia.yy",},
     {"name":"oLimite","order":1,"path":"objects/oLimite/oLimite.yy",},
     {"name":"oPedraPraia","order":2,"path":"objects/oPedraPraia/oPedraPraia.yy",},
+    {"name":"oPlataformaPraia","order":3,"path":"objects/oPlataformaPraia/oPlataformaPraia.yy",},
+    {"name":"sChaoPraia_1","order":3,"path":"sprites/sChaoPraia_1/sChaoPraia_1.yy",},
     {"name":"sChaoPraia","order":1,"path":"sprites/sChaoPraia/sChaoPraia.yy",},
     {"name":"sGeneral","order":3,"path":"sprites/sGeneral/sGeneral.yy",},
     {"name":"SMarco","order":3,"path":"sprites/SMarco/SMarco.yy",},
