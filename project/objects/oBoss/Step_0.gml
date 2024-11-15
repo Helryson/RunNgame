@@ -1,5 +1,6 @@
 // Instancia do player mais próxima
 
+
 // Distância do player e o soldado
 var distancia = x - player_perto.x;
 
@@ -102,8 +103,7 @@ if instance_number(oLimite) >= 1{
 	}else if distancia_limiteX > 0{
 		// Caso for maior que zero
 		distancia_borda_limiteX = distancia_limiteX - limite_proximo.sprite_width/2
-	}
-	
+	}	
 	if distancia_borda_limiteX < 10 and distancia_borda_limiteX >= 0{
 		x += 3
 	}else if distancia_borda_limiteX > -10 and distancia_borda_limiteX <= 0{
@@ -111,7 +111,6 @@ if instance_number(oLimite) >= 1{
 	}
 }
 
-// Lógica de disparo
 if (can_shoot) {
     if (shot_timer > 0) {
         shot_timer -= 1; // Decrementa o timer
@@ -121,12 +120,13 @@ if (can_shoot) {
         if (wait_time > 0) {
             wait_time -= 1; // Decrementa o tempo de espera
         } else {
-            var proj = instance_create_layer(x, y-(sprite_height/4), "Instances", oBalaInimigo);
+            var proj = instance_create_layer(x, y-(sprite_height/2.5), "Instances", oBalaInimigo);
             proj.direction = bala_direcao; // Define a direção do projétil
-            proj.image_angle = bala_direcao;
-			proj.atirador = oBoss
+            proj.atirador = oBoss
+			proj.image_angle = bala_direcao
 			shot_timer = fire_rate; // Reseta o timer para o próximo disparo
-		}
+			wait_time = 20
+        }
     }
 }
 
