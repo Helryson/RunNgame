@@ -40,6 +40,7 @@ global.tecla_pressionada = false // SE alguma tecla está pressionada
 global.hp_tempo = 5 // A cada quantos fps recupera 1 hp
 global.player_danificado = false // Se o player tomou dano
 global.tempo_recover = 120 // Isso seria 2 segundos sem tomar dano até começar recuperar hp a 60 fps
+global.player_andar = true // se o player pode andar
 
 global.salas_gameplay = [game] // Salas do meio do jogo
 global.salas_fim = [bossfight] // Salas do chefão

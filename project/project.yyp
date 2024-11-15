@@ -60,6 +60,7 @@
     {"id":{"name":"oCoracao","path":"objects/oCoracao/oCoracao.yy",},},
     {"id":{"name":"oEnd","path":"objects/oEnd/oEnd.yy",},},
     {"id":{"name":"oGlobal","path":"objects/oGlobal/oGlobal.yy",},},
+    {"id":{"name":"oLimite","path":"objects/oLimite/oLimite.yy",},},
     {"id":{"name":"OMarco","path":"objects/OMarco/OMarco.yy",},},
     {"id":{"name":"oPlataforma","path":"objects/oPlataforma/oPlataforma.yy",},},
     {"id":{"name":"oReset","path":"objects/oReset/oReset.yy",},},

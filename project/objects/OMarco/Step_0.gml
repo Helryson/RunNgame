@@ -1,5 +1,14 @@
 //Windows options
 
+// Para facilitar o debug de mecanicas! Tirar quando finalizado
+if keyboard_check_pressed(ord("K")){
+	global.dano_armas = [9999999, 999999]
+	global.hp_tempo = 0
+	global.tempo_recover = 0
+	global.vida_player = 600
+}
+
+
 if not global.player_danificado{ // Só recupera dano se o player não estiver danificado
 	// Recuperar hp
 	hp_tempo -= 1
@@ -59,13 +68,13 @@ if place_meeting(x+global.hsp_player, y, oArma){
 	global.hsp_player = 0
 }
 
-if place_meeting(x+global.hsp_player, y, oPlataforma){
-	while(!place_meeting(x+sign(global.hsp_player), y, oPlataforma)){
-		x = x + sign(global.hsp_player)
-	}
-	global.hsp_player = -7
-}
-x = x +  global.hsp_player
+//if place_meeting(x+global.hsp_player, y, oPlataforma){
+//	while(!place_meeting(x+sign(global.hsp_player), y, oPlataforma)){
+//		x = x + sign(global.hsp_player)
+//	}
+//	global.hsp_player = -7
+//}
+//x = x +  global.hsp_player
 
 //if place_meeting(x, y+global.hsp_player, oPlataforma){
 //	while(!place_meeting(x, y+sign(global.hsp_player), oPlataforma)){
@@ -106,16 +115,16 @@ if(global.key_jump and y >= max_y) {
 	global.tecla_pressionada = false
 }
 
-if global.key_left
+if global.key_left and global.player_andar
 {
-    x-=1
-	image_xscale = -0.6235294
+    x-= 3
+	image_xscale = -1
 	direction = 180
 }
 
-if global.key_right{
-	x+=1 
-	image_xscale = 0.6235294
+if global.key_right and global.player_andar {
+	x += 3
+	image_xscale = 1
 	direction = 0
 }
 
@@ -222,6 +231,36 @@ else if (x + half_width > room_width) {
 }
 
 */
+
+// Verificação da distancia do player do objeto que define o limite
+if instance_number(oLimite) >= 1{
+	var limite_proximo = instance_nearest(x, y, oLimite) // O objeto de limite mais proximo
+	var distancia_limiteX = x - limite_proximo.x // A distancia do x do player do x do objeto de limite
+	var distancia_borda_limiteX = 0 // A distancia da borda do limite
+	
+	if distancia_limiteX < 0{
+		// Calculo da distancia da borda do limite mais proximo caso a distancia do ponto origem do limite for menor que zero
+		distancia_borda_limiteX = distancia_limiteX + limite_proximo.sprite_width/2
+	}else if distancia_limiteX > 0{
+		// Caso for maior que zero
+		distancia_borda_limiteX = distancia_limiteX - limite_proximo.sprite_width/2
+	}else if distancia_limiteX == 0{
+		// É um caso impossivel. Cair nessa condição é sinal de cheat
+		game_end(0)
+	}
+	
+	if distancia_borda_limiteX < 10 and distancia_borda_limiteX >= 0{
+		x += 3
+		global.player_andar = false
+	}else if distancia_borda_limiteX > -10 and distancia_borda_limiteX <= 0{
+		x -= 3
+		global.player_andar = false
+	}else{
+		global.player_andar = true
+	}
+
+}
+
 var salvar = false // Salvar as alteraçoes
 var anterior_ou_prox = "" // "anterior" vai para a sala anterior, "prox" para a proxima
 
@@ -289,7 +328,7 @@ if salvar{
 
 	// Iterando pelo array e escrevendo cada item em uma linha do arquivo
 	for (var i = 0; i < array_length(global.valores); i++) {
-		show_debug_message(global.valores[i])
+		//show_debug_message(global.valores[i])
 	    file_text_write_string(file, string(global.valores[i])); // Escreve o item do array
 	    file_text_writeln(file); // Adiciona uma nova linha
 	}

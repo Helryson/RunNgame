@@ -1,6 +1,7 @@
 {
   "FolderOrderSettings":[],
   "ResourceOrderSettings":[
+    {"name":"oLimite","order":1,"path":"objects/oLimite/oLimite.yy",},
     {"name":"sGeneral","order":3,"path":"sprites/sGeneral/sGeneral.yy",},
     {"name":"SMarco","order":3,"path":"sprites/SMarco/SMarco.yy",},
     {"name":"sMarcoAK47","order":2,"path":"sprites/sMarcoAK47/sMarcoAK47.yy",},
