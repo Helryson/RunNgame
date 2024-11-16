@@ -1,5 +1,7 @@
 //Windows options
 
+//show_debug_message("("+string(x)+", "+string(y)+")")
+
 // Para facilitar o debug de mecanicas! Tirar quando finalizado
 if keyboard_check_pressed(ord("K")){
 	global.dano_armas = [9999999, 999999]
@@ -46,12 +48,12 @@ var max_y = y_inicial
 
 
 
-if y < y_inicial{
-	// SE o y for menor que o y inicial, pulando
-	global.pulo = true
-}else{
-	global.pulo = false
-}
+//if y < y_inicial{
+//	// SE o y for menor que o y inicial, pulando
+//	global.pulo = true
+//}else{
+//	global.pulo = false
+//}
 
 if keyboard_check_pressed(vk_f11){
 window_set_fullscreen(!window_get_fullscreen());
@@ -102,8 +104,8 @@ var move = global.key_right - global.key_left;
 global.hsp_player = move * (global.walkspd_player - 2)
 global.vsp_player = global.vsp_player + global.grv_player;
 
-if(global.key_jump and y >= max_y) {
-	global.vsp_player = global.velocidade_pulo
+if(global.key_jump and global.ativar_tecla_pulo) {
+	global.pulo = true
 	global.tecla_pressionada = true
 	
 	// Troca o sprite para o de pulo
@@ -113,6 +115,24 @@ if(global.key_jump and y >= max_y) {
 	
 }else{
 	global.tecla_pressionada = false
+}
+
+// Aumenta o y até chegar no final do pulo
+var diferenca_altura = y - (y_inicial - global.altura_pulo)
+var diferenca_y_inicial = y - y_inicial
+
+if diferenca_altura >= 0 and global.pulo{
+	y -= global.velocidade_pulo
+	global.ativar_tecla_pulo = false
+}else{
+	global.pulo = false
+}
+
+// Descendo até chegar no y original
+if diferenca_y_inicial <= 0 and not global.pulo{
+	y += global.velocidade_pulo
+}else if not global.pulo{
+	global.ativar_tecla_pulo = true
 }
 
 if global.key_left and global.player_andar
@@ -159,6 +179,7 @@ if (global.left_mouse) {
 		global.num_balas_player -= 1
 		bala = instance_create_layer(x, y-(sprite_height/2.5), "Instances", oBala)
 		global.ultima_bala = global.tempo_jogo
+		show_debug_message("Atirando!")
 		
 		if !global.key_up and !global.key_down{
 			if image_xscale < 0 {
@@ -350,16 +371,10 @@ if anterior_ou_prox == "anterior"{
 }
 
 
-y = y + global.vsp_player;
-
-
 // Voltar para o y inicial
 if (y > y_inicial){
 	// Diminuir o y gradativamente até chegar em y_inicial
-	//y -= global.vsp_player
-	global.vsp_player = 17
-	
-	y = y_inicial
+	global.vsp_player = -10
 	//global.pulo = false // Significa que o player chegou no chão
 }
 

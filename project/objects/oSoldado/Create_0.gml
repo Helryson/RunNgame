@@ -5,7 +5,6 @@
 
 // Define o Y como o mesmo do player NA CRIAÇÃO
 player_perto = instance_nearest(x, y, OMarco) // O player mais próximo do soldado
-y = player_perto.y
 
 hsp = 0;
 vsp = 0;

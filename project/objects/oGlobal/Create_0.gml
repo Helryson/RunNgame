@@ -6,7 +6,7 @@ global.originais = [600,
 0,
 0.75,
 4,
--17,
+17,
 0,
 0.4,
 0,
@@ -41,6 +41,8 @@ global.hp_tempo = 5 // A cada quantos fps recupera 1 hp
 global.player_danificado = false // Se o player tomou dano
 global.tempo_recover = 120 // Isso seria 2 segundos sem tomar dano até começar recuperar hp a 60 fps
 global.player_andar = true // se o player pode andar
+global.altura_pulo = 200 // A altura que o player chega
+global.ativar_tecla_pulo = true // Se a tecla de pulo está ativada
 
 global.salas_gameplay = [game] // Salas do meio do jogo
 global.salas_fim = [bossfight] // Salas do chefão
@@ -115,3 +117,5 @@ global.ultima_bala = real(lines[11])
 global.gravidade = real(lines[12])
 global.num_balas_player = real(lines[13])
 
+
+global.centro_gravidade = 576

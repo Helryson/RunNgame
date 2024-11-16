@@ -10,7 +10,8 @@ if array_contains(global.salas_gameplay, room){
 /// @description Inserir descrição aqui
 // Você pode escrever seu código neste editor
 
-y_inicial = y
+y_inicial = global.centro_gravidade
+y_inicial_o = global.centro_gravidade // o valor original
 
 // define se é possivel colidir com o objeto de queda ou não (apenas na sala)
 colidir_queda = true
