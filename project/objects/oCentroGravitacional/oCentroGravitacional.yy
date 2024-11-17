@@ -1,13 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"oLimite",
+  "%Name":"oCentroGravitacional",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"OMarco","path":"objects/OMarco/OMarco.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oLimite",
+  "name":"oCentroGravitacional",
   "overriddenProperties":[],
   "parent":{
     "name":"Delimitadores",
@@ -31,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"semtextura",
-    "path":"sprites/semtextura/semtextura.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

@@ -7,6 +7,7 @@
   "inheritLayers":false,
   "instanceCreationOrder":[
     {"name":"inst_35F450E9","path":"rooms/bossfight/bossfight.yy",},
+    {"name":"inst_167FED4E","path":"rooms/bossfight/bossfight.yy",},
     {"name":"inst_22E64BCC","path":"rooms/bossfight/bossfight.yy",},
     {"name":"inst_C30F815","path":"rooms/bossfight/bossfight.yy",},
     {"name":"inst_220CA77E","path":"rooms/bossfight/bossfight.yy",},
@@ -22,6 +23,8 @@
     {"name":"inst_465B0662","path":"rooms/bossfight/bossfight.yy",},
     {"name":"inst_588A85A8","path":"rooms/bossfight/bossfight.yy",},
     {"name":"inst_4CFA2FE6","path":"rooms/bossfight/bossfight.yy",},
+    {"name":"inst_16239ABA","path":"rooms/bossfight/bossfight.yy",},
+    {"name":"inst_790B9112","path":"rooms/bossfight/bossfight.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -42,6 +45,9 @@
         {"$GMRInstance":"v1","%Name":"inst_465B0662","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_465B0662","objectId":{"name":"oLimite","path":"objects/oLimite/oLimite.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":64.0,"y":320.0,},
         {"$GMRInstance":"v1","%Name":"inst_588A85A8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_588A85A8","objectId":{"name":"oLimite","path":"objects/oLimite/oLimite.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1088.0,"y":448.0,},
         {"$GMRInstance":"v1","%Name":"inst_4CFA2FE6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4CFA2FE6","objectId":{"name":"oLimite","path":"objects/oLimite/oLimite.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1088.0,"y":320.0,},
+        {"$GMRInstance":"v1","%Name":"inst_167FED4E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_167FED4E","objectId":{"name":"oCentroGravitacional","path":"objects/oCentroGravitacional/oCentroGravitacional.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":160.0,"y":480.0,},
+        {"$GMRInstance":"v1","%Name":"inst_16239ABA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_16239ABA","objectId":{"name":"oDeadzone","path":"objects/oDeadzone/oDeadzone.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1216.0,"y":448.0,},
+        {"$GMRInstance":"v1","%Name":"inst_790B9112","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_790B9112","objectId":{"name":"oDeadzone","path":"objects/oDeadzone/oDeadzone.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1344.0,"y":448.0,},
       ],"layers":[],"name":"Main_Layer","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assets_1","assets":[],"depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Assets_1","properties":[],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Game_Layer","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[

@@ -1,4 +1,4 @@
-var colisoes = [OMarco, oSoldado, oBala, oBalaInimigo, oArma, oBoss]
+var colisoes = [OMarco, oSoldado, oBala, oBalaInimigo, oArma, oBoss, oArma]
 var colisoes_destrutivas = [oBala, oBalaInimigo]
 var players = [OMarco]
 

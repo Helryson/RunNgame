@@ -261,35 +261,6 @@ else if (x + half_width > room_width) {
 
 */
 
-// Verificação da distancia do player do objeto que define o limite
-if instance_number(oLimite) >= 1{
-	var limite_proximo = instance_nearest(x, y, oLimite) // O objeto de limite mais proximo
-	var distancia_limiteX = x - limite_proximo.x // A distancia do x do player do x do objeto de limite
-	var distancia_borda_limiteX = 0 // A distancia da borda do limite
-	
-	if distancia_limiteX < 0{
-		// Calculo da distancia da borda do limite mais proximo caso a distancia do ponto origem do limite for menor que zero
-		distancia_borda_limiteX = distancia_limiteX + limite_proximo.sprite_width/2
-	}else if distancia_limiteX > 0{
-		// Caso for maior que zero
-		distancia_borda_limiteX = distancia_limiteX - limite_proximo.sprite_width/2
-	}else if distancia_limiteX == 0{
-		// É um caso impossivel. Cair nessa condição é sinal de cheat
-		game_end(0)
-	}
-	
-	if distancia_borda_limiteX < 10 and distancia_borda_limiteX >= 0{
-		x += 3
-		global.player_andar = false
-	}else if distancia_borda_limiteX > -10 and distancia_borda_limiteX <= 0{
-		x -= 3
-		global.player_andar = false
-	}else{
-		global.player_andar = true
-	}
-
-}
-
 var salvar = false // Salvar as alteraçoes
 var anterior_ou_prox = "" // "anterior" vai para a sala anterior, "prox" para a proxima
 

@@ -1,10 +1,19 @@
 {
-  "FolderOrderSettings":[],
+  "FolderOrderSettings":[
+    {"name":"Delimitadores","order":1,"path":"folders/Objetos/Delimitadores.yy",},
+  ],
   "ResourceOrderSettings":[
     {"name":"oChaoPraia","order":1,"path":"objects/oChaoPraia/oChaoPraia.yy",},
-    {"name":"oLimite","order":1,"path":"objects/oLimite/oLimite.yy",},
+    {"name":"oDeadzone","order":5,"path":"objects/oDeadzone/oDeadzone.yy",},
+    {"name":"oGlobal","order":1,"path":"objects/oGlobal/oGlobal.yy",},
+    {"name":"oLimite","order":2,"path":"objects/oLimite/oLimite.yy",},
     {"name":"oPedraPraia","order":2,"path":"objects/oPedraPraia/oPedraPraia.yy",},
     {"name":"oPlataformaPraia","order":3,"path":"objects/oPlataformaPraia/oPlataformaPraia.yy",},
+    {"name":"oReset","order":3,"path":"objects/oReset/oReset.yy",},
+    {"name":"oSoldadoSpawner","order":4,"path":"objects/oSoldadoSpawner/oSoldadoSpawner.yy",},
+    {"name":"endgame","order":2,"path":"rooms/endgame/endgame.yy",},
+    {"name":"game","order":1,"path":"rooms/game/game.yy",},
+    {"name":"gameover","order":3,"path":"rooms/gameover/gameover.yy",},
     {"name":"sChaoPraia_1","order":3,"path":"sprites/sChaoPraia_1/sChaoPraia_1.yy",},
     {"name":"sChaoPraia","order":1,"path":"sprites/sChaoPraia/sChaoPraia.yy",},
     {"name":"sGeneral","order":3,"path":"sprites/sGeneral/sGeneral.yy",},
@@ -14,7 +23,7 @@
     {"name":"sMarcoPistolaPuando","order":4,"path":"sprites/sMarcoPistolaPuando/sMarcoPistolaPuando.yy",},
     {"name":"sMecha","order":1,"path":"sprites/sMecha/sMecha.yy",},
     {"name":"sPedraPraia","order":2,"path":"sprites/sPedraPraia/sPedraPraia.yy",},
-    {"name":"sPraia","order":1,"path":"sprites/sPraia/sPraia.yy",},
+    {"name":"sPraia","order":4,"path":"sprites/sPraia/sPraia.yy",},
     {"name":"sSoldado_andando","order":2,"path":"sprites/sSoldado_andando/sSoldado_andando.yy",},
   ],
 }

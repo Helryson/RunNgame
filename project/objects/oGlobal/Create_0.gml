@@ -8,7 +8,7 @@ global.originais = [600,
 0,
 0.75,
 4,
-17,
+12,
 0,
 0.4,
 0,
@@ -120,4 +120,4 @@ global.gravidade = real(lines[12])
 global.num_balas_player = real(lines[13])
 
 
-global.centro_gravidade = 576
+//global.centro_gravidade = 576
