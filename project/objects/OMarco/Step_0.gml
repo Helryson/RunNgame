@@ -1,5 +1,11 @@
 //Windows options
 
+// Deletar a tela de carregamento se tiver alguma
+if instance_number(oCarregamento) >= 1{
+	var carregamento = instance_nearest(x, y, oCarregamento)
+	instance_destroy(carregamento)
+}
+
 //show_debug_message("("+string(x)+", "+string(y)+")")
 
 // Para facilitar o debug de mecanicas! Tirar quando finalizado
@@ -120,7 +126,7 @@ if(global.key_jump and global.ativar_tecla_pulo) {
 // Aumenta o y até chegar no final do pulo
 var diferenca_altura = y - (y_inicial - global.altura_pulo)
 var diferenca_y_inicial = y - y_inicial
-show_debug_message(string(y_inicial)+" "+string(y)+" "+string(global.ativar_tecla_pulo))
+//show_debug_message(string(y_inicial)+" "+string(y)+" "+string(global.ativar_tecla_pulo))
 
 if diferenca_altura > 0 and global.pulo{
 	y -= global.velocidade_pulo
@@ -339,9 +345,11 @@ if salvar{
 
 // Para proxima ou para a sala anterior
 if anterior_ou_prox == "anterior"{
+	instance_create_layer(0, 0, "Instances", oCarregamento)
 	room_goto_previous()
 }else if anterior_ou_prox == "prox"{
 	if room_next(room) != gameover{
+		instance_create_layer(0, 0, "Instances", oCarregamento)
 		room_goto_next()
 	}
 }else{

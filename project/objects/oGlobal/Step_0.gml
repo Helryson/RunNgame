@@ -42,7 +42,8 @@ switch(global.vida_player) {
 
 // Spawnar armas aleatoriamente (Uma de cada vez!)
 if instance_number(oArma) <= 0{
-
+	var xAleatorio = irandom_range(0, room_width)
+	instance_create_layer(xAleatorio, 0, "Main_Layer", oArma)
 }
 
 

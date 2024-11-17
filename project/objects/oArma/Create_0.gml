@@ -9,4 +9,3 @@ arma_atual = global.armas[arma_indice];
 centro_gravitacional = instance_nearest(x, y, oCentroGravitacional)
 y_inicial = centro_gravitacional.y
 y_inicial_o = centro_gravitacional.y
-chances = 1 // Quantas vezes a cada chances numeros aleatorios para spawnar
