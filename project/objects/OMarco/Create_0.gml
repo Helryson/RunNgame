@@ -17,7 +17,7 @@ y_inicial_o = global.centro_gravidade // o valor original
 colidir_queda = true
 hp_tempo = global.hp_tempo // Variavel local para não interferir na global
 hp_recover = global.tempo_recover
-
+id_plataforma = 0 // O id da possivel plataforma que o objeto ta tocando
 
 /*
 hsp = global.hsp_player;

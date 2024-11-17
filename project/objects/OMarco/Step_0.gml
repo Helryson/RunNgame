@@ -120,19 +120,27 @@ if(global.key_jump and global.ativar_tecla_pulo) {
 // Aumenta o y até chegar no final do pulo
 var diferenca_altura = y - (y_inicial - global.altura_pulo)
 var diferenca_y_inicial = y - y_inicial
+show_debug_message(string(y_inicial)+" "+string(y)+" "+string(global.ativar_tecla_pulo))
 
-if diferenca_altura >= 0 and global.pulo{
+if diferenca_altura > 0 and global.pulo{
 	y -= global.velocidade_pulo
 	global.ativar_tecla_pulo = false
+	
 }else{
-	global.pulo = false
+	if diferenca_altura > 0{
+		global.pulo = false
+	}else{
+		global.pulo = false
+		global.ativar_tecla_pulo = true
+	}
 }
 
 // Descendo até chegar no y original
-if diferenca_y_inicial <= 0 and not global.pulo{
+if diferenca_y_inicial < 0 and not global.pulo{
 	y += global.velocidade_pulo
 }else if not global.pulo{
 	global.ativar_tecla_pulo = true
+
 }
 
 if global.key_left and global.player_andar
@@ -374,7 +382,7 @@ if anterior_ou_prox == "anterior"{
 // Voltar para o y inicial
 if (y > y_inicial){
 	// Diminuir o y gradativamente até chegar em y_inicial
-	global.vsp_player = -10
+	y -= global.velocidade_pulo
 	//global.pulo = false // Significa que o player chegou no chão
 }
 

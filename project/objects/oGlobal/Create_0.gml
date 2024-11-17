@@ -1,5 +1,7 @@
 // Para não ser os mesmos numeros aleatórios a cada abertura
 randomize()
+id_plataforma = 0 // O id da possivel plataforma que o objeto ta tocando
+
 // Valores padrões
 global.originais = [600,
 0,

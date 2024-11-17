@@ -2,3 +2,4 @@
 // Você pode escrever seu código neste editor
 speed = 7
 direction = 0; // Inicializa a direção
+id_plataforma = 0 // O id da possivel plataforma que o objeto ta tocando

@@ -3,3 +3,4 @@
 speed = 5; // Velocidade do projétil
 direction = 0; // Inicializa a direção
 atirador = oSoldado
+id_plataforma = 0 // O id da possivel plataforma que o objeto ta tocando
