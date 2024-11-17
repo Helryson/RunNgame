@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 id_plataforma = 0 // O id da possivel plataforma que o objeto ta tocando
+
+y_inicial = global.centro_gravidade
+y_inicial_o = global.centro_gravidade
+
 //Velocidade do soldado
 
 // Define o Y como o mesmo do player NA CRIAÇÃO

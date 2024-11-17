@@ -33,42 +33,26 @@ for (var c=0; c<array_length(colisoes); c+=1){
 				// X
 				// Para casos que a distancia for neegativa
 				if distanciaX > 0 and modulo_dx <= pedra_distanciax_origem{
-					if array_contains(players, objeto){
-						player_proximo.y_inicial = y
-					}else{
-						player_proximo.y = y
-					}
+					player_proximo.y_inicial = y
 				}
 	
 				//show_debug_message(string(distanciaX)+", "+string(pedra_distanciax_origem))
 				// a distancia é positiva
 				if distanciaX < 0 and modulo_dx <= pedra_distanciax_origem{
-					if array_contains(players, objeto){
-						player_proximo.y_inicial = y
-					}else{
-						player_proximo.y = y
-					}
+					player_proximo.y_inicial = y
 				}
 				
 				//Y
 				
 				//show_debug_message(string(distanciaY)+", "+string(pedra_distanciay_origem))
 				if distanciaY >= 0 and modulo_dy <= pedra_distanciay_origem{
-					if array_contains(players, objeto){
-						player_proximo.y_inicial = y
-					}else{
-						player_proximo.y = y
-					}
+					player_proximo.y_inicial = y
 				}
 	
 				//show_debug_message(string(distanciaX)+", "+string(pedra_distanciax_origem))
 				// a distancia é positiva
 				if distanciaY < 0 and modulo_dy <= pedra_distanciay_origem{
-					if array_contains(players, objeto){
-						player_proximo.y_inicial -= 1
-					}else{
-						player_proximo.y -= 1
-					}
+					player_proximo.y_inicial -= 1
 				}
 				
 
@@ -82,7 +66,7 @@ for (var c=0; c<array_length(colisoes); c+=1){
 		}else{
 			// Só roda se o ID for o mesmo! Se não, nem tenta
 			if objeto.id_plataforma == id{
-				if array_contains(players, objeto){
+				if not array_contains(colisoes_destrutivas, objeto){
 					// Só reseta o y inicial se o player não tiver no mesmo x que abrange o objto
 					if modulo_dx > sprite_height/2{
 						player_proximo.y_inicial = player_proximo.y_inicial_o
