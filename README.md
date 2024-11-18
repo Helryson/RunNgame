@@ -3,7 +3,7 @@
 ## Programação
 
 * Breno Martins
-* Helrysson Rodrigues
+* Helryson Rodrigues
 
 ## Músicas
 
