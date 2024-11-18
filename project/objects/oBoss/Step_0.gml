@@ -125,6 +125,16 @@ if (can_shoot) {
 
 // Se o soldado tiver zerado de vida, MORRA!
 if vida <= 0{
-	room_goto(endgame)
-	instance_destroy()
+	can_shoot = false
+	
+	if morte == 0{
+		morte = current_time
+		sprite_index = sMechaMorte
+	}
+	
+	var agora = current_time
+	if agora - morte >= tempo_espera{
+		room_goto(endgame)
+		instance_destroy()
+	}
 }

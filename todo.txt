@@ -3,9 +3,9 @@ Feitos
 * Aumentar dificuldade do boss
 * Melhorar a colisão
 * Modificar IA do boss
+* Criar identificador de dano para o boss
 
 Não feitos:
-* Criar identificador de dano para o boss
 * Sistema de diálogo
 * Introdução
 * Balancear inimigos

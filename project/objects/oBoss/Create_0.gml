@@ -40,3 +40,6 @@ is_moving = true; // Flag para indicar se está se movendo
 // Variaveis de movimento
 min_x = 200
 max_x = 400
+
+morte = 0
+tempo_espera = 5000

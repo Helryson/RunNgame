@@ -33,3 +33,5 @@ move_timer = 0; // Timer para controle de movimento
 move_duration = room_speed * 2; // Duração do movimento (2 segundos)
 stop_duration = room_speed * 2; // Duração da parada (2 segundos)
 is_moving = true; // Flag para indicar se está se movendo
+
+dano = false // Se tomou daano
