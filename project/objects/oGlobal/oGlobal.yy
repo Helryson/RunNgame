@@ -9,8 +9,8 @@
   "name":"oGlobal",
   "overriddenProperties":[],
   "parent":{
-    "name":"Jogo",
-    "path":"folders/Objetos/Jogo.yy",
+    "name":"project",
+    "path":"project.yyp",
   },
   "parentObjectId":null,
   "persistent":false,

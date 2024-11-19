@@ -10,11 +10,15 @@ if array_contains(global.salas_gameplay, room){
 /// @description Inserir descrição aqui
 // Você pode escrever seu código neste editor
 
-y_inicial = y
+centro_gravitacional = instance_nearest(x, y, oCentroGravitacional)
+y_inicial = centro_gravitacional.y
+y_inicial_o = centro_gravitacional.y
 
 // define se é possivel colidir com o objeto de queda ou não (apenas na sala)
 colidir_queda = true
 hp_tempo = global.hp_tempo // Variavel local para não interferir na global
+hp_recover = global.tempo_recover
+id_plataforma = 0 // O id da possivel plataforma que o objeto ta tocando
 
 
 /*

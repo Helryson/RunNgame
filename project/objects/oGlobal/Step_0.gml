@@ -28,21 +28,14 @@ var coracoes = [coracao7, coracao6, coracao5, coracao4, coracao3, coracao2, cora
 // Pega um sprite da lista de corações
 coracao.sprite_index = coracoes[int64(global.vida_player/100)]
 
-/*
-switch(global.vida_player) {
-    case 6: coracao.sprite_index = coracao1; break;
-    case 5: coracao.sprite_index = coracao2; break;
-    case 4: coracao.sprite_index = coracao3; break;
-    case 3: coracao.sprite_index = coracao4; break;
-    case 2: coracao.sprite_index = coracao5; break;
-    case 1: coracao.sprite_index = coracao6; break;
-    case 0: coracao.sprite_index = coracao7; break;
-}
-*/
 
 // Spawnar armas aleatoriamente (Uma de cada vez!)
 if instance_number(oArma) <= 0{
-
+	if room == bossfight{
+		var xAleatorio = irandom_range(32, 960)
+		instance_create_layer(xAleatorio, 0, "Main_Layer", oArma)
+	}else{
+		var xAleatorio = irandom_range(0, room_width)
+		instance_create_layer(xAleatorio, 0, "Main_Layer", oArma)
+	}
 }
-
-

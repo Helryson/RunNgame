@@ -2,7 +2,7 @@ var num_soldados = instance_number(oSoldado)
 
 // Se não tiver o numero maximo de soldados, spawnar
 if spawnar and num_max_soldados > num_soldados{
-	var xAleatorio = irandom_range(0, room_width)
+	var xAleatorio = irandom_range(OMarco.x*2, room_width)
 	var soldado = instance_create_layer(xAleatorio, y, "Main_Layer", oSoldado)
 }
 

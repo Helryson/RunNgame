@@ -1,20 +1,21 @@
 // Para não ser os mesmos numeros aleatórios a cada abertura
 randomize()
+id_plataforma = 0 // O id da possivel plataforma que o objeto ta tocando
+
 // Valores padrões
 global.originais = [600,
 0,
 0,
 0.75,
 4,
--17,
+12,
 0,
 0.4,
 0,
 0,
 80,
 0,
-17,
-100]
+17]
 
 // Calcular tamnanho da tela
 
@@ -32,12 +33,17 @@ window_set_size(w, h)
 // para não resetar caso mude de sala
 
 
-global.armas = [pistola, ak47] // Array com as armas que existem no jogo
-global.dano_armas = [7, 10]
+global.armas = [pistola, ak47, shotgun] // Array com as armas que existem no jogo
+global.dano_armas = [5, 4, [4, 8, 16, 32]]
 global.invencibilidade_player = false //Se o player é invencivel
 global.tempo_invencibilidade_player = 1000
 global.tecla_pressionada = false // SE alguma tecla está pressionada
-global.hp_tempo = 120 // A cada quantos fps recupera 1 hp
+global.hp_tempo = 5 // A cada quantos fps recupera 1 hp
+global.player_danificado = false // Se o player tomou dano
+global.tempo_recover = 120 // Isso seria 2 segundos sem tomar dano até começar recuperar hp a 60 fps
+global.player_andar = true // se o player pode andar
+global.altura_pulo = 200 // A altura que o player chega
+global.ativar_tecla_pulo = true // Se a tecla de pulo está ativada
 
 global.salas_gameplay = [game] // Salas do meio do jogo
 global.salas_fim = [bossfight] // Salas do chefão
@@ -110,5 +116,5 @@ global.ultima_bala = real(lines[11])
 
 // Gravidade
 global.gravidade = real(lines[12])
-global.num_balas_player = real(lines[13])
 
+global.num_balas_player = 100000000000000

@@ -1,11 +1,41 @@
 //Windows options
 
-// Recuperar hp
-hp_tempo -= 1
+// Deletar a tela de carregamento se tiver alguma
+if instance_number(oCarregamento) >= 1{
+	var carregamento = instance_nearest(x, y, oCarregamento)
+	instance_destroy(carregamento)
+}
 
-if hp_tempo <= 0{
-	global.vida_player += 1
-	hp_tempo = global.hp_tempo
+//show_debug_message("("+string(x)+", "+string(y)+")")
+
+// Para facilitar o debug de mecanicas! Tirar quando finalizado
+if keyboard_check_pressed(ord("K")){
+	global.dano_armas = [9999999, 999999]
+	global.hp_tempo = 0
+	global.tempo_recover = 0
+	global.vida_player = 600
+}
+
+
+if not global.player_danificado{ // Só recupera dano se o player não estiver danificado
+	// Recuperar hp
+	hp_tempo -= 1
+
+	if hp_tempo <= 0{
+		global.vida_player += 5
+		hp_tempo = global.hp_tempo
+	}
+}else{
+	hp_recover -= 1
+	if hp_recover <= 0{ // se o tempo de recover de hp tiver zerado...
+		global.player_danificado = false
+		hp_recover = global.tempo_recover
+	}
+}
+// Se a vida for maior que 100
+
+if global.vida_player > global.originais[0]{
+	global.vida_player = global.originais[0]
 }
 
 // Trocar o sprite dependendo da arma
@@ -16,6 +46,9 @@ switch (global.arma_player_atual){
 	case ak47:
 		sprite_index = sMarcoAK47
 		break
+	case shotgun:
+		sprite_index = SMarco
+		break
 }
 
 
@@ -24,12 +57,12 @@ var max_y = y_inicial
 
 
 
-if y < y_inicial{
-	// SE o y for menor que o y inicial, pulando
-	global.pulo = true
-}else{
-	global.pulo = false
-}
+//if y < y_inicial{
+//	// SE o y for menor que o y inicial, pulando
+//	global.pulo = true
+//}else{
+//	global.pulo = false
+//}
 
 if keyboard_check_pressed(vk_f11){
 window_set_fullscreen(!window_get_fullscreen());
@@ -46,33 +79,23 @@ if place_meeting(x+global.hsp_player, y, oArma){
 	global.hsp_player = 0
 }
 
-if place_meeting(x+global.hsp_player, y, oPlataforma){
-	while(!place_meeting(x+sign(global.hsp_player), y, oPlataforma)){
-		x = x + sign(global.hsp_player)
-	}
-	global.hsp_player = -7
-}
-x = x +  global.hsp_player
-
-if place_meeting(x, y+global.hsp_player, oPlataforma){
-	while(!place_meeting(x, y+sign(global.hsp_player), oPlataforma)){
-		y = y + sign(global.hsp_player)
-	}
-	global.vsp_player = -7
-}
-
-y = y +  global.hsp_player
-
-
-//// Troca de arma
-//if (global.middle_mouse){ 
-//		// Se o indice for menor que o numero total de armas... adicionar mais um no index
-//		if global.arma_player_indx < armas_tamanho{
-//			global.arma_player_indx += 1
-//		}else{
-//			global.arma_player_indx = 0	
-//		}
+//if place_meeting(x+global.hsp_player, y, oPlataforma){
+//	while(!place_meeting(x+sign(global.hsp_player), y, oPlataforma)){
+//		x = x + sign(global.hsp_player)
+//	}
+//	global.hsp_player = -7
 //}
+//x = x +  global.hsp_player
+
+//if place_meeting(x, y+global.hsp_player, oPlataforma){
+//	while(!place_meeting(x, y+sign(global.hsp_player), oPlataforma)){
+//		y = y + sign(global.hsp_player)
+//	}
+//	global.vsp_player = -7
+//}
+
+// y = y +  global.hsp_player
+
 
 //Calculate Movement
 var move = global.key_right - global.key_left;
@@ -80,29 +103,52 @@ var move = global.key_right - global.key_left;
 global.hsp_player = move * (global.walkspd_player - 2)
 global.vsp_player = global.vsp_player + global.grv_player;
 
-if(global.key_jump and y >= max_y) {
-	global.vsp_player = global.velocidade_pulo
-	global.tecla_pressionada = true
-	
-	// Troca o sprite para o de pulo
-	if global.arma_player_atual == pistola{
-		sprite_index = sMarcoPistolaPuando
-	}
-	
-}else{
-	global.tecla_pressionada = false
+if(global.key_jump and global.ativar_tecla_pulo and not global.pulo) {
+    global.pulo = true;
+    global.tecla_pressionada = true;
+    
+    // Troca o sprite para o de pulo
+    if global.arma_player_atual == pistola {
+        sprite_index = sMarcoPistolaPuando;
+    }
+} else {
+    global.tecla_pressionada = false;
 }
 
-if global.key_left
+// Aumenta o y até chegar no final do pulo
+var diferenca_altura = y - (y_inicial - global.altura_pulo);
+var diferenca_y_inicial = y - y_inicial;
+
+if diferenca_altura > 0 and global.pulo {
+	 
+    y -= global.velocidade_pulo;
+    global.ativar_tecla_pulo = false; // Desativa a tecla de pulo enquanto estiver no ar
+} else if global.pulo {
+    // Finaliza o pulo no ponto mais alto
+    global.pulo = false;
+}
+
+// Descendo até chegar no y original
+if diferenca_y_inicial < 0 and not global.pulo {
+    y += global.velocidade_pulo;
+    if y >= y_inicial {
+        // Só permite pular novamente quando voltar ao chão
+        y = y_inicial;
+        global.ativar_tecla_pulo = true;
+    }
+}
+
+
+if global.key_left and global.player_andar
 {
-    x-=1
-	image_xscale = -0.6235294
+    x-= 3
+	image_xscale = -1
 	direction = 180
 }
 
-if global.key_right{
-	x+=1 
-	image_xscale = 0.6235294
+if global.key_right and global.player_andar {
+	x += 3
+	image_xscale = 1
 	direction = 0
 }
 
@@ -127,6 +173,9 @@ if (global.left_mouse) {
 		case pistola: 
 			global.tempo_arma_player_atual = 0.4
 			break
+		case shotgun: 
+			global.tempo_arma_player_atual = 1
+			break
 	}
 	
 	
@@ -136,7 +185,13 @@ if (global.left_mouse) {
 		var bala
 		global.num_balas_player -= 1
 		bala = instance_create_layer(x, y-(sprite_height/2.5), "Instances", oBala)
+		global.num_balas_player -= 1
+		if global.num_balas_player == 0{
+			global.arma_player_atual = global.armas[0]
+			global.num_balas_player = 10000000000000000
+		}
 		global.ultima_bala = global.tempo_jogo
+		show_debug_message("Atirando!")
 		
 		if !global.key_up and !global.key_down{
 			if image_xscale < 0 {
@@ -209,6 +264,7 @@ else if (x + half_width > room_width) {
 }
 
 */
+
 var salvar = false // Salvar as alteraçoes
 var anterior_ou_prox = "" // "anterior" vai para a sala anterior, "prox" para a proxima
 
@@ -276,7 +332,7 @@ if salvar{
 
 	// Iterando pelo array e escrevendo cada item em uma linha do arquivo
 	for (var i = 0; i < array_length(global.valores); i++) {
-		show_debug_message(global.valores[i])
+		//show_debug_message(global.valores[i])
 	    file_text_write_string(file, string(global.valores[i])); // Escreve o item do array
 	    file_text_writeln(file); // Adiciona uma nova linha
 	}
@@ -287,9 +343,11 @@ if salvar{
 
 // Para proxima ou para a sala anterior
 if anterior_ou_prox == "anterior"{
+	instance_create_layer(0, 0, "Instances", oCarregamento)
 	room_goto_previous()
 }else if anterior_ou_prox == "prox"{
 	if room_next(room) != gameover{
+		instance_create_layer(0, 0, "Instances", oCarregamento)
 		room_goto_next()
 	}
 }else{
@@ -298,16 +356,10 @@ if anterior_ou_prox == "anterior"{
 }
 
 
-y = y + global.vsp_player;
-
-
 // Voltar para o y inicial
 if (y > y_inicial){
 	// Diminuir o y gradativamente até chegar em y_inicial
-	//y -= global.vsp_player
-	global.vsp_player = 17
-	
-	y = y_inicial
+	y -= global.velocidade_pulo
 	//global.pulo = false // Significa que o player chegou no chão
 }
 
@@ -356,7 +408,7 @@ if global.vida_player <= 0{
 
 	file_text_writeln(file_player); // Adiciona uma nova linha	
 	file_text_close(file_player)
-	audio_stop_sound(audio)
+	//audio_stop_sound(audio)
 	room_goto(gameover)
 }
 

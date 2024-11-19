@@ -1,15 +1,27 @@
 // Instancia do player mais próxima
 
+// Voltar para o y inicial
+if (y > y_inicial){
+	// Diminuir o y gradativamente até chegar em y_inicial
+	y -= global.gravidade
+}
+
+if (y < y_inicial){
+	y += global.gravidade
+}
+
+
+
 // Distância do player e o soldado
 var distancia = x - player_perto.x;
 
 // Verifica mudança de direção
 
 if distancia <= 0{
-	image_xscale = -0.6893204
+	image_xscale = -1
 	direction = 0
 }else{
-	image_xscale = 0.6893204
+	image_xscale = 1
 	direction = 180
 }
 
@@ -24,11 +36,15 @@ if (espera > 0) {
         // Se o jogador estiver perto, mover o soldado para ele
         if (distancia < 200 && distancia > 10) {
             hsp = -walkspd; // Move para a esquerda
-			sprite_index = sSoldado_andando
+			if not dano{
+				sprite_index = sSoldado_andando
+			}
         }
         else if (distancia > -200 && distancia < -10) {
             hsp = walkspd; // Move para a direita
-			sprite_index = sSoldado_andando
+			if not dano{
+				sprite_index = sSoldado_andando
+			}
         }
         move_timer -= 1; // Decrementa o temporizador de movimento
     } 

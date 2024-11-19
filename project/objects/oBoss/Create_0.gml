@@ -1,5 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
+id_plataforma = 0 // O id da possivel plataforma que o objeto ta tocando
+
+
+centro_gravitacional = instance_nearest(x, y, oCentroGravitacional)
+y_inicial = centro_gravitacional.y
+y_inicial_o = centro_gravitacional.y
 
 //Velocidade do soldado
 
@@ -16,16 +22,24 @@ pause_timer = 0; // Novo temporizador para pausar
 pause_duration = room_speed * 2; // Duração da pausa em frames (2 segundos)
 
 
-vida = 600; // Inicializa a saúde do inimigo
+vida = 2000; // Inicializa a saúde do inimigo
 shot_timer = 0; // Timer inicial
-wait_time = 45; // 0.75 segundos (a 60 FPS)
-fire_rate = 30; // 0.5 segundo (a 60 FPS)
+wait_time = 20; // 0.75 segundos (a 60 FPS)
+fire_rate = 5; // 0.5 segundo (a 60 FPS)
 can_shoot = true; // Permite disparar inicialmente
 shoot_wait_time = 0; // Inicializa o tempo de espera para disparo
-dano_player = global.dano_armas[1] // Dano do chefe
+dano_player = 10 // Dano do chefe
 
 // Variáveis para controle de parada
 move_timer = 0; // Timer para controle de movimento
 move_duration = room_speed * 2; // Duração do movimento (2 segundos)
 stop_duration = room_speed * 2; // Duração da parada (2 segundos)
 is_moving = true; // Flag para indicar se está se movendo
+
+
+// Variaveis de movimento
+min_x = 200
+max_x = 400
+
+morte = 0
+tempo_espera = 5000
