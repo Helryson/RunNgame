@@ -49,7 +49,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.1100.0.686",
+    "IDEVersion":"2024.8.1.171",
   },
   "name":"project",
   "resources":[
@@ -107,6 +107,7 @@
     {"id":{"name":"sGamOver","path":"sprites/sGamOver/sGamOver.yy",},},
     {"id":{"name":"sGeneral","path":"sprites/sGeneral/sGeneral.yy",},},
     {"id":{"name":"sGrama","path":"sprites/sGrama/sGrama.yy",},},
+    {"id":{"name":"shotgun","path":"sprites/shotgun/shotgun.yy",},},
     {"id":{"name":"SMarco","path":"sprites/SMarco/SMarco.yy",},},
     {"id":{"name":"sMarcoAK47","path":"sprites/sMarcoAK47/sMarcoAK47.yy",},},
     {"id":{"name":"sMarcoPistola","path":"sprites/sMarcoPistola/sMarcoPistola.yy",},},
@@ -119,6 +120,7 @@
     {"id":{"name":"sPedraPraia","path":"sprites/sPedraPraia/sPedraPraia.yy",},},
     {"id":{"name":"sPlataforma","path":"sprites/sPlataforma/sPlataforma.yy",},},
     {"id":{"name":"sPraia","path":"sprites/sPraia/sPraia.yy",},},
+    {"id":{"name":"Sprite41","path":"sprites/Sprite41/Sprite41.yy",},},
     {"id":{"name":"sSoldado_andando","path":"sprites/sSoldado_andando/sSoldado_andando.yy",},},
     {"id":{"name":"sSoldado","path":"sprites/sSoldado/sSoldado.yy",},},
     {"id":{"name":"sSoldadoDano","path":"sprites/sSoldadoDano/sSoldadoDano.yy",},},

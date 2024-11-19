@@ -1,7 +1,13 @@
 // Se o player colidir com a arma, é para coletar
 global.arma_player_atual = arma_atual
 
-// Adiciona as balas
-global.num_balas_player = global.originais[13] // O indice 13 é o responsável pelo default
+switch arma_atual{
+	case ak47:
+	global.num_balas_player = 12
+	break
+	
+	case shotgun:
+	global.num_balas_player = 18
+}
 
 instance_destroy()

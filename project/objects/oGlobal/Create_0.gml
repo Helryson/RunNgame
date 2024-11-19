@@ -15,8 +15,7 @@ global.originais = [600,
 0,
 80,
 0,
-17,
-100]
+17]
 
 // Calcular tamnanho da tela
 
@@ -34,8 +33,8 @@ window_set_size(w, h)
 // para não resetar caso mude de sala
 
 
-global.armas = [pistola, ak47] // Array com as armas que existem no jogo
-global.dano_armas = [7, 10]
+global.armas = [pistola, ak47, shotgun] // Array com as armas que existem no jogo
+global.dano_armas = [5, 4, [4, 8, 16, 32]]
 global.invencibilidade_player = false //Se o player é invencivel
 global.tempo_invencibilidade_player = 1000
 global.tecla_pressionada = false // SE alguma tecla está pressionada
@@ -117,7 +116,5 @@ global.ultima_bala = real(lines[11])
 
 // Gravidade
 global.gravidade = real(lines[12])
-global.num_balas_player = real(lines[13])
 
-
-//global.centro_gravidade = 576
+global.num_balas_player = 100000000000000

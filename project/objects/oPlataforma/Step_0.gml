@@ -31,7 +31,7 @@ for (var c=0; c<array_length(colisoes); c+=1){
 				var pixels_ate_bordaY = sprite_height / 2	
 	
 				// X
-				// Para casos que a distancia for neegativa
+				// Para casos que a distancia for neegatwva
 				if distanciaX > 0 and modulo_dx <= pedra_distanciax_origem{
 					player_proximo.y_inicial = y
 				}

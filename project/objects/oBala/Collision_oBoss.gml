@@ -1,8 +1,34 @@
 // Soldado mais perto
-var soldado = other
+var chefao = other;
 // Tira 1 de vida do alvo
-soldado.vida -= global.dano_armas[array_get_index(global.armas, global.arma_player_atual)]
-soldado.sprite_index = sMechaDano
+
+switch global.arma_player_atual {
+    case pistola:
+        chefao.vida -= global.dano_armas[0];
+        break;
+
+    case ak47:
+        chefao.vida -= global.dano_armas[1];
+        break;
+
+    case shotgun:
+        if (boss_x == real(256) || boss_x == real(-256)) {
+            chefao.vida -= global.dano_armas[2][0];
+        } else if (boss_x == real(128) || boss_x == real(-128)) {
+            chefao.vida -= global.dano_armas[2][1];
+        } else if (boss_x == real(64) || boss_x == real(-64)) {
+            chefao.vida -= global.dano_armas[2][2];
+        } else if (boss_x == real(32) || boss_x == real(-32)) {
+            chefao.vida -= global.dano_armas[2][3];
+        }
+        break;
+}
+
+// Exibe a vida restante do chefão no console de depuração
+show_debug_message(chefao.vida);
+
+// Atualiza o sprite do chefão para mostrar dano
+chefao.sprite_index = sMechaDano;
 
 // Destruir a instância da bala em caso de colisão
-instance_destroy()
+instance_destroy();
