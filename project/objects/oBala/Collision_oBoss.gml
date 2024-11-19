@@ -12,15 +12,16 @@ switch global.arma_player_atual {
         break;
 
     case shotgun:
-        if (boss_x == real(256) || boss_x == real(-256)) {
-            chefao.vida -= global.dano_armas[2][0];
-        } else if (boss_x == real(128) || boss_x == real(-128)) {
-            chefao.vida -= global.dano_armas[2][1];
-        } else if (boss_x == real(64) || boss_x == real(-64)) {
-            chefao.vida -= global.dano_armas[2][2];
-        } else if (boss_x == real(32) || boss_x == real(-32)) {
-            chefao.vida -= global.dano_armas[2][3];
-        }
+        if x >= boss_x+256 or x <= boss_x-256 {
+		    chefao.vida -= global.dano_armas[2][0];
+		} else if x >= boss_x+128 or x <= boss_x-128 {
+		    chefao.vida -= global.dano_armas[2][1];
+		} else if x >= boss_x+64 or x <= boss_x-64 {
+		    chefao.vida -= global.dano_armas[2][2];
+		} else if x >= boss_x+32 or x <= boss_x-32 {
+		    chefao.vida -= global.dano_armas[2][3];
+		}
+
         break;
 }
 
