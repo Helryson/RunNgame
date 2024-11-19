@@ -34,7 +34,7 @@ window_set_size(w, h)
 
 
 global.armas = [pistola, ak47, shotgun] // Array com as armas que existem no jogo
-global.dano_armas = [5, 4, 6]
+global.dano_armas = [5, 4, [4, 8, 16, 32]]
 global.invencibilidade_player = false //Se o player é invencivel
 global.tempo_invencibilidade_player = 1000
 global.tecla_pressionada = false // SE alguma tecla está pressionada
