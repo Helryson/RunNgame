@@ -13,6 +13,7 @@ if array_contains(global.salas_gameplay, room){
 centro_gravitacional = instance_nearest(x, y, oCentroGravitacional)
 y_inicial = centro_gravitacional.y
 y_inicial_o = centro_gravitacional.y
+sprite_atual = sprite_index
 
 // define se é possivel colidir com o objeto de queda ou não (apenas na sala)
 colidir_queda = true

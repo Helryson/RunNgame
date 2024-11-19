@@ -39,18 +39,20 @@ if global.vida_player > global.originais[0]{
 }
 
 // Trocar o sprite dependendo da arma
-switch (global.arma_player_atual){
-	case pistola:
-		sprite_index = sMarcoPistola
-		break
-	case ak47:
-		sprite_index = sMarcoAK47
-		break
-	case shotgun:
-		sprite_index = SMarco
-		break
-}
 
+if sprite_index != sMarcoDano{
+	switch (global.arma_player_atual){
+		case pistola:
+			sprite_index = sMarcoPistola
+			break
+		case ak47:
+			sprite_index = sMarcoAK47
+			break
+		case shotgun:
+			sprite_index = SMarco
+			break
+	}
+}
 
 // O máximo que o player pode chegar
 var max_y = y_inicial
@@ -108,9 +110,11 @@ if(global.key_jump and global.ativar_tecla_pulo and not global.pulo) {
     global.tecla_pressionada = true;
     
     // Troca o sprite para o de pulo
-    if global.arma_player_atual == pistola {
-        sprite_index = sMarcoPistolaPuando;
-    }
+	if sprite_index != sMarcoDano{
+	    if global.arma_player_atual == pistola {
+	        sprite_index = sMarcoPistolaPuando;
+	    }
+	}
 } else {
     global.tecla_pressionada = false;
 }
@@ -153,14 +157,16 @@ if global.key_right and global.player_andar {
 }
 
 
-// Trocar sprite caso esteja andando
-if global.key_left or global.key_right{
-	global.tecla_pressionada = true
-	if global.arma_player_atual == pistola{
-		sprite_index = sMarcoPistolaAndando
+if sprite_index != sMarcoDano{
+	// Trocar sprite caso esteja andando
+	if global.key_left or global.key_right{
+		global.tecla_pressionada = true
+		if global.arma_player_atual == pistola{
+			sprite_index = sMarcoPistolaAndando
+		}
+	}else{
+		global.tecla_pressionada = false
 	}
-}else{
-	global.tecla_pressionada = false
 }
 
 
@@ -232,13 +238,14 @@ if (global.left_mouse) {
 		
 }
 
-// Se nenhuma tecla que troca sprite tiver pressionada
-if not global.tecla_pressionada{
-	if global.arma_player_atual == pistola{
-		sprite_index = sMarcoPistola
+if sprite_index != sMarcoDano{
+	// Se nenhuma tecla que troca sprite tiver pressionada
+	if not global.tecla_pressionada{
+		if global.arma_player_atual == pistola{
+			sprite_index = sMarcoPistola
+		}
 	}
 }
-
 
 //Horizontal Collision
 /* if (place_meeting(x+hsp, y, Object3)){
@@ -412,4 +419,6 @@ if global.vida_player <= 0{
 	room_goto(gameover)
 }
 
-
+if sprite_index != sMarcoDano{
+	sprite_atual = sprite_index
+} // Para ficar mais facil de resetar o sprite
