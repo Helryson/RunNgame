@@ -174,7 +174,7 @@ if (global.left_mouse) {
 			global.tempo_arma_player_atual = 0.4
 			break
 		case shotgun: 
-			global.tempo_arma_player_atual = 1
+			global.tempo_arma_player_atual = 0.7
 			break
 	}
 	

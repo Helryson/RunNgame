@@ -9,8 +9,8 @@
   "name":"oGlobal",
   "overriddenProperties":[],
   "parent":{
-    "name":"project",
-    "path":"project.yyp",
+    "name":"Delimitadores",
+    "path":"folders/Objetos/Delimitadores.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -49,7 +49,7 @@
   "origin":7,
   "parent":{
     "name":"Inimigos",
-    "path":"folders/Sprites/Game/Inimigos.yy",
+    "path":"folders/Sprites/Inimigos.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

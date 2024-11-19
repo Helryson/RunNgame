@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Cenas",
-    "path":"folders/Cenas.yy",
+    "name":"Jogo",
+    "path":"folders/Objetos/Jogo.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
