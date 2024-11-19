@@ -1,18 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"oPlataformaPraia",
-  "eventList":[],
+  "%Name":"oMechaCoracao",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"oPlataformaPraia",
+  "name":"oMechaCoracao",
   "overriddenProperties":[],
   "parent":{
-    "name":"Interativos",
-    "path":"folders/Objetos/Interativos.yy",
+    "name":"Jogo",
+    "path":"folders/Objetos/Jogo.yy",
   },
-  "parentObjectId":{
-    "name":"oChaoPraia",
-    "path":"objects/oChaoPraia/oChaoPraia.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

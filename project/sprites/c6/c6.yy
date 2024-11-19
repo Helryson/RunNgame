@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"coracao5",
+  "%Name":"c6",
   "bboxMode":0,
   "bbox_bottom":37,
   "bbox_left":9,
@@ -12,28 +12,28 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"651f5528-1eb6-456b-a0d7-9b0f6f7e482a","name":"651f5528-1eb6-456b-a0d7-9b0f6f7e482a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"4ea5bc64-c251-450a-b838-776af47abe14","name":"4ea5bc64-c251-450a-b838-776af47abe14","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":43,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"190ad1d1-f7eb-449a-a4cb-964e348ee6ba","blendMode":0,"displayName":"default","isLocked":false,"name":"190ad1d1-f7eb-449a-a4cb-964e348ee6ba","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"e712b0ba-a9ed-4aaf-820b-1d1a41d757cf","blendMode":0,"displayName":"default","isLocked":false,"name":"e712b0ba-a9ed-4aaf-820b-1d1a41d757cf","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"coracao5",
+  "name":"c6",
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Player",
-    "path":"folders/Sprites/Corações/Player.yy",
+    "name":"Mecha",
+    "path":"folders/Sprites/Corações/Mecha.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"coracao5",
+    "%Name":"c6",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"coracao5",
+    "name":"c6",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"651f5528-1eb6-456b-a0d7-9b0f6f7e482a","path":"sprites/coracao5/coracao5.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ffcdc39f-575e-4fc3-9478-aaf3fb9e75e2","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4ea5bc64-c251-450a-b838-776af47abe14","path":"sprites/c6/c6.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"5e882be6-c006-40a7-9e84-c480a400b208","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

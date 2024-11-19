@@ -44,8 +44,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"Corações",
-    "path":"folders/Sprites/Corações.yy",
+    "name":"Player",
+    "path":"folders/Sprites/Corações/Player.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
