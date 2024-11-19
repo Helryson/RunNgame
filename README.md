@@ -21,6 +21,7 @@
 * Ian Braga
 * Marcílio Magalhães
 * Lívia Souza
+* Breno Martins
 
 ### Artes originais
 * SNK (Original)
