@@ -103,3 +103,10 @@ if (can_shoot) {
 if vida <= 0{
 	instance_destroy()
 }
+
+var jogador = instance_nearest(x, y, OMarco)
+
+if (jogador.x == x - 32 || jogador.x == x + 32) {
+    // Define o alarme para 1.5 segundos (90 frames)
+    alarm[0] = 90;
+}

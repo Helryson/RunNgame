@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"oPlataformaPraia",
+  "%Name":"oMensagemGlobal",
   "eventList":[],
   "managed":true,
-  "name":"oPlataformaPraia",
+  "name":"oMensagemGlobal",
   "overriddenProperties":[],
   "parent":{
-    "name":"Interativos",
-    "path":"folders/Objetos/Interativos.yy",
+    "name":"Mensagens",
+    "path":"folders/Objetos/Mensagens.yy",
   },
-  "parentObjectId":{
-    "name":"oChaoPraia",
-    "path":"objects/oChaoPraia/oChaoPraia.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sChaoPraia",
-    "path":"sprites/sChaoPraia/sChaoPraia.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
