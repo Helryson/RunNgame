@@ -64,6 +64,7 @@
     {"name":"sCenario","order":3,"path":"sprites/sCenario/sCenario.yy",},
     {"name":"sChaoPraia","order":2,"path":"sprites/sChaoPraia/sChaoPraia.yy",},
     {"name":"sEndgame","order":2,"path":"sprites/sEndgame/sEndgame.yy",},
+    {"name":"sEndgame_1","order":11,"path":"sprites/sEndgame_1/sEndgame_1.yy",},
     {"name":"sGamOver","order":1,"path":"sprites/sGamOver/sGamOver.yy",},
     {"name":"sGeneral","order":3,"path":"sprites/sGeneral/sGeneral.yy",},
     {"name":"shotgun","order":1,"path":"sprites/shotgun/shotgun.yy",},

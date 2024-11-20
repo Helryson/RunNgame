@@ -3,7 +3,7 @@ randomize()
 id_plataforma = 0 // O id da possivel plataforma que o objeto ta tocando
 
 // Valores padrões
-global.originais = [600,
+global.originais = [500,
 0,
 0,
 0.75,
@@ -40,7 +40,7 @@ global.tempo_invencibilidade_player = 1000
 global.tecla_pressionada = false // SE alguma tecla está pressionada
 global.hp_tempo = 5 // A cada quantos fps recupera 1 hp
 global.player_danificado = false // Se o player tomou dano
-global.tempo_recover = 120 // Isso seria 2 segundos sem tomar dano até começar recuperar hp a 60 fps
+global.tempo_recover = 30 // Isso seria 0.5 segundos sem tomar dano até começar recuperar hp a 60 fps
 global.player_andar = true // se o player pode andar
 global.altura_pulo = 200 // A altura que o player chega
 global.ativar_tecla_pulo = true // Se a tecla de pulo está ativada

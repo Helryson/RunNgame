@@ -114,6 +114,7 @@
     {"id":{"name":"sChaoPraia","path":"sprites/sChaoPraia/sChaoPraia.yy",},},
     {"id":{"name":"semtextura","path":"sprites/semtextura/semtextura.yy",},},
     {"id":{"name":"sEndgame","path":"sprites/sEndgame/sEndgame.yy",},},
+    {"id":{"name":"sEndgame_1","path":"sprites/sEndgame_1/sEndgame_1.yy",},},
     {"id":{"name":"sGamOver","path":"sprites/sGamOver/sGamOver.yy",},},
     {"id":{"name":"sGeneral","path":"sprites/sGeneral/sGeneral.yy",},},
     {"id":{"name":"sGrama","path":"sprites/sGrama/sGrama.yy",},},
