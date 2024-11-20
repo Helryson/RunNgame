@@ -138,3 +138,17 @@ if vida <= 0{
 		instance_destroy()
 	}
 }
+
+// Coloca os corações
+// Coloca os corações
+var coracoes = [c7, c6, c5, c4, c3, c2, c1];
+var vida_porcentagem = (vida / max_vida) * 100;
+
+// Calcula o índice com base na porcentagem
+var indice = floor((vida_porcentagem / 100) * array_length(coracoes));
+indice = clamp(indice, 0, array_length(coracoes) - 1);
+
+oCoracaoMecha.sprite_index = coracoes[indice];
+
+show_debug_message(string(vida_porcentagem))
+
