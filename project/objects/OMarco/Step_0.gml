@@ -53,7 +53,6 @@ if sprite_index != sMarcoDano{
 			break
 	}
 }
-
 // O máximo que o player pode chegar
 var max_y = y_inicial
 
