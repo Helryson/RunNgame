@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oAreiaMaiorParede",
+  "%Name":"oPedraLitoraneaParedeMaior",
   "eventList":[],
   "managed":true,
-  "name":"oAreiaMaiorParede",
+  "name":"oPedraLitoraneaParedeMaior",
   "overriddenProperties":[],
   "parent":{
     "name":"Interativos",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sAreiaMaior",
-    "path":"sprites/sAreiaMaior/sAreiaMaior.yy",
+    "name":"sPedraLitoraneaMaior",
+    "path":"sprites/sPedraLitoraneaMaior/sPedraLitoraneaMaior.yy",
   },
   "spriteMaskId":null,
   "visible":true,

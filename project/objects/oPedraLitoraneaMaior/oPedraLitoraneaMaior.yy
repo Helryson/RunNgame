@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"oAreiaParede",
+  "%Name":"oPedraLitoraneaMaior",
   "eventList":[],
   "managed":true,
-  "name":"oAreiaParede",
+  "name":"oPedraLitoraneaMaior",
   "overriddenProperties":[],
   "parent":{
     "name":"Interativos",
     "path":"folders/Objetos/Interativos.yy",
   },
   "parentObjectId":{
-    "name":"oPedraPraia",
-    "path":"objects/oPedraPraia/oPedraPraia.yy",
+    "name":"oPlataforma",
+    "path":"objects/oPlataforma/oPlataforma.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sAreia",
-    "path":"sprites/sAreia/sAreia.yy",
+    "name":"sPedraLitoraneaMaior",
+    "path":"sprites/sPedraLitoraneaMaior/sPedraLitoraneaMaior.yy",
   },
   "spriteMaskId":null,
   "visible":true,

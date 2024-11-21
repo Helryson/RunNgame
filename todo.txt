@@ -15,3 +15,4 @@ Não feitos:
 BUGS A SEREM CORRIGIDOS
 * Musica parando de tocar quando volta de sala
 * Caixa de armas dando glitch as vezes
+* Colisão problemática na sala 2 da praia
