@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"oPlataformaPraia",
+  "%Name":"oAreiaParede",
   "eventList":[],
   "managed":true,
-  "name":"oPlataformaPraia",
+  "name":"oAreiaParede",
   "overriddenProperties":[],
   "parent":{
     "name":"Interativos",
     "path":"folders/Objetos/Interativos.yy",
   },
   "parentObjectId":{
-    "name":"oChaoPraia",
-    "path":"objects/oChaoPraia/oChaoPraia.yy",
+    "name":"oPedraPraia",
+    "path":"objects/oPedraPraia/oPedraPraia.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sChaoPraiaMenor",
-    "path":"sprites/sChaoPraiaMenor/sChaoPraiaMenor.yy",
+    "name":"sAreia",
+    "path":"sprites/sAreia/sAreia.yy",
   },
   "spriteMaskId":null,
   "visible":true,
