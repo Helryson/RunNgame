@@ -99,24 +99,122 @@ if place_meeting(x+global.hsp_player, y, oArma){
 
 
 //Calculate Movement
-var move = global.key_right - global.key_left;
-
-global.hsp_player = move * (global.walkspd_player - 2)
-global.vsp_player = global.vsp_player + global.grv_player;
-
-if(global.key_jump and global.ativar_tecla_pulo and not global.pulo) {
-    global.pulo = true;
-    global.tecla_pressionada = true;
-    
-    // Troca o sprite para o de pulo
-	if sprite_index != sMarcoDano{
-	    if global.arma_player_atual == pistola {
-	        sprite_index = sMarcoPistolaPuando;
-	    }
+if !global.is_dialog_active{
+	
+	if global.key_left and global.player_andar{
+	    x-= 3
+		image_xscale = -1
+		direction = 180
 	}
-} else {
-    global.tecla_pressionada = false;
+
+	if global.key_right and global.player_andar {
+		x += 3
+		image_xscale = 1
+		direction = 0
+	}
+	
+	var move = global.key_right - global.key_left;
+
+	global.hsp_player = move * (global.walkspd_player - 2)
+	global.vsp_player = global.vsp_player + global.grv_player;
+
+	if(global.key_jump and global.ativar_tecla_pulo and not global.pulo) {
+	    global.pulo = true;
+	    global.tecla_pressionada = true;
+    
+	    // Troca o sprite para o de pulo
+		if sprite_index != sMarcoDano{
+		    if global.arma_player_atual == pistola {
+		        sprite_index = sMarcoPistolaPuando;
+		    }
+		}
+	} else {
+	    global.tecla_pressionada = false;
+	}
+	
+	// Cria instância de bala na camada instances_1 quando clica com botão esquerdo
+	if (global.left_mouse) {
+		switch(global.arma_player_atual){
+			case ak47: 
+				global.tempo_arma_player_atual = 0.2
+				break
+			case pistola: 
+				global.tempo_arma_player_atual = 0.4
+				break
+			case shotgun: 
+				global.tempo_arma_player_atual = 0.7
+				break
+		}
+	
+	
+		// Sistema de tiro refeito
+		if global.tempo_jogo - global.ultima_bala >= global.tempo_arma_player_atual * 1000 && global.num_balas_player >= 1{
+			//show_debug_message(string(global.ultima_bala), string(global.tempo_arma_player_atual))
+			var bala
+			global.num_balas_player -= 1
+			bala = instance_create_layer(x, y-(sprite_height/2.5), "Instances", oBala)
+			global.num_balas_player -= 1
+			if global.num_balas_player == 0{
+				global.arma_player_atual = global.armas[0]
+				global.num_balas_player = 10000000000000000
+			}
+			global.ultima_bala = global.tempo_jogo
+			show_debug_message("Atirando!")
+		
+			if !global.key_up and !global.key_down{
+				if image_xscale < 0 {
+					bala.direction = 180
+				}
+				else {	
+					bala.direction = 0
+				}
+			}
+			else if global.key_up and global.key_left{
+				bala.direction = 155
+				bala.image_angle = 155
+			}
+			else if global.key_up and global.key_right{
+				bala.direction = 25
+				bala.image_angle = 25
+			}
+			else{
+				if global.key_up{
+					bala.direction = 90
+					bala.image_angle = 90
+				}
+			
+				else if global.key_down and global.pulo{
+					bala.direction = -90
+					bala.image_angle = -90
+				}
+				else if global.key_down{
+					if image_xscale < 0{
+						bala.direction = 180 
+					}
+					else{
+						bala.direction = 0 
+					}
+				}
+			}
+		}
+		
+	}
+	
+	if sprite_index != sMarcoDano{
+		// Trocar sprite caso esteja andando
+		if global.key_left or global.key_right{
+			global.tecla_pressionada = true
+			if global.arma_player_atual == pistola{
+				sprite_index = sMarcoPistolaAndando
+			}
+		}else{
+			global.tecla_pressionada = false
+		}
+	}
+	
+	
 }
+
 
 // Aumenta o y até chegar no final do pulo
 var diferenca_altura = y - (y_inicial - global.altura_pulo);
@@ -141,101 +239,6 @@ if diferenca_y_inicial < 0 and not global.pulo {
     }
 }
 
-
-if global.key_left and global.player_andar
-{
-    x-= 3
-	image_xscale = -1
-	direction = 180
-}
-
-if global.key_right and global.player_andar {
-	x += 3
-	image_xscale = 1
-	direction = 0
-}
-
-
-if sprite_index != sMarcoDano{
-	// Trocar sprite caso esteja andando
-	if global.key_left or global.key_right{
-		global.tecla_pressionada = true
-		if global.arma_player_atual == pistola{
-			sprite_index = sMarcoPistolaAndando
-		}
-	}else{
-		global.tecla_pressionada = false
-	}
-}
-
-
-// Cria instância de bala na camada instances_1 quando clica com botão esquerdo
-if (global.left_mouse) {
-	switch(global.arma_player_atual){
-		case ak47: 
-			global.tempo_arma_player_atual = 0.2
-			break
-		case pistola: 
-			global.tempo_arma_player_atual = 0.4
-			break
-		case shotgun: 
-			global.tempo_arma_player_atual = 0.7
-			break
-	}
-	
-	
-	// Sistema de tiro refeito
-	if global.tempo_jogo - global.ultima_bala >= global.tempo_arma_player_atual * 1000 && global.num_balas_player >= 1{
-		//show_debug_message(string(global.ultima_bala), string(global.tempo_arma_player_atual))
-		var bala
-		global.num_balas_player -= 1
-		bala = instance_create_layer(x, y-(sprite_height/2.5), "Instances", oBala)
-		global.num_balas_player -= 1
-		if global.num_balas_player == 0{
-			global.arma_player_atual = global.armas[0]
-			global.num_balas_player = 10000000000000000
-		}
-		global.ultima_bala = global.tempo_jogo
-		show_debug_message("Atirando!")
-		
-		if !global.key_up and !global.key_down{
-			if image_xscale < 0 {
-				bala.direction = 180
-			}
-			else {	
-				bala.direction = 0
-			}
-		}
-		else if global.key_up and global.key_left{
-			bala.direction = 155
-			bala.image_angle = 155
-		}
-		else if global.key_up and global.key_right{
-			bala.direction = 25
-			bala.image_angle = 25
-		}
-		else{
-			if global.key_up{
-				bala.direction = 90
-				bala.image_angle = 90
-			}
-			
-			else if global.key_down and global.pulo{
-				bala.direction = -90
-				bala.image_angle = -90
-			}
-			else if global.key_down{
-				if image_xscale < 0{
-					bala.direction = 180 
-				}
-				else{
-					bala.direction = 0 
-				}
-			}
-		}
-	}
-		
-}
 
 if sprite_index != sMarcoDano{
 	// Se nenhuma tecla que troca sprite tiver pressionada

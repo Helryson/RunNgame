@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"src_load_dialog",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"src_load_dialog",
+  "parent":{
+    "name":"Mensagens",
+    "path":"folders/Objetos/Mensagens.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

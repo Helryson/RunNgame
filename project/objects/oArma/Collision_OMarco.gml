@@ -3,7 +3,7 @@ global.arma_player_atual = arma_atual
 
 switch arma_atual{
 	case ak47:
-	global.num_balas_player = 12
+	global.num_balas_player = 90
 	break
 	
 	case shotgun:
