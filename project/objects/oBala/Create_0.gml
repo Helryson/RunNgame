@@ -18,3 +18,18 @@ if (boss != noone) {
     boss_x = -1;
     boss_y = -1;
 }
+
+//localiza o soldado mais proximo
+soldado = instance_nearest(x, y, oSoldado);
+
+// Verifica se o boss existe
+if (soldado != noone) {
+    // Armazena as coordenadas do boss no momento da criação
+    soldado_x = soldado.x;
+    soldado_y = soldado.y;
+} else {
+    // Define valores padrão caso nenhum boss seja encontrado
+    soldado_x = -1;
+    soldado_ys = -1;
+}
+
