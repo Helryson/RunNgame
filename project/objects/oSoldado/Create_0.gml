@@ -1,8 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+show_debug_message("Objeto oSoldado inicializado.");
+
 id_plataforma = 0 // O id da possivel plataforma que o objeto ta tocando
 
-
+global.dano_armas = [5, 4, [4, 8, 16, 32]];
 //Velocidade do soldado
 centro_gravitacional = instance_nearest(x, y, oCentroGravitacional)
 y_inicial = centro_gravitacional.y
