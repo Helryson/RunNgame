@@ -51,7 +51,7 @@ if accept_key{
 }
 	
 //desenha o text box
-text_img += text_img_spd
+//text_img += text_img_spd
 var txtb_spr_w = sprite_get_width(txtb_spr)
 var txtb_spr_h = sprite_get_height(txtb_spr)
 

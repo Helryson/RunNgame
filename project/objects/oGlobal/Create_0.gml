@@ -122,5 +122,5 @@ global.num_balas_player = 100000000000000
 global.is_dialog_active = false; // Define se o diálogo está ativo
 global.dialog_file = "";  
 if room == bossfight{
-	global.is_dialog_active = true;
+	global.is_dialog_active = false;
 }
