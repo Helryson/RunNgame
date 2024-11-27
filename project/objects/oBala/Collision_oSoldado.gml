@@ -4,6 +4,7 @@ var soldado = other;
 
 switch global.arma_player_atual {
     case pistola:
+		var som_tiro = pistola_tiro
         soldado.vida -= global.dano_armas[0];
         // Reproduz o som de tiro para a pistola
         audio_play_sound(som_tiro, 1, false);  // 1 é o volume e 'false' indica que o som não se repete

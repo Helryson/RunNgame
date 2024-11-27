@@ -48,7 +48,7 @@ if instance_number(oArma) <= 0{
 }
 
 if instance_nearest(x, y, oTextBox){
-	global.is_dialog_active = true
+	global.is_dialog_active = false
 }
 else{
 	global.is_dialog_active = false

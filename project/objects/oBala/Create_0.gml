@@ -8,6 +8,8 @@ id_pedra = 0 // o id da possivel pedra que o objeto colidir
 // Localiza o boss mais próximo
 boss = instance_nearest(x, y, oBoss);
 
+
+
 // Verifica se o boss existe
 if (boss != noone) {
     // Armazena as coordenadas do boss no momento da criação
