@@ -1,5 +1,5 @@
 // Create Event for collision object
-distancia_afetarX = sprite_width/2
+distancia_afetarX = sprite_width/2  + 10
 distancia_afetarY = sprite_height
 pedra_distanciax_origem = sprite_width/2
 pedra_distanciay_origem = sprite_height

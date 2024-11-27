@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sPedraLitoranea",
-    "path":"sprites/sPedraLitoranea/sPedraLitoranea.yy",
+    "name":"sPedraLitoraneaP",
+    "path":"sprites/sPedraLitoraneaP/sPedraLitoraneaP.yy",
   },
   "spriteMaskId":null,
   "visible":true,
