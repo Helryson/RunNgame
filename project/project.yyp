@@ -58,6 +58,7 @@
   },
   "name":"project",
   "resources":[
+    {"id":{"name":"font_debug","path":"fonts/font_debug/font_debug.yy",},},
     {"id":{"name":"oArma","path":"objects/oArma/oArma.yy",},},
     {"id":{"name":"oBala","path":"objects/oBala/oBala.yy",},},
     {"id":{"name":"oBalaInimigo","path":"objects/oBalaInimigo/oBalaInimigo.yy",},},
