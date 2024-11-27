@@ -22,13 +22,15 @@ pause_timer = 0; // Novo temporizador para pausar
 pause_duration = room_speed * 2; // Duração da pausa em frames (2 segundos)
 
 
-vida = 2000; // Inicializa a saúde do inimigo
+//armas = [metralhadora, missel, flame]
+max_vida  = 1000  // Vida maxima
+vida = max_vida // Inicializa a saúde do inimigo
 shot_timer = 0; // Timer inicial
 wait_time = 20; // 0.75 segundos (a 60 FPS)
-fire_rate = 10; // 0.5 segundo (a 60 FPS)
 can_shoot = true; // Permite disparar inicialmente
 shoot_wait_time = 0; // Inicializa o tempo de espera para disparo
 dano_player = 10 // Dano do chefe
+fire_rate = 25; // 0.5 segundo (a 60 FPS)
 
 // Variáveis para controle de parada
 move_timer = 0; // Timer para controle de movimento

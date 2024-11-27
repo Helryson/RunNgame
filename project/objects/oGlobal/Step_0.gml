@@ -25,8 +25,15 @@ var player_proximo = instance_nearest(x, y, OMarco)
 // Lista de corações
 var coracoes = [coracao7, coracao6, coracao5, coracao4, coracao3, coracao2, coracao1]
 
-// Pega um sprite da lista de corações
-coracao.sprite_index = coracoes[int64(global.vida_player/100)]
+var vida_porcentagem = (global.vida_player /global.originais[0]) * 100;
+
+// Calcula o índice com base na porcentagem
+var indice = floor((vida_porcentagem / 100) * array_length(coracoes));
+indice = clamp(indice, 0, array_length(coracoes) - 1);
+
+show_debug_message(string(vida_porcentagem))
+
+oCoracao.sprite_index = coracoes[indice];
 
 
 // Spawnar armas aleatoriamente (Uma de cada vez!)
@@ -38,4 +45,11 @@ if instance_number(oArma) <= 0{
 		var xAleatorio = irandom_range(0, room_width)
 		instance_create_layer(xAleatorio, 0, "Main_Layer", oArma)
 	}
+}
+
+if instance_nearest(x, y, oTextBox){
+	global.is_dialog_active = true
+}
+else{
+	global.is_dialog_active = false
 }

@@ -29,7 +29,9 @@ switch global.arma_player_atual {
 show_debug_message(chefao.vida);
 
 // Atualiza o sprite do chefão para mostrar dano
-chefao.sprite_index = sMechaDano;
+if chefao.vida > 0{
+	chefao.sprite_index = sMechaDano;
+}
 
 // Destruir a instância da bala em caso de colisão
 instance_destroy();

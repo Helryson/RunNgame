@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sChaoPraia",
-    "path":"sprites/sChaoPraia/sChaoPraia.yy",
+    "name":"sChaoPraiaMenor",
+    "path":"sprites/sChaoPraiaMenor/sChaoPraiaMenor.yy",
   },
   "spriteMaskId":null,
   "visible":true,
