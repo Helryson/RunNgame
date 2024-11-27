@@ -46,3 +46,10 @@ if instance_number(oArma) <= 0{
 		instance_create_layer(xAleatorio, 0, "Main_Layer", oArma)
 	}
 }
+
+if instance_nearest(x, y, oTextBox){
+	global.is_dialog_active = true
+}
+else{
+	global.is_dialog_active = false
+}

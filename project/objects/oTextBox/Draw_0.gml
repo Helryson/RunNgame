@@ -1,7 +1,7 @@
 var accept_key = keyboard_check_pressed(ord("L"))
 
 var textbox_x = camera_get_view_x(view_camera[0])
-var textbox_y = camera_get_view_y(view_camera[0]) + 424
+var textbox_y = camera_get_view_y(view_camera[0]) + 200
 
 //setup
 if setup == false{
@@ -25,10 +25,14 @@ if setup == false{
 
 
 //digitando o texto
-if draw_char < text_lenght[page]{
-	draw_char += text_speed
-	draw_char = clamp(draw_char, 0, text_lenght[page])
+// Ajuste a velocidade de digitação
+var time_increment = text_speed * delta_time;  // Ajuste com delta_time para um comportamento mais suave
+
+if draw_char < text_lenght[page] {
+    draw_char += time_increment;
+    draw_char = clamp(draw_char, 0, text_lenght[page]);
 }
+
 
 //vira através das paginas
 if accept_key{
@@ -51,7 +55,7 @@ if accept_key{
 }
 	
 //desenha o text box
-//text_img += text_img_spd
+txtb_img += txtb_img_spd
 var txtb_spr_w = sprite_get_width(txtb_spr)
 var txtb_spr_h = sprite_get_height(txtb_spr)
 
@@ -60,5 +64,5 @@ draw_sprite_ext(txtb_spr, txtb_img, textbox_x + text_x_offset[page], textbox_y, 
 
 
 //desenha texto
-var _drawtext = string_copy(text[page], 1, draw_char)
+var _drawtext = string_copy(text[page], 1, round(draw_char))
 draw_text_ext(textbox_x + text_x_offset[page] + border, textbox_y + border, _drawtext, line_sep, line_width)
