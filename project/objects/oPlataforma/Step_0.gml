@@ -52,7 +52,7 @@ for (var c=0; c<array_length(colisoes); c+=1){
 				//show_debug_message(string(distanciaX)+", "+string(pedra_distanciax_origem))
 				// a distancia é positiva
 				if distanciaY < 0 and modulo_dy <= pedra_distanciay_origem{
-					player_proximo.y_inicial -= global.gravidade
+					player_proximo.y_inicial = y
 				}
 				
 
