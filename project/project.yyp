@@ -144,6 +144,7 @@
     {"id":{"name":"sMarcoPistola","path":"sprites/sMarcoPistola/sMarcoPistola.yy",},},
     {"id":{"name":"sMarcoPistolaAndando","path":"sprites/sMarcoPistolaAndando/sMarcoPistolaAndando.yy",},},
     {"id":{"name":"sMarcoPistolaPuando","path":"sprites/sMarcoPistolaPuando/sMarcoPistolaPuando.yy",},},
+    {"id":{"name":"sMarcoShotgunAndando","path":"sprites/sMarcoShotgunAndando/sMarcoShotgunAndando.yy",},},
     {"id":{"name":"sMarcoShotgunPuando","path":"sprites/sMarcoShotgunPuando/sMarcoShotgunPuando.yy",},},
     {"id":{"name":"sMecha","path":"sprites/sMecha/sMecha.yy",},},
     {"id":{"name":"sMechaDano","path":"sprites/sMechaDano/sMechaDano.yy",},},
