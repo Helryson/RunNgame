@@ -1,4 +1,4 @@
-// Instancia do player mais próxima
+var count = 0 // contagem de frames para mudar de arma 
 
 // Voltar para o y inicial
 if (y > y_inicial){
@@ -31,8 +31,6 @@ if distancia <= 0{
 }
 
 
-
-
 // Horizontal Collision
 x += hsp;
 
@@ -46,14 +44,37 @@ if (place_meeting(x, y + vsp, oCenario)) {
     vsp = 0;
 }
 y += ;*/
-
 // Vendo se o x passou do limite
 // Verificação da distancia do player do objeto que define o limite
 // obj_npc - Step Event
 if (!global.is_dialog_active) {
+	
+	if count == 600{
+		arma_atual = sFogo
+		count = 0
+	}
+	count++
+	
     // Código para NPCs se moverem ou realizarem ações normais
 	
-	if (can_shoot) {
+	switch arma_atual{
+	
+		case sBalaInimigo:
+		fire_rate = 25
+		break
+	
+		//case missel:
+		//fire_rate = 45
+		//break
+	
+		case sFogo:
+		sprite_index = sMechaFlameTrower
+		fire_rate = 45
+		break
+	
+	}
+	
+	if (can_shoot and arma_atual != sFogo) {
 	    if (shot_timer > 0) {
 	        shot_timer -= 1; // Decrementa o timer
 	    }
@@ -70,6 +91,23 @@ if (!global.is_dialog_active) {
 				wait_time = 20
 	        }
 	    }
+	} else if (can_shoot and arma_atual == sFogo){
+		 if (shot_timer > 0) {
+	        shot_timer -= 1; // Decrementa o timer
+	    }
+
+	    if (shot_timer <= 0) {
+	        if (wait_time > 0) {
+	            wait_time -= 1; // Decrementa o tempo de espera
+	        } else {
+	            var proj = instance_create_layer(x, bala_y, "Instances", oFlame);
+	            proj.direction = bala_direcao; // Define a direção do projétil
+	            proj.atirador = oBoss
+				proj.image_angle = bala_direcao
+				shot_timer = fire_rate; // Reseta o timer para o próximo disparo
+				wait_time = 20
+	        }
+	    }	
 	}
 	
 	// Se o temporizador de espera estiver ativo, decrementa e pausa o movimento
