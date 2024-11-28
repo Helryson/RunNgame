@@ -124,12 +124,17 @@ if !global.is_dialog_active{
     
 	    // Troca o sprite para o de pulo
 		if sprite_index != sMarcoDano{
-		    if global.arma_player_atual == pistola {
-		        sprite_index = sMarcoPistolaPuando;
-		    }else if global.arma_player_atual == shotgun{
-				sprite_index = sMarcoShotgunPuando
-			}else if global.arma_player_atual == ak47{
-				sprite_index = sMarcoAk47Puando
+			var pulando_sprites = [sMarcoShotgunPuando, sMarcoPistolaPuando, sMarcoAk47Puando]
+			
+			// Para evitar sprite congelando
+			if not array_contains(pulando_sprites, sprite_index){
+			    if global.arma_player_atual == pistola {
+			        sprite_index = sMarcoPistolaPuando;
+			    }else if global.arma_player_atual == shotgun{
+					sprite_index = sMarcoShotgunPuando
+				}else if global.arma_player_atual == ak47{
+					sprite_index = sMarcoAk47Puando
+				}
 			}
 		}
 	} else {
@@ -206,13 +211,18 @@ if !global.is_dialog_active{
 	
 	if sprite_index != sMarcoDano{
 		// Trocar sprite caso esteja andando
-		if global.key_left or global.key_right{
-			global.tecla_pressionada = true
-			if global.arma_player_atual == pistola{
-				sprite_index = sMarcoPistolaAndando
+		var andando_sprites = [sMarcoPistolaAndando]
+		
+		// só troca se não tiver trocado já (para evitar congelamento da animação)
+		if not array_contains(andando_sprites, sprite_index){
+			if global.key_left or global.key_right{
+				global.tecla_pressionada = true
+				if global.arma_player_atual == pistola{
+					sprite_index = sMarcoPistolaAndando
+				}
+			}else{
+				global.tecla_pressionada = false
 			}
-		}else{
-			global.tecla_pressionada = false
 		}
 	}
 	
