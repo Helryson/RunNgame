@@ -30,7 +30,7 @@ shot_timer = 0; // Timer inicial
 wait_time = 20; // 0.75 segundos (a 60 FPS)
 can_shoot = true; // Permite disparar inicialmente
 shoot_wait_time = 0; // Inicializa o tempo de espera para disparo
-dano_player = 10 // Dano do chefe
+dano_player = 15 // Dano do chefe
 fire_rate = 25; // 25 frames entre cada tiro / 60 = 1 segundo
 
 // Variáveis para controle de parada
