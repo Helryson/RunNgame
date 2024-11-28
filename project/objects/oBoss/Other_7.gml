@@ -1,5 +1,11 @@
 if sprite_index == sMechaDano{
-	sprite_index = sMecha
+	switch (arma_atual){
+		case sBalaInimigo:
+			sprite_index = sMecha
+			break
+		case sFogo:
+			sprite_index = sMechaFlameTrower
+	}
 }
 
 if sprite_index == sMechaMorte{

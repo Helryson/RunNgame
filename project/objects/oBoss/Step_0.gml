@@ -56,23 +56,24 @@ if (!global.is_dialog_active) {
 	count++
 	
     // Código para NPCs se moverem ou realizarem ações normais
+
+	if vida == max_vida	
+		switch arma_atual{
 	
-	switch arma_atual{
+			case sBalaInimigo:
+			fire_rate = 25
+			break
 	
-		case sBalaInimigo:
-		fire_rate = 25
-		break
+			//case missel:
+			//fire_rate = 45
+			//break
 	
-		//case missel:
-		//fire_rate = 45
-		//break
+			case sFogo:
+			sprite_index = sMechaFlameTrower
+			fire_rate = 45
+			break
 	
-		case sFogo:
-		sprite_index = sMechaFlameTrower
-		fire_rate = 45
-		break
-	
-	}
+		}
 	
 	if (can_shoot and arma_atual != sFogo) {
 	    if (shot_timer > 0) {
