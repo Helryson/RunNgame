@@ -3,6 +3,7 @@ var colisoes_destrutivas = [oBala, oBalaInimigo]
 var players = [OMarco]
 
 for (var c=0; c<array_length(colisoes); c+=1){
+	
 	var objeto = colisoes[c]
 	if instance_number(objeto) >= 1{
 		var player_proximo = instance_nearest(x, y, objeto)
@@ -24,7 +25,7 @@ for (var c=0; c<array_length(colisoes); c+=1){
 
 		// Verificar se o player está proximo o suficiente em x e y para a logica se aplicar
 		if (modulo_dx <= distancia_afetarX and (modulo_dy <= distancia_afetarY)){		
-			objeto.id_plataforma = id
+			player_proximo.id_plataforma = id
 			if not array_contains(colisoes_destrutivas, objeto){
 				// Aplicar a logica
 				var pixels_ate_bordaX = sprite_width / 2
@@ -65,7 +66,7 @@ for (var c=0; c<array_length(colisoes); c+=1){
 			}
 		}else{
 			// Só roda se o ID for o mesmo! Se não, nem tenta
-			if objeto.id_plataforma == id{
+			if player_proximo.id_plataforma == id{
 				if not array_contains(colisoes_destrutivas, objeto){
 					// Só reseta o y inicial se o player não tiver no mesmo x que abrange o objto
 					if modulo_dx > sprite_height/2{
