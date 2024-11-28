@@ -211,14 +211,22 @@ if !global.is_dialog_active{
 	
 	if sprite_index != sMarcoDano{
 		// Trocar sprite caso esteja andando
-		var andando_sprites = [sMarcoPistolaAndando]
+		var andando_sprites = [sMarcoPistolaAndando, sMarcoShotgunAndando]
 		
 		// só troca se não tiver trocado já (para evitar congelamento da animação)
 		if not array_contains(andando_sprites, sprite_index){
 			if global.key_left or global.key_right{
 				global.tecla_pressionada = true
 				if global.arma_player_atual == pistola{
-					sprite_index = sMarcoPistolaAndando
+					sprite_index = andando_sprites[0]
+				}else{
+					if global.arma_player_atual == shotgun{
+						sprite_index = andando_sprites[1]
+				}else{		
+					if global.arma_player_atual == ak47{
+						sprite_index = andando_sprites[2]
+					}
+				}
 				}
 			}else{
 				global.tecla_pressionada = false
