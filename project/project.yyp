@@ -139,6 +139,7 @@
     {"id":{"name":"shotgun","path":"sprites/shotgun/shotgun.yy",},},
     {"id":{"name":"SMarco","path":"sprites/SMarco/SMarco.yy",},},
     {"id":{"name":"sMarcoAK47","path":"sprites/sMarcoAK47/sMarcoAK47.yy",},},
+    {"id":{"name":"sMarcoAk47Puando","path":"sprites/sMarcoAk47Puando/sMarcoAk47Puando.yy",},},
     {"id":{"name":"sMarcoDano","path":"sprites/sMarcoDano/sMarcoDano.yy",},},
     {"id":{"name":"sMarcoPistola","path":"sprites/sMarcoPistola/sMarcoPistola.yy",},},
     {"id":{"name":"sMarcoPistolaAndando","path":"sprites/sMarcoPistolaAndando/sMarcoPistolaAndando.yy",},},

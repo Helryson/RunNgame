@@ -126,7 +126,11 @@ if !global.is_dialog_active{
 		if sprite_index != sMarcoDano{
 		    if global.arma_player_atual == pistola {
 		        sprite_index = sMarcoPistolaPuando;
-		    }
+		    }else if global.arma_player_atual == shotgun{
+				sprite_index = sMarcoShotgunPuando
+			}else if global.arma_player_atual == ak47{
+				sprite_index = sMarcoAk47Puando
+			}
 		}
 	} else {
 	    global.tecla_pressionada = false;
