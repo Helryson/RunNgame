@@ -1,0 +1,18 @@
+Feitos
+* Aprimorar sistema de regeneração de vida
+* Aumentar dificuldade do boss
+* Melhorar a colisão
+* Modificar IA do boss
+* Criar identificador de dano para o boss
+* Balancear inimigos
+
+Não feitos:
+* Sistema de diálogo
+* Introdução
+* Lição de moral no final
+* Level design
+
+BUGS A SEREM CORRIGIDOS
+* Musica parando de tocar quando volta de sala
+* Caixa de armas dando glitch as vezes
+* Colisão problemática na sala 2 da praia
