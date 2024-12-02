@@ -30,7 +30,7 @@ var coracoes = [coracao7, coracao6, coracao5, coracao4, coracao3, coracao2, cora
 
 var vida_porcentagem = (global.vida_player /global.originais[0]) * 100;
 
-// Calcula o índice com base na porcentagem
+a// Calcula o índice com base na porcentagem
 var indice = floor((vida_porcentagem / 100) * array_length(coracoes));
 indice = clamp(indice, 0, array_length(coracoes) - 1);
 

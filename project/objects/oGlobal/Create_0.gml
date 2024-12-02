@@ -119,8 +119,4 @@ global.gravidade = real(lines[12])
 global.num_balas_player = 100000000000000
 
 //dialogo
-global.is_dialog_active = false; // Define se o diálogo está ativo
-global.dialog_file = "";  
-if room == bossfight{
-	global.is_dialog_active = false;
-}
+global.is_dialog_active = false;
