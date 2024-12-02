@@ -6,6 +6,7 @@
     {"name":"Intro","order":1,"path":"rooms/Intro/Intro.yy",},
     {"name":"fireball","order":2,"path":"sounds/fireball/fireball.yy",},
     {"name":"pistola_tiro","order":1,"path":"sounds/pistola_tiro/pistola_tiro.yy",},
+    {"name":"sCaixxMadeira","order":1,"path":"sprites/sCaixxMadeira/sCaixxMadeira.yy",},
     {"name":"sFogo","order":1,"path":"sprites/sFogo/sFogo.yy",},
     {"name":"sMarcoAk47Puando","order":2,"path":"sprites/sMarcoAk47Puando/sMarcoAk47Puando.yy",},
     {"name":"sMarcoShotgunPuando","order":1,"path":"sprites/sMarcoShotgunPuando/sMarcoShotgunPuando.yy",},

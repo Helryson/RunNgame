@@ -125,6 +125,7 @@
     {"id":{"name":"sBala","path":"sprites/sBala/sBala.yy",},},
     {"id":{"name":"sBalaInimigo","path":"sprites/sBalaInimigo/sBalaInimigo.yy",},},
     {"id":{"name":"sCaixa","path":"sprites/sCaixa/sCaixa.yy",},},
+    {"id":{"name":"sCaixxMadeira","path":"sprites/sCaixxMadeira/sCaixxMadeira.yy",},},
     {"id":{"name":"sCarregamento","path":"sprites/sCarregamento/sCarregamento.yy",},},
     {"id":{"name":"sCenario","path":"sprites/sCenario/sCenario.yy",},},
     {"id":{"name":"sChaoPraia_1","path":"sprites/sChaoPraia_1/sChaoPraia_1.yy",},},
