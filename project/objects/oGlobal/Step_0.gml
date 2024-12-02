@@ -1,3 +1,6 @@
+if keyboard_check_pressed(vk_f11){
+	window_set_fullscreen(!window_get_fullscreen());
+};
 // INstancia de coração mais proxima
 var coracao = instance_nearest(x, y, oCoracao)
 global.tempo_jogo = current_time
@@ -31,7 +34,7 @@ var vida_porcentagem = (global.vida_player /global.originais[0]) * 100;
 var indice = floor((vida_porcentagem / 100) * array_length(coracoes));
 indice = clamp(indice, 0, array_length(coracoes) - 1);
 
-show_debug_message(string(vida_porcentagem))
+// show_debug_message(string(vida_porcentagem))
 
 oCoracao.sprite_index = coracoes[indice];
 
@@ -47,8 +50,8 @@ if instance_number(oArma) <= 0{
 	}
 }
 
-if instance_nearest(x, y, oTextBox){
-	global.is_dialog_active = false
+if instance_number(oTextBox) > 0{
+	global.is_dialog_active = true
 }
 else{
 	global.is_dialog_active = false

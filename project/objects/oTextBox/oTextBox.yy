@@ -9,8 +9,8 @@
   "name":"oTextBox",
   "overriddenProperties":[],
   "parent":{
-    "name":"Dialogo",
-    "path":"folders/Sprites/Dialogo.yy",
+    "name":"Mensagens",
+    "path":"folders/Objetos/Mensagens.yy",
   },
   "parentObjectId":null,
   "persistent":false,

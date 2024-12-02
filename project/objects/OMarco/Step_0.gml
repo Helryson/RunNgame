@@ -65,10 +65,6 @@ var max_y = y_inicial
 //	global.pulo = false
 //}
 
-if keyboard_check_pressed(vk_f11){
-window_set_fullscreen(!window_get_fullscreen());
-};
-
 
 // Atualiza o tempo do tiro
 //global.shot_timer -= 0.1; // Diminui o timer a cada passo
@@ -158,7 +154,8 @@ if !global.is_dialog_active{
 	
 		// Sistema de tiro refeito
 		if global.tempo_jogo - global.ultima_bala >= global.tempo_arma_player_atual * 1000 && global.num_balas_player >= 1{
-			//show_debug_message(string(global.ultima_bala), string(global.tempo_arma_player_atual))
+			show_debug_message("Hey!")
+		
 			var bala
 			global.num_balas_player -= 1
 			bala = instance_create_layer(x, y-(sprite_height/2.5), "Instances", oBala)
@@ -211,22 +208,14 @@ if !global.is_dialog_active{
 	
 	if sprite_index != sMarcoDano{
 		// Trocar sprite caso esteja andando
-		var andando_sprites = [sMarcoPistolaAndando, sMarcoShotgunAndando]
+		var andando_sprites = [sMarcoPistolaAndando]
 		
 		// só troca se não tiver trocado já (para evitar congelamento da animação)
 		if not array_contains(andando_sprites, sprite_index){
 			if global.key_left or global.key_right{
 				global.tecla_pressionada = true
 				if global.arma_player_atual == pistola{
-					sprite_index = andando_sprites[0]
-				}else{
-					if global.arma_player_atual == shotgun{
-						sprite_index = andando_sprites[1]
-				}else{		
-					if global.arma_player_atual == ak47{
-						sprite_index = andando_sprites[2]
-					}
-				}
+					sprite_index = sMarcoPistolaAndando
 				}
 			}else{
 				global.tecla_pressionada = false
@@ -235,6 +224,8 @@ if !global.is_dialog_active{
 	}
 	
 	
+}else{
+	global.hsp_player = 0
 }
 
 

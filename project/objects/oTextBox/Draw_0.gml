@@ -1,7 +1,15 @@
+if keyboard_check_pressed(vk_f11){
+	window_set_fullscreen(!window_get_fullscreen());
+};
+
 var accept_key = keyboard_check_pressed(ord("L"))
 
 var textbox_x = camera_get_view_x(view_camera[0])
 var textbox_y = camera_get_view_y(view_camera[0]) + 200
+
+if room  == Intro{
+		textbox_y = camera_get_view_y(view_camera[0]) + 50
+}
 
 //setup
 if setup == false{
@@ -46,6 +54,9 @@ if accept_key{
 		//destroi o text box
 		else{
 			instance_destroy()
+			if room == Intro{
+				room_goto_next()
+			}
 		}
 	}
 	//se nao terminou de digitar
