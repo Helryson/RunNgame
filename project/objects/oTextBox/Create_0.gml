@@ -5,7 +5,7 @@
 textbox_width = 16*20
 textbox_height = 9*20
 border = 10
-line_sep = 12
+line_sep = 50
 line_width = textbox_width - border*2
 txtb_spr = chat
 txtb_img = 0
