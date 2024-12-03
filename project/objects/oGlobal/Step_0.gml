@@ -50,9 +50,9 @@ if instance_number(oArma) <= 0{
 	}
 }
 
-if instance_number(oTextBox) > 0{
-	global.is_dialog_active = true
-}
-else{
-	global.is_dialog_active = false
-}
+//if instance_number(oTextBox) > 0{
+//	global.is_dialog_active = true
+//}
+//else{
+//	global.is_dialog_active = false
+//}

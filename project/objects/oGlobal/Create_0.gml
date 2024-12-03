@@ -45,7 +45,7 @@ global.player_andar = true // se o player pode andar
 global.altura_pulo = 200 // A altura que o player chega
 global.ativar_tecla_pulo = true // Se a tecla de pulo está ativada
 
-global.salas_gameplay = [game, game2] // Salas do meio do jogo
+global.salas_gameplay = [game, game2, game3] // Salas do meio do jogo
 global.salas_fim = [bossfight] // Salas do chefão
 
 // Pegar os valores no arquivo de configurações (para manter os valores)

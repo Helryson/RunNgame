@@ -1,5 +1,9 @@
 //Windows options
 
+if instance_number(oTextBox) <= 0{
+	global.is_dialog_active = false
+}
+
 // Deletar a tela de carregamento se tiver alguma
 if instance_number(oCarregamento) >= 1{
 	var carregamento = instance_nearest(x, y, oCarregamento)
