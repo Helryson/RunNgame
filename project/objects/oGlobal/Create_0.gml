@@ -75,8 +75,11 @@ if array_length(lines) < array_length(global.originais){
 	lines = global.originais
 }
 
+// Primeira sala
+global.sala_1 = game
+
 // Se o jogo acabou de começar, carrega o arquivo default
-if current_time <= 1000{
+if room == global.sala_1{
 	lines = global.originais
 }
 

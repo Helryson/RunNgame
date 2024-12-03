@@ -154,8 +154,7 @@ if !global.is_dialog_active{
 				global.tempo_arma_player_atual = 0.7
 				break
 		}
-	
-	
+		show_debug_message(string(global.tempo_jogo)+" - "+string(global.ultima_bala)+" >= "+string(global.tempo_arma_player_atual *  1000) + " && "+string(global.num_balas_player)+" >=1")
 		// Sistema de tiro refeito
 		if global.tempo_jogo - global.ultima_bala >= global.tempo_arma_player_atual * 1000 && global.num_balas_player >= 1{
 			show_debug_message("Hey!")
