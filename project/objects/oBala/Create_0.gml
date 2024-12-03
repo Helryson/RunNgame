@@ -14,11 +14,11 @@ switch global.arma_player_atual {
 
     case ak47:
         // Reproduz o som de tiro para a AK47
-        audio_play_sound(pistola_tiro, 1, false);  // Troque por um som específico para a AK47
+        audio_play_sound(ak_tiro, 1, false);  // Troque por um som específico para a AK47
         break;
 
     case shotgun:
-        audio_play_sound(pistola_tiro, 1, false);
+        audio_play_sound(escopeta_tiro, 1, false);
         break;
 }
 

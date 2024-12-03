@@ -45,4 +45,6 @@ min_x = 200
 max_x = 400
 
 morte = 0
-tempo_espera = 5000
+tempo_espera = 3000
+
+troca_arma_timer = 0;  // Timer para controle da troca de arma

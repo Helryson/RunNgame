@@ -1,4 +1,4 @@
-
+global.is_dialog_active = true
 
 //parametros textbox
 

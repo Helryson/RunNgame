@@ -10,8 +10,8 @@
     "path":"folders/Objetos/Interativos.yy",
   },
   "parentObjectId":{
-    "name":"oPlataforma",
-    "path":"objects/oPlataforma/oPlataforma.yy",
+    "name":"oPlataformaPraia",
+    "path":"objects/oPlataformaPraia/oPlataformaPraia.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
