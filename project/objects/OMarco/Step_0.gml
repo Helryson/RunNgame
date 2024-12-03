@@ -42,21 +42,6 @@ if global.vida_player > global.originais[0]{
 	global.vida_player = global.originais[0]
 }
 
-// Trocar o sprite dependendo da arma
-
-if sprite_index != sMarcoDano{
-	switch (global.arma_player_atual){
-		case pistola:
-			sprite_index = sMarcoPistola
-			break
-		case ak47:
-			sprite_index = sMarcoAK47
-			break
-		case shotgun:
-			sprite_index = SMarco
-			break
-	}
-}
 // O máximo que o player pode chegar
 var max_y = y_inicial
 
@@ -210,23 +195,59 @@ if !global.is_dialog_active{
 	}
 	
 	if sprite_index != sMarcoDano{
-		// Trocar sprite caso esteja andando
-		var andando_sprites = [sMarcoPistolaAndando]
-		
-		// só troca se não tiver trocado já (para evitar congelamento da animação)
-		if not array_contains(andando_sprites, sprite_index){
-			if global.key_left or global.key_right{
-				global.tecla_pressionada = true
-				if global.arma_player_atual == pistola{
-					sprite_index = sMarcoPistolaAndando
-				}
-			}else{
-				global.tecla_pressionada = false
-			}
+			
+		switch (global.arma_player_atual){
+			case pistola:
+				sprite_index = sMarcoPistola
+				break
+			case ak47:
+				sprite_index = sMarcoAK47
+				break
+			case shotgun:
+				sprite_index = sMarcoShotgun
+				break
 		}
-	}
-	
-	
+		
+		// Lista de sprites de caminhada
+	    var andando_sprites = [sMarcoPistolaAndando, sMarcoShotgunAndando, sMarcoAk47Andando]
+
+	    // Só troca o sprite se não estiver em uma animação de caminhada já existente
+	    if not array_contains(andando_sprites, sprite_index){
+	        if global.key_left or global.key_right{
+	            global.tecla_pressionada = true
+	            switch global.arma_player_atual{
+	                case pistola:
+	                    // Verifica se o sprite já está em animação para pistola
+	                    if (sprite_index != sMarcoPistolaAndando) {
+	                        sprite_index = sMarcoPistolaAndando
+	                        image_index = 0  // Começar a animação do primeiro frame
+							image_speed = 0.2  // Definir a velocidade da animação (ajuste conforme necessário)
+	                    }
+	                    break
+
+	                case ak47:
+	                    // Verifica se o sprite já está em animação para ak47
+	                    if (sprite_index != sMarcoAk47Andando) {
+	                        sprite_index = sMarcoAk47Andando
+	                        image_index = 0  // Começar a animação do primeiro frame
+							image_speed = 0.2  // Definir a velocidade da animação (ajuste conforme necessário)
+	                    }
+	                    break
+
+	                case shotgun:
+	                    // Verifica se o sprite já está em animação para shotgun
+	                    if (sprite_index != sMarcoShotgunAndando) {
+	                        sprite_index = sMarcoShotgunAndando
+	                        image_index = 0  // Começar a animação do primeiro frame
+							image_speed = 0.2  // Definir a velocidade da animação (ajuste conforme necessário)
+	                    }
+	                    break
+	            }
+	        }else{
+	            global.tecla_pressionada = false
+	        }
+	    }
+	}	
 }else{
 	global.hsp_player = 0
 }

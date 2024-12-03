@@ -48,13 +48,11 @@ if accept_key{
 	if draw_char == text_lenght[page]{
 		//proxima pagina
 		if page < page_number - 1 {
-			global.is_dialog_active = true
 			page++
 			draw_char = 0
 		}
 		//destroi o text box
 		else{
-			global.is_dialog_active = false
 			instance_destroy()
 			if room == Intro{
 				room_goto_next()

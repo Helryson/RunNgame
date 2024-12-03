@@ -10,8 +10,8 @@
   "name":"OMarco",
   "overriddenProperties":[],
   "parent":{
-    "name":"Interativos",
-    "path":"folders/Objetos/Interativos.yy",
+    "name":"Personagens",
+    "path":"folders/Objetos/Personagens.yy",
   },
   "parentObjectId":null,
   "persistent":false,
