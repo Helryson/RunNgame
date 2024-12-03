@@ -3,6 +3,7 @@
   "ResourceOrderSettings":[
     {"name":"oFlame","order":1,"path":"objects/oFlame/oFlame.yy",},
     {"name":"oTextBox","order":1,"path":"objects/oTextBox/oTextBox.yy",},
+    {"name":"game3","order":2,"path":"rooms/game3/game3.yy",},
     {"name":"Intro","order":1,"path":"rooms/Intro/Intro.yy",},
     {"name":"fireball","order":2,"path":"sounds/fireball/fireball.yy",},
     {"name":"pistola_tiro","order":1,"path":"sounds/pistola_tiro/pistola_tiro.yy",},

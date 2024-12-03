@@ -96,6 +96,7 @@
     {"id":{"name":"endgame","path":"rooms/endgame/endgame.yy",},},
     {"id":{"name":"game","path":"rooms/game/game.yy",},},
     {"id":{"name":"game2","path":"rooms/game2/game2.yy",},},
+    {"id":{"name":"game3","path":"rooms/game3/game3.yy",},},
     {"id":{"name":"gameover","path":"rooms/gameover/gameover.yy",},},
     {"id":{"name":"Intro","path":"rooms/Intro/Intro.yy",},},
     {"id":{"name":"background","path":"sounds/background/background.yy",},},
@@ -177,6 +178,7 @@
     {"roomId":{"name":"bossfight","path":"rooms/bossfight/bossfight.yy",},},
     {"roomId":{"name":"gameover","path":"rooms/gameover/gameover.yy",},},
     {"roomId":{"name":"endgame","path":"rooms/endgame/endgame.yy",},},
+    {"roomId":{"name":"game3","path":"rooms/game3/game3.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
