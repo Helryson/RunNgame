@@ -48,6 +48,7 @@ global.altura_pulo = 200 // A altura que o player chega
 global.ativar_tecla_pulo = true // Se a tecla de pulo está ativada
 
 global.salas_gameplay = [game, game2, game3] // Salas do meio do jogo
+global.salas_navio = [navio1, navio2]
 global.salas_fim = [bossfight] // Salas do chefão
 
 // Pegar os valores no arquivo de configurações (para manter os valores)

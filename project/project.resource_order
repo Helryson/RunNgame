@@ -32,6 +32,7 @@
     {"name":"Telas","order":13,"path":"folders/Telas.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"devmode","order":6,"path":"objects/devmode/devmode.yy",},
     {"name":"oBala","order":2,"path":"objects/oBala/oBala.yy",},
     {"name":"oBalaInimigo","order":3,"path":"objects/oBalaInimigo/oBalaInimigo.yy",},
     {"name":"oBoss","order":4,"path":"objects/oBoss/oBoss.yy",},
@@ -58,6 +59,7 @@
     {"name":"fireball","order":2,"path":"sounds/fireball/fireball.yy",},
     {"name":"helicoptero_tiro","order":7,"path":"sounds/helicoptero_tiro/helicoptero_tiro.yy",},
     {"name":"minigun","order":3,"path":"sounds/minigun/minigun.yy",},
+    {"name":"nvaio","order":8,"path":"sounds/nvaio/nvaio.yy",},
     {"name":"pistola_tiro","order":1,"path":"sounds/pistola_tiro/pistola_tiro.yy",},
     {"name":"risada_chefao","order":4,"path":"sounds/risada_chefao/risada_chefao.yy",},
     {"name":"sCaixxMadeira","order":1,"path":"sprites/sCaixxMadeira/sCaixxMadeira.yy",},

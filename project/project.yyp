@@ -60,6 +60,7 @@
   "name":"project",
   "resources":[
     {"id":{"name":"font_debug","path":"fonts/font_debug/font_debug.yy",},},
+    {"id":{"name":"devmode","path":"objects/devmode/devmode.yy",},},
     {"id":{"name":"oArma","path":"objects/oArma/oArma.yy",},},
     {"id":{"name":"oBala","path":"objects/oBala/oBala.yy",},},
     {"id":{"name":"oBalaInimigo","path":"objects/oBalaInimigo/oBalaInimigo.yy",},},
@@ -114,6 +115,7 @@
     {"id":{"name":"helicoptero_tiro","path":"sounds/helicoptero_tiro/helicoptero_tiro.yy",},},
     {"id":{"name":"introduction","path":"sounds/introduction/introduction.yy",},},
     {"id":{"name":"minigun","path":"sounds/minigun/minigun.yy",},},
+    {"id":{"name":"nvaio","path":"sounds/nvaio/nvaio.yy",},},
     {"id":{"name":"pistola_tiro","path":"sounds/pistola_tiro/pistola_tiro.yy",},},
     {"id":{"name":"risada_chefao","path":"sounds/risada_chefao/risada_chefao.yy",},},
     {"id":{"name":"ak47","path":"sprites/ak47/ak47.yy",},},
@@ -199,8 +201,8 @@
     {"roomId":{"name":"bossfight","path":"rooms/bossfight/bossfight.yy",},},
     {"roomId":{"name":"gameover","path":"rooms/gameover/gameover.yy",},},
     {"roomId":{"name":"endgame","path":"rooms/endgame/endgame.yy",},},
-    {"roomId":{"name":"navio2","path":"rooms/navio2/navio2.yy",},},
     {"roomId":{"name":"navio1","path":"rooms/navio1/navio1.yy",},},
+    {"roomId":{"name":"navio2","path":"rooms/navio2/navio2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

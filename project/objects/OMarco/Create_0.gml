@@ -4,6 +4,8 @@ if array_contains(global.salas_gameplay, room){
 	fundo = audio_play_sound(background, 1, true)
 }else if array_contains(global.salas_fim, room){
 	fundo = audio_play_sound(bosstheme, 1, true)
+}else if array_contains(global.salas_navio, room){
+	fundo = audio_play_sound(nvaio, 1, true)
 }
 
 
