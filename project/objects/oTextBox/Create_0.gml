@@ -1,3 +1,7 @@
+if room == Intro{
+	audio_play_sound(introduction, 1, true)
+}
+
 global.is_dialog_active = true
 
 //parametros textbox
