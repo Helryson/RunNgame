@@ -2,6 +2,7 @@
 // Você pode escrever seu código neste editor
 
 frames_tiro = 60 // A cada quantos frames vai atirar
+frames_tiro_var = frames_tiro
 
 x_minimo = 0
 x_maximo = room_width

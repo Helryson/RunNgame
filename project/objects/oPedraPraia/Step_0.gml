@@ -1,5 +1,5 @@
 var colisoes = [OMarco, oSoldado, oBala, oBalaInimigo, oArma, oBoss]
-var colisoes_destrutivas = [oBala, oBalaInimigo]
+var colisoes_destrutivas = [oBala, oBalaInimigo, oMissel]
 
 for (var c=0; c<array_length(colisoes); c+=1){
 	var objeto = colisoes[c]

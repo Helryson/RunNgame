@@ -1,5 +1,5 @@
 var colisoes = [OMarco, oSoldado, oBala, oBalaInimigo, oArma, oBoss, oArma]
-var colisoes_destrutivas = [oBala, oBalaInimigo]
+var colisoes_destrutivas = [oBala, oBalaInimigo, oMissel]
 var players = [OMarco]
 
 for (var c=0; c<array_length(colisoes); c+=1){

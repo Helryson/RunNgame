@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Personagens",
-    "path":"folders/Sequências/Personagens.yy",
+    "path":"folders/Objetos/Personagens.yy",
   },
   "parentObjectId":null,
   "persistent":false,
