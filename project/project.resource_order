@@ -35,6 +35,7 @@
     {"name":"risada_chefao","order":4,"path":"sounds/risada_chefao/risada_chefao.yy",},
     {"name":"sCaixxMadeira","order":1,"path":"sprites/sCaixxMadeira/sCaixxMadeira.yy",},
     {"name":"sFogo","order":1,"path":"sprites/sFogo/sFogo.yy",},
+    {"name":"sHelicopter","order":2,"path":"sprites/sHelicopter/sHelicopter.yy",},
     {"name":"sMarcoAk47Andando","order":5,"path":"sprites/sMarcoAk47Andando/sMarcoAk47Andando.yy",},
     {"name":"sMarcoAk47Puando","order":2,"path":"sprites/sMarcoAk47Puando/sMarcoAk47Puando.yy",},
     {"name":"sMarcoShotgun","order":3,"path":"sprites/sMarcoShotgun/sMarcoShotgun.yy",},

@@ -148,6 +148,7 @@
     {"id":{"name":"sGamOver","path":"sprites/sGamOver/sGamOver.yy",},},
     {"id":{"name":"sGeneral","path":"sprites/sGeneral/sGeneral.yy",},},
     {"id":{"name":"sGrama","path":"sprites/sGrama/sGrama.yy",},},
+    {"id":{"name":"sHelicopter","path":"sprites/sHelicopter/sHelicopter.yy",},},
     {"id":{"name":"shotgun","path":"sprites/shotgun/shotgun.yy",},},
     {"id":{"name":"SMarco","path":"sprites/SMarco/SMarco.yy",},},
     {"id":{"name":"sMarcoAK47","path":"sprites/sMarcoAK47/sMarcoAK47.yy",},},
