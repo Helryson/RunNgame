@@ -64,6 +64,8 @@
     {"name":"sFogo","order":1,"path":"sprites/sFogo/sFogo.yy",},
     {"name":"sGeneral","order":4,"path":"sprites/sGeneral/sGeneral.yy",},
     {"name":"sHelicopter","order":9,"path":"sprites/sHelicopter/sHelicopter.yy",},
+    {"name":"sHelicopteroDano","order":10,"path":"sprites/sHelicopteroDano/sHelicopteroDano.yy",},
+    {"name":"sHelicopteroMorte","order":11,"path":"sprites/sHelicopteroMorte/sHelicopteroMorte.yy",},
     {"name":"sMarcoAk47Andando","order":5,"path":"sprites/sMarcoAk47Andando/sMarcoAk47Andando.yy",},
     {"name":"sMarcoAk47Puando","order":2,"path":"sprites/sMarcoAk47Puando/sMarcoAk47Puando.yy",},
     {"name":"sMarcoShotgun","order":3,"path":"sprites/sMarcoShotgun/sMarcoShotgun.yy",},

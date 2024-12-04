@@ -28,8 +28,13 @@ y += velocidade_voo_y * direcao_y
 
 frames_tiro_var -= 1
 
-if frames_tiro_var == 0{
+// Sistema de tiro
+if frames_tiro_var == 0 and pode_atirar{
 	var bala = instance_create_layer(x, y, "Instances", oMissel)
 	frames_tiro_var = frames_tiro 
 }
 
+if vida <= 0{
+	sprite_index = sHelicopteroMorte
+	pode_atirar = false
+}
