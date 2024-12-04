@@ -1,14 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"oBala",
+  "%Name":"oHelicoptero",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"oSoldado","path":"objects/oSoldado/oSoldado.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"oBoss","path":"objects/oBoss/oBoss.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oBala",
+  "name":"oHelicoptero",
   "overriddenProperties":[],
   "parent":{
     "name":"Personagens",
@@ -33,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sBala",
-    "path":"sprites/sBala/sBala.yy",
+    "name":"sHelicopter",
+    "path":"sprites/sHelicopter/sHelicopter.yy",
   },
   "spriteMaskId":null,
   "visible":true,

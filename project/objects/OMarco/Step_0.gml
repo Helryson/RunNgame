@@ -14,7 +14,7 @@ if instance_number(oCarregamento) >= 1{
 
 // Para facilitar o debug de mecanicas! Tirar quando finalizado
 if keyboard_check_pressed(ord("K")){
-	global.dano_armas = [9999999, 999999]
+	global.dano_armas = [1000000000, 1000000000, [1000000000, 1000000000, 1000000000], 1000000000]
 	global.hp_tempo = 0
 	global.tempo_recover = 0
 	global.vida_player = 600
