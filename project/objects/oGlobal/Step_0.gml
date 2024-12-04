@@ -1,6 +1,12 @@
 if keyboard_check_pressed(vk_f11){
 	window_set_fullscreen(!window_get_fullscreen());
 };
+
+global.num_inimigos = 0
+for (var index=0; index < array_length(global.inimigos); index += 1){
+	global.num_inimigos += instance_number(global.inimigos[index])
+}
+
 // INstancia de coração mais proxima
 var coracao = instance_nearest(x, y, oCoracao)
 global.tempo_jogo = current_time
@@ -49,6 +55,7 @@ if instance_number(oArma) <= 0{
 		instance_create_layer(xAleatorio, 0, "Main_Layer", oArma)
 	}
 }
+
 
 //if instance_number(oTextBox) > 0{
 //	global.is_dialog_active = true

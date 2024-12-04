@@ -32,6 +32,8 @@ window_set_size(w, h)
 // Define a variável global para as variáveis do player
 // para não resetar caso mude de sala
 
+global.inimigos = [oSoldado, oBoss, oHelicoptero] // lista de inimigos
+global.num_inimigos = 0 // Numero de inimigos na sala
 
 global.armas = [pistola, ak47, shotgun] // Array com as armas que existem no jogo
 global.dano_armas = [5, 4, [4, 8, 16, 32]]

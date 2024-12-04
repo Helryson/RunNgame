@@ -1,4 +1,7 @@
 //Windows options
+// Calcula o numero de inimigos
+
+
 
 if instance_number(oTextBox) <= 0{
 	global.is_dialog_active = false
@@ -317,7 +320,7 @@ var anterior_ou_prox = "" // "anterior" vai para a sala anterior, "prox" para a 
 
 // Se o x for >= que room_width, ir pra proxima "sala"
 if x >= room_width{
-	if room != room_last and room != gameover{
+	if room != room_last and room != gameover and global.num_inimigos <= 0{
 		salvar = true
 		anterior_ou_prox = "prox"
 	}else{
@@ -327,8 +330,7 @@ if x >= room_width{
 
 // Se o x <= 0, sala anterior
 if x <= 0{
-	if room != room_first{
-		
+	if room != room_first and global.num_inimigos <= 0{
 		salvar = true
 		anterior_ou_prox = "anterior"
 	}else{
