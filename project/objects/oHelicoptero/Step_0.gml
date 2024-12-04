@@ -8,18 +8,21 @@ if x <= x_minimo{
 }else if x >= x_maximo{
 	x -= velocidade_voo_x
 	direcao_x = -1
-}else{
-	x += velocidade_voo_x * direcao_x
 }
 
 // Anda o y
 if y >= y_minimo{
 	y -= velocidade_voo_y
-	direcao_y = 1
-}else if y <= y_maximo{
-	y += velocidade_voo_y
 	direcao_y = -1
-}else{
-	y += velocidade_voo_x * direcao_y
 }
+
+if y <= y_maximo{
+	y += velocidade_voo_y
+	direcao_y = 1
+}
+
+x += velocidade_voo_x * direcao_x
+y += velocidade_voo_y * direcao_y
+
+show_debug_message(string(x)+", "+string(y)+" - "+string(x_minimo)+", "+string(y_minimo)+" - "+string(x_maximo)+", "+string(y_maximo))
 
