@@ -10,7 +10,7 @@ var textbox_y = camera_get_view_y(view_camera[0]) + 200
 if room  == Intro{
 		textbox_y = camera_get_view_y(view_camera[0]) + 50
 }else{
-	textbox_y =  room_height - (0.25 * room_height)
+	textbox_y =  room_height - (0.25 * room_height )
 }
 
 //setup
@@ -56,6 +56,10 @@ if accept_key{
 		//destroi o text box
 		else{
 			instance_destroy()
+			
+			if room == postboss{
+				room_goto(endgame)
+			}
 			if room == Intro{
 				room_goto_next()
 			}

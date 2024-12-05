@@ -40,12 +40,23 @@ switch room{
 	
 	text[0] = "Caresmin: Filho..."
 	text[1] = "Daniel:  Pai..."
-	text[2] = "Caresmin: Não deveria estar aqui… ESTÁ GUERRA NÃO É SUA, GAROTO!"
-	text[3] = "Daniel: Pai!!!!!!!?. Eu não posso acreditar, achei que o estivesse desaparecido… Eu não creio que o senhor teve a coragem de nos trair!"
-	text[4] = "Caresmin: Eu não me importo no que você acredita ou não garoto, Eu tive meus motivos e você irá entender."
-	text[5] = "Daniel: Do que está falando? Pai… VOCÊ SÓ PODE ESTAR MALUCO! Esses desgraçados devem ter feito lavagem cerebral, não existe outra explicação….."
-	text[6] = "Caresmin: … Você irá enxergar a verdade garoto, mas não antes de eu te dar uma surra."
-	text[7] = "Daniel: ….. então se é assim, o senhor não me deixa escolha"
+	text[2] = "Caresmin: Nao deveria estar aqui… ESTA GUERRA NAO E SUA, GAROTO!"
+	text[3] = "Daniel: Pai!!!!!!!?. Eu nao posso acreditar, achei que o estivesse desaparecido… Eu nao creio que o senhor teve a coragem de nos trair!"
+	text[4] = "Caresmin: Eu nao me importo no que você acredita ou nao garoto, Eu tive meus motivos e você ira entender."
+	text[5] = "Daniel: Do que esta falando? Pai… VOCE SO PODE ESTAR MALUCO! Esses desgracados devem ter feito lavagem cerebral, nao existe outra explicaçao….."
+	text[6] = "Caresmin: … Voce ira enxergar a verdade garoto, mas nao antes de eu te dar uma surra."
+	text[7] = "Daniel: ….. então se e assim, o senhor nao me deixa escolha"
+	break
+	
+	case postboss:
+	
+	text[0] = "Daniel: Pai eu…eu…eu nao queria que fosse assim, voce pediu por isso."
+	text[1] = "Caresmin: ... Filho, eu nao queria que voce chegasse nesse ponto. Aqueles malditos do Governo Mundial. "
+	text[2] = "Daniel: A culpa nao e deles, o senhor que decidiu trilhar esse caminho, junto do Asmodeus, ele e o verdadeiro mau, ele que causou tudo isso."
+	text[3] = "Caresmin: Pois e ao contrario, o Governo Mundial alienou todos e construiu um imperio atraves de mentiras, experimentos desumanos e opressao daqueles contrarios ao sistema. Asmodeus apenas me fez ver ao contrario, ele nao e o inimigo aqui."
+	text[4] = "Daniel: (Comecando a lacrimejar)Eu……. Eu nao sei o que dizer, na... nada faz sentido, eu nao sei acreditar."
+	text[5] = "Caresmin: (coloca as maos no rosto de seu filho) Garoto, não deixe ser controlado(suspira), eu sei que voce vai o certo no final…..Nao acredite nas mentiras deles (Morre com uma expressao amarga no rosto)."
+	text[6] = "Daniel:  (olhando paro o ceu e com lagrimas no rosto)......Missao cumprida coronel, mais um inimigo morto"
 	break
 
 }

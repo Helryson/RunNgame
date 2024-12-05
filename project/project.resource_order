@@ -81,6 +81,7 @@
     {"name":"sMechaMorte","order":2,"path":"sprites/sMechaMorte/sMechaMorte.yy",},
     {"name":"sMissel","order":2,"path":"sprites/sMissel/sMissel.yy",},
     {"name":"sNavio","order":1,"path":"sprites/sNavio/sNavio.yy",},
+    {"name":"sPosBatalha","order":2,"path":"sprites/sPosBatalha/sPosBatalha.yy",},
     {"name":"Sprite58","order":1,"path":"sprites/Sprite58/Sprite58.yy",},
     {"name":"sSoldado","order":5,"path":"sprites/sSoldado/sSoldado.yy",},
     {"name":"sSoldado_andando","order":6,"path":"sprites/sSoldado_andando/sSoldado_andando.yy",},
