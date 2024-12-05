@@ -172,11 +172,11 @@ if vida <= 0{
 		sprite_index = sMechaMorte
 	}
 	
-	var agora = current_time
-	if agora - morte >= tempo_espera{
-		room_goto(endgame)
-		instance_destroy()
-	}
+	//var agora = current_time
+	//if agora - morte >= tempo_espera{
+	// 	room_goto(endgame)
+	//	instance_destroy()
+	//}
 }
 
 // Coloca os corações

@@ -9,6 +9,8 @@ var textbox_y = camera_get_view_y(view_camera[0]) + 200
 
 if room  == Intro{
 		textbox_y = camera_get_view_y(view_camera[0]) + 50
+}else{
+	textbox_y =  room_height - (0.25 * room_height)
 }
 
 //setup
